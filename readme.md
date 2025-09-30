@@ -2,9 +2,9 @@
 
 # Summary
 
-Integrating the MA5332MS from infineon, a super efficient and compact class D amplifier. With a ADAU1761 DSP, a simple to use DSP for consumer audio applications. A TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. RP2350 microcontroller for easy high level control of the system.
+Integrating the MA5332MS from infineon, a super efficient and compact class D amplifier. With a ADAU1761 DSP, a simple to use DSP for consumer audio applications. TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. RP2350 microcontroller for easy high level control of the system.
 
-The goal is to design a compact and efficient board that can supply a wide range of power to the class D amplifier, include line in and out for easy audio amplification, Digital audio in over usb-c should be possible in the future with the RP2350 and the DSP. Which could have some signal processing benefits for driving a HUB75 matrix panel in real time. Including a quality DSP such as the ADAU1761 DSP should allow us to explore signal processing techniques to achieve optimal results for many speaker setups.
+The goal is to design a compact and efficient board that can supply a wide range of power to the class D amplifier, include line in and out for easy audio amplification. Digital audio in over usb-c should be possible in the future with the RP2350 and the DSP. Which could have some signal quality and processing benefits. Driving a HUB75 matrix panel in real time using existing optimized libraries. Including a quality DSP such as the ADAU1761 DSP should allow us to explore signal processing techniques to achieve optimal results for many speaker setups.
 
 # Power Supply
 
