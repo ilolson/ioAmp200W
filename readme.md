@@ -8,13 +8,22 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts dc. Even lower s
 
 Major Circuits
 -RP2350 microcontroller
+
 -TI TPS26750 PD 3.1 EPR controller and power management system
+
 -MA5332MS class D amplifier (up to 200W)
+
 -ADAU1761 consumer audio DSP w/ graphical interface (programmed over serial from RP2350)
 
+
 Cool features
+
 -HUB75 interface (for driving LED matrix panels)
+
 -USB-C digital audio in (24 bit/96kHz should be doable, keeps signal pristine)
+
 -Precision signal aquisition with ADS131 delta-sigma ADC
+
 -Line In
+
 -Run without a heatsink at lower powers
