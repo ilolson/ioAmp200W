@@ -6,7 +6,7 @@ Integrating the MA5332MS from infineon, a super efficient and compact class D am
 
 The goal is to design a compact and efficient board that can supply a wide range of power to the class D amplifier, include line in and out for easy audio amplification, Digital audio in over usb-c should be possible in the future with the RP2350 and the DSP. Which could have some signal processing benefits for driving a HUB75 matrix panel in real time. Including a quality DSP such as the ADAU1761 DSP should allow us to explore signal processing techniques to achieve optimal results for many speaker setups.
 
-#Power Supply
+# Power Supply
 
 The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts dc. Even lower settings such as 20V/3A is a common laptop charging standard and many people already own USB-C bricks that can supply this which should be enough for some decent audio output. The highest commonly available is 28V@5A which is uncommon but available from many manufacturers online. 48V@5A is hard to find and expensive although I do plan on testing it on the first revision. 
 
