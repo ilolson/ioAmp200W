@@ -1,5 +1,7 @@
 # ioAmp200W
 
+Small but powerful USB-C powered two channel speaker amplifier.
+
 # Summary
 
 Integrating the MA5332MS from infineon, a super efficient and compact 2 channel class D amplifier. With a ADAU1761 DSP, a simple to use DSP for consumer audio applications. TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. An easy to use RP2350 microcontroller for high level control of the system, and hopefully digital audio in at 24bit/96khz.
@@ -8,7 +10,7 @@ The goal is to design a compact and efficient circuit board that can supply a wi
 
 # Power Supply
 
-The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts dc. Even lower settings such as 20V/3A is a common laptop charging standard and many people already own USB-C bricks that can supply this which should be enough for some decent audio output. The highest easily available is 28V@5A which is uncommon but sold online. 48V@5A is hard to find and expensive although I do plan on testing it on the first revision. 
+The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower settings such as 20V/3A is a common laptop charging standard and many people already own USB-C bricks that can supply this which should be enough for some decent audio output, it also won't damage anything so it will be a safe default. The highest easily available is 28V@5A which is uncommon but sold online. 48V@5A is hard to find and expensive although I do plan on testing it on the first revision. 
 
 # Major Circuits
 
@@ -34,4 +36,8 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts dc. Even lower s
 -Run without a heatsink at lower powers
 
 -High quality audio amplification at a manageable cost for DIY setups
+
+# Status
+
+-Initial schematic design
 
