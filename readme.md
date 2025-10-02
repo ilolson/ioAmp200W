@@ -29,7 +29,9 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts dc. Even lower s
 
 -Precision signal aquisition with ADS131 delta-sigma ADC
 
--Line In/Out
+-Line In
 
 -Run without a heatsink at lower powers
+
+-High quality audio amplification at a manageable cost for DIY setups
 
