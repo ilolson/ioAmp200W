@@ -10969,7 +10969,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b99b192-3001-4d67-8329-29bff91d5409")
-		(property "Reference" "J3"
+		(property "Reference" "TRS1"
 			(at 93.345 449.58 0)
 			(effects
 				(font
@@ -11027,7 +11027,7 @@
 		(instances
 			(project ""
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "J3")
+					(reference "TRS1")
 					(unit 1)
 				)
 			)
@@ -11429,7 +11429,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 645.16 440.69 0)
+		(at 673.1 439.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11437,8 +11437,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "605da38f-4a5f-4d51-a299-99e7ae6c52dc")
-		(property "Reference" "J5"
-			(at 646.43 440.6899 0)
+		(property "Reference" "R_OUT1"
+			(at 674.37 439.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11447,7 +11447,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 646.43 443.2299 0)
+			(at 674.37 441.9599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11456,7 +11456,7 @@
 			)
 		)
 		(property "Footprint" "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
-			(at 645.16 440.69 0)
+			(at 673.1 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11465,7 +11465,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 645.16 440.69 0)
+			(at 673.1 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11474,7 +11474,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 645.16 440.69 0)
+			(at 673.1 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11491,7 +11491,7 @@
 		(instances
 			(project ""
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "J5")
+					(reference "R_OUT1")
 					(unit 1)
 				)
 			)
@@ -11703,7 +11703,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 675.64 440.69 0)
+		(at 643.89 439.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11711,8 +11711,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "780b2525-7170-4d8c-a1a3-b4536fc3a868")
-		(property "Reference" "J6"
-			(at 676.91 440.6899 0)
+		(property "Reference" "L_OUT1"
+			(at 645.16 439.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11721,7 +11721,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 676.91 443.2299 0)
+			(at 645.16 441.9599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11730,7 +11730,7 @@
 			)
 		)
 		(property "Footprint" "Connector_AMASS:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
-			(at 675.64 440.69 0)
+			(at 643.89 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11739,7 +11739,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 675.64 440.69 0)
+			(at 643.89 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11748,7 +11748,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 675.64 440.69 0)
+			(at 643.89 439.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11765,7 +11765,7 @@
 		(instances
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "J6")
+					(reference "L_OUT1")
 					(unit 1)
 				)
 			)
