@@ -5887,6 +5887,12 @@
 		(uuid "9d4011a7-4610-4033-b48a-3adbf1637a9b")
 	)
 	(junction
+		(at 276.86 302.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "007aa07d-6272-452a-ac8b-79366a3f6fc9")
+	)
+	(junction
 		(at 289.56 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5987,6 +5993,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "539dee44-f181-486b-a82c-16440023f5fc")
+	)
+	(junction
+		(at 276.86 297.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5cf362a4-bd35-4325-88fd-6c524c04f031")
 	)
 	(junction
 		(at 175.26 185.42)
@@ -6107,6 +6119,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c404b16d-4cf8-4653-8cbc-b4a2c5046b20")
+	)
+	(junction
+		(at 276.86 299.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb4436cb-0fcb-40d1-a342-e5430646d054")
 	)
 	(junction
 		(at 323.85 186.69)
@@ -6976,6 +6994,16 @@
 	)
 	(wire
 		(pts
+			(xy 276.86 297.18) (xy 276.86 299.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fa3babe-afa9-4290-aef4-c06ee06da9e5")
+	)
+	(wire
+		(pts
 			(xy 93.98 292.1) (xy 107.95 292.1)
 		)
 		(stroke
@@ -7516,6 +7544,16 @@
 	)
 	(wire
 		(pts
+			(xy 276.86 299.72) (xy 276.86 302.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab851b22-33b2-4d13-93ea-75a2650d3857")
+	)
+	(wire
+		(pts
 			(xy 261.62 289.56) (xy 276.86 289.56)
 		)
 		(stroke
@@ -7663,6 +7701,16 @@
 			(type default)
 		)
 		(uuid "bab10b1d-044a-4a3e-888e-b677fb36d792")
+	)
+	(wire
+		(pts
+			(xy 276.86 302.26) (xy 276.86 304.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcc548c2-7a8e-41e0-9857-37944f81a4e6")
 	)
 	(wire
 		(pts
@@ -7843,6 +7891,16 @@
 			(type default)
 		)
 		(uuid "d8ea6964-adf2-4be0-9d28-d946f63cfbd7")
+	)
+	(wire
+		(pts
+			(xy 276.86 294.64) (xy 276.86 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db4850d0-9596-470d-bf68-afe6f4c62b16")
 	)
 	(wire
 		(pts
@@ -8144,16 +8202,6 @@
 		)
 		(uuid "1fe23840-425a-4e14-b67e-56a93d04b5a4")
 	)
-	(label "GPIO26_ADC0"
-		(at 276.86 294.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "259165ed-e6d2-4b02-a3f4-9a503d40a0e5")
-	)
 	(label "USB_D-"
 		(at 435.61 236.22 180)
 		(effects
@@ -8263,16 +8311,6 @@
 			(justify right bottom)
 		)
 		(uuid "4a5d87c1-f9b6-4445-a692-e78ea8a831fd")
-	)
-	(label "GPIO27_ADC1"
-		(at 276.86 297.18 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4c368dac-0ade-4b0a-85dc-80cf72efee2c")
 	)
 	(label "GPIO23"
 		(at 276.86 284.48 180)
@@ -8514,16 +8552,6 @@
 		)
 		(uuid "c0f10225-0dd8-42d8-9723-e502927ff3da")
 	)
-	(label "GPIO28_ADC2"
-		(at 276.86 299.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c64969df-0366-4ae6-9bcc-9166ef51186c")
-	)
 	(label "GPIO21"
 		(at 276.86 279.4 180)
 		(effects
@@ -8553,16 +8581,6 @@
 			(justify left bottom)
 		)
 		(uuid "d566a18c-2a8c-4520-98d9-94a017701c34")
-	)
-	(label "GPIO29_ADC3"
-		(at 276.86 302.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "da7c9b6e-f8a1-4f73-939e-4c3f3740031d")
 	)
 	(label "RUN"
 		(at 184.15 279.4 0)
@@ -11403,6 +11421,72 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 276.86 304.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "761bebc8-68c6-4216-ac5c-ae367518e920")
+		(property "Reference" "#PWR07"
+			(at 276.86 311.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 276.86 309.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 276.86 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 276.86 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7df9ed1b-60a1-4030-a087-59385eb94022")
+		)
+		(instances
+			(project ""
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
