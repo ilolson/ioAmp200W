@@ -6,7 +6,7 @@ Small but powerful USB-C powered two channel speaker amplifier.
 
 Integrating the MA5332MS from infineon, a super efficient and compact 2 channel class D amplifier. With a ADAU1761 DSP, a simple to use DSP for consumer audio applications. TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. An easy to use RP2350 microcontroller for high level control of the system, and hopefully digital audio in at 24bit/96khz.
 
-The goal is to design a compact and efficient circuit board that can supply a wide range of power to the class D amplifier through USB-C Power Delivery. It will include line in and out for easy audio amplification. Including a quality and easy to use DSP such as the ADAU1761 DSP should allow us to explore signal processing techniques to achieve optimal results at different power supply voltages, and different speaker setups. Digital audio in over USB-C should be possible in the future with the RP2350 and the DSP. For fun we can drive a HUB75 matrix panel in real time using existing optimized libraries with our signal, and integrate a delta sigma ADC circuit previously made.
+The goal is to design a compact and efficient circuit board that can supply a wide range of power to the class D amplifier through USB-C Power Delivery. It will include line in and out for easy audio amplification. Including a quality and easy to use DSP such as the ADAU1761 DSP should allow us to explore signal processing techniques to achieve optimal results at different power supply voltages, and different speaker setups. Digital audio in over USB-C should be possible in the future with the RP2350 and the DSP. For fun we can drive a HUB75 matrix panel in real time using existing optimized libraries with our signal.
 
 # Power Supply
 
