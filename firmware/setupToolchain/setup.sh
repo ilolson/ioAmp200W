@@ -53,6 +53,15 @@ ARCH="$(uname -m)"                               # 'arm64', 'x86_64', 'aarch64',
 IS_MAC=0; [[ "$OS" == darwin* ]] && IS_MAC=1
 IS_LINUX=0; [[ "$OS" == linux*  ]] && IS_LINUX=1
 
+# ---------- Sudo normalization (Linux) ----------
+# If the script is run with sudo, default $HOME becomes /root which breaks defaults like $PICO_SDK_PATH.
+# Prefer the invoking user's home for SDK/extras when PICO_* are still at their defaults.
+if (( IS_LINUX )) && [[ "${EUID:-$(id -u)}" -eq 0 ]] && [[ -n "${SUDO_USER:-}" ]]; then
+  SUDO_HOME="$(getent passwd "$SUDO_USER" | cut -d: -f6 2>/dev/null || echo "/home/$SUDO_USER")"
+  if [[ "$PICO_SDK_PATH" == "/root/pico-sdk" ]]; then PICO_SDK_PATH="$SUDO_HOME/pico-sdk"; fi
+  if [[ "$PICO_EXTRAS_PATH" == "/root/pico-extras" ]]; then PICO_EXTRAS_PATH="$SUDO_HOME/pico-extras"; fi
+fi
+
 # Helper to choose an Arm GNU Toolchain URL per OS/arch
 choose_arm_gnu_url() {
   # Version is ${ARM_GNU_VERSION}. You can override by exporting ARM_GNU_URL yourself.
@@ -230,6 +239,20 @@ ensure_nosys_specs() {
 
 
 install_arm_gnu_toolchain() {
+find_pico_toolchain_file() {
+  local candidates=(
+    "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_gcc.cmake"  # SDK >= 2.0
+    "$PICO_SDK_PATH/cmake/pico_toolchain.cmake"                   # older layouts
+  )
+  local f
+  for f in "${candidates[@]}"; do
+    if [[ -f "$f" ]]; then
+      echo "$f"
+      return 0
+    fi
+  done
+  return 1
+}
   [[ -n "$ARM_GNU_URL" ]] || ARM_GNU_URL="$(choose_arm_gnu_url)"
   echo "Toolchain URL: $ARM_GNU_URL"
 
@@ -415,9 +438,10 @@ fi
 
 echo "Configuring CMake..."
 # Force the Pico SDK toolchain so CMake picks arm-none-eabi-gcc (avoids host gcc with ARM flags)
-TOOLCHAIN_FILE="$PICO_SDK_PATH/cmake/pico_toolchain.cmake"
-if [[ ! -f "$TOOLCHAIN_FILE" ]]; then
-  echo "ERROR: Toolchain file not found at $TOOLCHAIN_FILE (check PICO_SDK_PATH)."
+TOOLCHAIN_FILE="$(find_pico_toolchain_file || true)"
+if [[ -z "$TOOLCHAIN_FILE" ]]; then
+  echo "ERROR: Could not locate a Pico SDK toolchain file under $PICO_SDK_PATH."
+  echo "Looked for: cmake/preload/toolchains/pico_arm_gcc.cmake and cmake/pico_toolchain.cmake"
   exit 1
 fi
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
