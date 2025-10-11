@@ -315,8 +315,14 @@ elif (( IS_LINUX )); then
     # Try distro toolchain first; libnewlib provides specs on many distros.
     apt_install_if_missing gcc-arm-none-eabi libnewlib-arm-none-eabi || true
     # Ensure host C/C++ compilers are set for CMake (needed for picotool ExternalProject)
-    export CC="${CC:-gcc}"
-    export CXX="${CXX:-g++}"
+    CC_PATH="$(command -v gcc || true)"
+    CXX_PATH="$(command -v g++ || true)"
+    if [[ -z "$CC_PATH" || -z "$CXX_PATH" ]]; then
+      echo "ERROR: gcc/g++ not found after installation."
+      exit 1
+    fi
+    export CC="$CC_PATH"
+    export CXX="$CXX_PATH"
   else
     echo "This script currently supports Ubuntu/Debian (apt) and macOS."
     echo "On other distros, install: cmake ninja-build git curl xz, and a working arm-none-eabi toolchain."
@@ -406,11 +412,19 @@ if [[ -f "$BUILD_DIR/_deps/picotool-build/CMakeCache.txt" ]] && ! grep -q "$PICO
   echo "Stale picotool cache detected; removing _deps/picotool-build to force reconfigure"
   rm -rf "$BUILD_DIR/_deps/picotool-build"
 fi
+# Clear CMake cache if host compiler changed (Linux)
+if (( IS_LINUX )) && [[ -f "$BUILD_DIR/CMakeCache.txt" ]]; then
+  if grep -q "CMAKE_C_COMPILER:FILEPATH=" "$BUILD_DIR/CMakeCache.txt" && ! grep -q "CMAKE_C_COMPILER:FILEPATH=${CC}" "$BUILD_DIR/CMakeCache.txt"; then
+    echo "Host compiler changed; clearing top-level CMake cache"
+    rm -f "$BUILD_DIR/CMakeCache.txt"
+  fi
+fi
 
 echo "Configuring CMake..."
 COMPILER_ARGS=""
 if (( IS_LINUX )); then
-  COMPILER_ARGS="-DCMAKE_C_COMPILER=${CC:-/usr/bin/gcc} -DCMAKE_CXX_COMPILER=${CXX:-/usr/bin/g++}"
+  # Pass absolute paths so CMake doesn't treat them as relative to the source dir
+  COMPILER_ARGS="-DCMAKE_C_COMPILER:FILEPATH=${CC} -DCMAKE_CXX_COMPILER:FILEPATH=${CXX}"
 fi
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
   -DPICO_BOARD="$PICO_BOARD" \
