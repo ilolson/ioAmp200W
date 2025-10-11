@@ -70,14 +70,14 @@ uint8_t current_resolution = CFG_TUD_AUDIO_FUNC_1_FORMAT_1_RESOLUTION_RX;
 // This task simulates an audio transfer callback, one frame is sent/received every 1ms.
 // In a real application, this would be replaced with actual I2S send/receive callback.
 void audio_task(void) {
-  // When new data arrives, push it straight back out to keep host buffers empty.
+  // When new data arrives, consume it immediately so host-side buffers stay empty.
   while (true) {
     spk_data_size = tud_audio_read(spk_buf, sizeof(spk_buf));
     if (!spk_data_size) {
       break;
     }
 
-    tud_audio_write((uint8_t *) spk_buf, spk_data_size);
+    // Route samples in spk_buf to the hardware codec or signal path here.
   }
 }
 

@@ -106,7 +106,7 @@ extern "C" {
 //--------------------------------------------------------------------
 
 #define CFG_TUD_AUDIO_FUNC_1_DESC_LEN                                TUD_AUDIO_HEADSET_STEREO_DESC_LEN
-#define CFG_TUD_AUDIO_FUNC_1_N_AS_INT                                2
+#define CFG_TUD_AUDIO_FUNC_1_N_AS_INT                                1
 
 // How many formats are used, need to adjust USB descriptor if changed
 #define CFG_TUD_AUDIO_FUNC_1_N_FORMATS                               2
@@ -117,8 +117,8 @@ extern "C" {
 #else
 #define CFG_TUD_AUDIO_FUNC_1_MAX_SAMPLE_RATE                         96000     // Allow 24bit/96kHz streaming while still fitting within FS bandwidth
 #endif
-#define CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_TX                           1
-#define CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_RX                           1         // Changed
+#define CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_TX                           0
+#define CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_RX                           2         // Stereo playback
 
 // 16bit in 16bit slots
 #define CFG_TUD_AUDIO_FUNC_1_FORMAT_1_N_BYTES_PER_SAMPLE_TX          2
@@ -141,13 +141,15 @@ extern "C" {
 #endif
 
 // EP and buffer size - for isochronous EP´s, the buffer and EP size are equal (different sizes would not make sense)
-#define CFG_TUD_AUDIO_ENABLE_EP_IN                1
+#define CFG_TUD_AUDIO_ENABLE_EP_IN                0
 
+#if CFG_TUD_AUDIO_ENABLE_EP_IN
 #define CFG_TUD_AUDIO_FUNC_1_FORMAT_1_EP_SZ_IN    TUD_AUDIO_EP_SIZE(CFG_TUD_AUDIO_FUNC_1_MAX_SAMPLE_RATE, CFG_TUD_AUDIO_FUNC_1_FORMAT_1_N_BYTES_PER_SAMPLE_TX, CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_TX)
 #define CFG_TUD_AUDIO_FUNC_1_FORMAT_2_EP_SZ_IN    TUD_AUDIO_EP_SIZE(CFG_TUD_AUDIO_FUNC_1_MAX_SAMPLE_RATE, CFG_TUD_AUDIO_FUNC_1_FORMAT_2_N_BYTES_PER_SAMPLE_TX, CFG_TUD_AUDIO_FUNC_1_N_CHANNELS_TX)
 
 #define CFG_TUD_AUDIO_FUNC_1_EP_IN_SZ_MAX         TU_MAX(CFG_TUD_AUDIO_FUNC_1_FORMAT_1_EP_SZ_IN, CFG_TUD_AUDIO_FUNC_1_FORMAT_2_EP_SZ_IN) // Maximum EP IN size for all AS alternate settings used
 #define CFG_TUD_AUDIO_FUNC_1_EP_IN_SW_BUF_SZ      (TUD_OPT_HIGH_SPEED ? (8 * CFG_TUD_AUDIO_FUNC_1_EP_IN_SZ_MAX) : (2 * CFG_TUD_AUDIO_FUNC_1_EP_IN_SZ_MAX)) // Reserve only a few frames to keep latency low
+#endif
 
 // EP and buffer size - for isochronous EP´s, the buffer and EP size are equal (different sizes would not make sense)
 #define CFG_TUD_AUDIO_ENABLE_EP_OUT               1

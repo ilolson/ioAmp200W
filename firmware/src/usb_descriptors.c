@@ -81,7 +81,6 @@ uint8_t const * tud_descriptor_device_cb(void)
 #if CFG_TUSB_MCU == OPT_MCU_LPC175X_6X || CFG_TUSB_MCU == OPT_MCU_LPC177X_8X || CFG_TUSB_MCU == OPT_MCU_LPC40XX
   // LPC 17xx and 40xx endpoint type (bulk/interrupt/iso) are fixed by its number
   // 0 control, 1 In, 2 Bulk, 3 Iso, 4 In etc ...
-  #define EPNUM_AUDIO_IN    0x03
   #define EPNUM_AUDIO_OUT   0x03
 
   #define EPNUM_CDC_NOTIF   0x84
@@ -90,7 +89,6 @@ uint8_t const * tud_descriptor_device_cb(void)
 
 #elif CFG_TUSB_MCU == OPT_MCU_NRF5X
   // ISO endpoints for NRF5x are fixed to 0x08 (0x88)
-  #define EPNUM_AUDIO_IN    0x08
   #define EPNUM_AUDIO_OUT   0x08
 
   #define EPNUM_CDC_NOTIF   0x81
@@ -100,7 +98,6 @@ uint8_t const * tud_descriptor_device_cb(void)
 #elif defined(TUD_ENDPOINT_ONE_DIRECTION_ONLY)
   // MCUs that don't support a same endpoint number with different direction IN and OUT defined in tusb_mcu.h
   //    e.g EP1 OUT & EP1 IN cannot exist together
-  #define EPNUM_AUDIO_IN    0x01
   #define EPNUM_AUDIO_OUT   0x02
 
   #define EPNUM_CDC_NOTIF   0x83
@@ -108,7 +105,6 @@ uint8_t const * tud_descriptor_device_cb(void)
   #define EPNUM_CDC_IN      0x85
 
 #else
-  #define EPNUM_AUDIO_IN    0x01
   #define EPNUM_AUDIO_OUT   0x01
 
   #define EPNUM_CDC_NOTIF   0x83
@@ -121,8 +117,8 @@ uint8_t const desc_fs_configuration[] =
     // Config number, interface count, string index, total length, attribute, power in mA
     TUD_CONFIG_DESCRIPTOR(1, ITF_NUM_TOTAL, 0, CONFIG_TOTAL_LEN, 0x00, 100),
 
-    // Interface number, string index, EP Out & EP In address, EP size
-    TUD_AUDIO_HEADSET_STEREO_DESCRIPTOR(2, EPNUM_AUDIO_OUT, EPNUM_AUDIO_IN | 0x80),
+    // Audio interface (control + streaming) descriptor
+    TUD_AUDIO_HEADSET_STEREO_DESCRIPTOR(2, EPNUM_AUDIO_OUT),
 
     // CDC: Interface number, string index, EP notification address and size, EP data address (out, in) and size.
     TUD_CDC_DESCRIPTOR(ITF_NUM_CDC, 6, EPNUM_CDC_NOTIF, 8, EPNUM_CDC_OUT, EPNUM_CDC_IN, 64)
@@ -136,8 +132,8 @@ uint8_t const desc_hs_configuration[] = {
     // Config number, interface count, string index, total length, attribute, power in mA
     TUD_CONFIG_DESCRIPTOR(1, ITF_NUM_TOTAL, 0, CONFIG_TOTAL_LEN, 0x00, 100),
 
-    // Interface number, string index, EP Out & EP In address, EP size
-    TUD_AUDIO_HEADSET_STEREO_DESCRIPTOR(2, EPNUM_AUDIO_OUT, EPNUM_AUDIO_IN | 0x80),
+    // Audio interface (control + streaming) descriptor
+    TUD_AUDIO_HEADSET_STEREO_DESCRIPTOR(2, EPNUM_AUDIO_OUT),
 
     // CDC: Interface number, string index, EP notification address and size, EP data address (out, in) and size.
     TUD_CDC_DESCRIPTOR(ITF_NUM_CDC, 6, EPNUM_CDC_NOTIF, 8, EPNUM_CDC_OUT, EPNUM_CDC_IN, 512)
@@ -221,8 +217,8 @@ char const *string_desc_arr[] =
   "iolson",                      // 1: Manufacturer
   "ioAmp",              // 2: Product
   NULL,                           // 3: Serials will use unique ID if possible
-  "Amp-In",             // 4: Audio Interface
-  "Mic-In",           // 5: Audio Interface
+  "Amp-Out",             // 4: Audio Interface
+  "",           // 5: Unused
   "USB-CDC-Serial",                  // 6: Audio Interface
 };
 
