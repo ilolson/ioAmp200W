@@ -6,6 +6,7 @@
 
 set -euo pipefail
 IFS=$' \t\n'
+umask 022
 
 # ---------- Config (overridable via env/flags) ----------
 PICO_SDK_PATH="${PICO_SDK_PATH:-$HOME/pico-sdk}"
@@ -14,6 +15,7 @@ PICO_BOARD="${PICO_BOARD:-pico2}"          # RP2350 Pico 2 by default; use 'pico
 BUILD_TYPE="${BUILD_TYPE:-Debug}"          # or Release
 GENERATOR="${GENERATOR:-}"                 # auto (prefers Ninja)
 TARGET="${TARGET:-}"                       # optional: a single CMake target to build
+NO_FLASH="${NO_FLASH:-0}"
 
 # ---------- Flags ----------
 usage() {
@@ -23,8 +25,10 @@ Usage: $0 [options]
     -b, --board <pico|pico2|custom>          Set PICO_BOARD (default: ${PICO_BOARD})
     -t, --type <Debug|Release>               Set CMAKE_BUILD_TYPE (default: ${BUILD_TYPE})
     -g, --generator <Ninja|Unix Makefiles>   Force CMake generator (default: auto)
+    -B, --build-dir <path>                 Use a specific build directory (default: auto)
     -r, --repo <path>                       Force repository root (default: auto-detect)
     -T, --target <name>                      Build only the named CMake target
+    --no-flash                            Skip copying UF2 to BOOTSEL volume
     -c, --clean                              Remove build/ before configuring
     -h, --help                               This help
 
@@ -32,6 +36,7 @@ Notes:
   • This script NEVER installs packages, downloads toolchains, or updates git repos.
   • It requires arm-none-eabi-gcc and pico-sdk to already exist and be reachable.
   • Auto-detects repo root: current dir if it has CMakeLists.txt, else parent of this script, else git top-level.
+  • If the default build/ is not writable (e.g., from a prior sudo build), the script auto-falls back to ~/.cache/pico-build/<repo>.
 EOF
   exit 0
 }
@@ -41,8 +46,10 @@ while [[ $# -gt 0 ]]; do
     -b|--board) PICO_BOARD="$2"; shift 2;;
     -t|--type) BUILD_TYPE="$2"; shift 2;;
     -g|--generator) GENERATOR="$2"; shift 2;;
+    -B|--build-dir) BUILD_DIR="$2"; shift 2;;
     -r|--repo) REPO_ROOT="$2"; shift 2;;
     -T|--target) TARGET="$2"; shift 2;;
+    --no-flash) NO_FLASH=1; shift;;
     -c|--clean) CLEAN=1; shift;;
     -h|--help) usage;;
     *) echo "Unknown option: $1"; usage;;
@@ -141,13 +148,53 @@ if [[ -z "$REPO_ROOT" ]]; then
   fi
 fi
 
-BUILD_DIR="$REPO_ROOT/build"
+# Helper: ensure a directory is writable; if not, set BUILD_DIR to a per-user cache fallback
+ensure_writable_build_dir() {
+  local dir="$1"
+  mkdir -p "$dir" 2>/dev/null || true
+  if [[ -d "$dir" ]] && [[ -w "$dir" ]]; then
+    # quick write test
+    local t="$dir/.write_test.$$"
+    if ( : > "$t" ) 2>/dev/null; then
+      rm -f "$t"
+      return 0
+    fi
+  fi
+  # Fallback to user cache
+  local repo_name
+  repo_name="$(basename "$REPO_ROOT")"
+  local fallback="${XDG_CACHE_HOME:-$HOME/.cache}/pico-build/$repo_name"
+  mkdir -p "$fallback" || true
+  if [[ -d "$fallback" ]] && [[ -w "$fallback" ]]; then
+    echo "Note: '$dir' is not writable; using fallback build dir: $fallback"
+    BUILD_DIR="$fallback"
+    return 0
+  fi
+  die "Build directory '$dir' is not writable and fallback '$fallback' is also not writable. Pass --build-dir to a writable location."
+}
+
+# Default build dir (can be overridden by -B/--build-dir or env BUILD_DIR)
+BUILD_DIR="${BUILD_DIR:-$REPO_ROOT/build}"
+
+# If --clean is passed and we can't delete due to permissions, switch to a fresh per-user dir
+if [[ -d "$BUILD_DIR" ]] && (( CLEAN )); then
+  if [[ -w "$BUILD_DIR" ]]; then
+    rm -rf "$BUILD_DIR"
+  else
+    echo "No permission to clean '$BUILD_DIR'; switching to a fresh directory."
+    ts="$(date +%s)"
+    BUILD_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/pico-build/$(basename "$REPO_ROOT")-$ts"
+  fi
+fi
+
+ensure_writable_build_dir "$BUILD_DIR"
 
 printf "Repo:        %s\n" "$REPO_ROOT"
 printf "SDK:         %s\n" "$PICO_SDK_PATH"
 printf "Extras:      %s\n" "$PICO_EXTRAS_PATH"
 printf "Board:       %s\n" "$PICO_BOARD"
 printf "Build type:  %s\n" "$BUILD_TYPE"
+printf "Build dir:   %s\n" "$BUILD_DIR"
 
 # ---------- Preflight (no installs/updates) ----------
 maybe_use_existing_toolchain || true
@@ -250,24 +297,28 @@ echo "Building..."
 "${build_cmd[@]}"
 
 # ---------- Auto-flash if BOOTSEL mounted ----------
-UF2="$(ls -t "$BUILD_DIR"/*.uf2 2>/dev/null | head -n 1 || true)"
-if [[ -n "$UF2" ]]; then
-  echo "UF2 built: $UF2"
-  for MOUNT in "/Volumes/RPI-RP2" "/media/$USER/RPI-RP2"; do
-    if [[ -d "$MOUNT" ]]; then
-      echo "Copying to $MOUNT ..."
-      cp "$UF2" "$MOUNT"/
-      echo "Flashed to $MOUNT"
-      COPIED=1
-      break
+if [[ "$NO_FLASH" != "1" ]]; then
+  UF2="$(ls -t "$BUILD_DIR"/*.uf2 2>/dev/null | head -n 1 || true)"
+  if [[ -n "$UF2" ]]; then
+    echo "UF2 built: $UF2"
+    for MOUNT in "/Volumes/RPI-RP2" "/media/$USER/RPI-RP2"; do
+      if [[ -d "$MOUNT" ]]; then
+        echo "Copying to $MOUNT ..."
+        cp "$UF2" "$MOUNT"/
+        echo "Flashed to $MOUNT"
+        COPIED=1
+        break
+      fi
+    done
+    : "${COPIED:=0}"
+    if [[ "$COPIED" -eq 0 ]]; then
+      echo "Built: $UF2 (put board in BOOTSEL to flash, then copy manually)"
     fi
-  done
-  : "${COPIED:=0}"
-  if [[ "$COPIED" -eq 0 ]]; then
-    echo "Built: $UF2 (put board in BOOTSEL to flash, then copy manually)"
+  else
+    echo "Build OK, but no UF2 found (check target name/outputs)."
   fi
 else
-  echo "Build OK, but no UF2 found (check target name/outputs)."
+  echo "Skipping auto-flash (--no-flash)."
 fi
 
 echo "Done."
