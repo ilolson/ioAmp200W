@@ -6,4 +6,4 @@ Verified to work on macOS and Ubuntu 24.04 LTS (ARM and Windows through WSL2, re
 
 ```qbuild.sh``` skips dependancy and toolchain checks for fast build times.
 
-Approx. 5.1 GB size on WSL2
+Approx. 5.1 GB download size on WSL2
