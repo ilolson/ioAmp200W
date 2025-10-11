@@ -238,9 +238,15 @@ ensure_nosys_specs() {
 }
 
 find_pico_toolchain_file() {
-  local candidates=(
-    "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_gcc.cmake"  # SDK >= 2.0
-    "$PICO_SDK_PATH/cmake/pico_toolchain.cmake"                   # older layouts
+  # Prefer Cortex-M33 GCC toolchain for Pico 2 / RP2350; fall back to older/generic toolchains
+  local candidates=()
+  if [[ "$PICO_BOARD" == pico2* || "$PICO_BOARD" == *rp2350* || "$PICO_BOARD" == *m33* ]]; then
+    candidates+=("$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_cortex_m33_gcc.cmake")
+  fi
+  candidates+=(
+    "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_gcc.cmake"
+    "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_clang_arm.cmake"
+    "$PICO_SDK_PATH/cmake/pico_toolchain.cmake"
   )
   local f
   for f in "${candidates[@]}"; do
@@ -442,7 +448,7 @@ echo "Configuring CMake..."
 TOOLCHAIN_FILE="$(find_pico_toolchain_file || true)"
 if [[ -z "$TOOLCHAIN_FILE" ]]; then
   echo "ERROR: Could not locate a Pico SDK toolchain file under $PICO_SDK_PATH."
-  echo "Looked for: cmake/preload/toolchains/pico_arm_gcc.cmake and cmake/pico_toolchain.cmake"
+  echo "Looked for: cmake/preload/toolchains/pico_arm_cortex_m33_gcc.cmake, pico_arm_gcc.cmake, pico_arm_clang_arm.cmake, and cmake/pico_toolchain.cmake"
   exit 1
 fi
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
