@@ -1,0 +1,9 @@
+# Toolchain Installation
+
+Contains a script that installs the Raspberry Pi pico toolchain (and extras, for I2S) onto your machine and the additional dependancies required to build the application. *Run as sudo.*
+
+Verified to work on macOS Tahoe-Sonoma and Ubuntu 24.04 LTS (and Windows through WSL2, reccomended), this goes for the *qbuild.sh* script in the above directory.
+
+*qbuild.sh* skips dependancy and toolchain checks for fast build times.
+
+Approx. 5.1 GB size on WSL2
