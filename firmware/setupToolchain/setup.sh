@@ -18,7 +18,7 @@ BUILD_TYPE="${BUILD_TYPE:-Debug}"          # or Release
 GENERATOR="${GENERATOR:-}"                 # auto (prefers Ninja)
 # Where to install the official Arm GNU Toolchain if needed
 ARM_GNU_DIR="${ARM_GNU_DIR:-$HOME/arm-gnu-toolchain}"
-ARM_GNU_URL="${ARM_GNU_URL:-}"             # if empty, auto-choose per OS/arch
+ARM_GNU_URL="${ARM_GNU_URL:-https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-darwin-arm64-arm-none-eabi.tar.xz}"
 ARM_GNU_VERSION="${ARM_GNU_VERSION:-13.2.rel1}"
 
 # ---------- Flags ----------
@@ -195,6 +195,7 @@ choose_arm_gnu_url() {
 
 install_arm_gnu_toolchain() {
   [[ -n "$ARM_GNU_URL" ]] || ARM_GNU_URL="$(choose_arm_gnu_url)"
+  echo "Toolchain URL: $ARM_GNU_URL"
 
   # If an official toolchain already exists, just use it (don’t re-download)
   if [[ -x "$ARM_GNU_DIR/bin/arm-none-eabi-gcc" ]]; then
