@@ -93,16 +93,6 @@ brew_install_if_missing() {
   fi
 }
 
-brew_cask_install_if_missing() {
-  local cask="$1"
-  if ! brew list --cask "$cask" >/dev/null 2>&1; then
-    echo "Installing Homebrew cask: $cask"
-    brew install --cask "$cask"
-  else
-    echo "✔ $cask already installed"
-  fi
-}
-
 apt_install_if_missing() {
   # Usage: apt_install_if_missing pkg1 [pkg2 ...]
   sudo_wrap apt-get update -y
@@ -120,15 +110,33 @@ apt_install_if_missing() {
   fi
 }
 
-maybe_use_arm_cask_on_path() {
-  # Prefer the Homebrew cask-installed Arm GNU Toolchain if present
-  local cask_bin
-  cask_bin="$(/usr/bin/find /Applications/ArmGNUToolchain -maxdepth 2 -type d -path '/Applications/ArmGNUToolchain/*/arm-none-eabi/bin' 2>/dev/null | head -n1 || true)"
-  if [[ -d "$cask_bin" ]]; then
-    export PATH="$cask_bin:$PATH"
-    echo "Prepended $cask_bin to PATH (Homebrew cask)"
-    return 0
+maybe_use_existing_toolchain() {
+  # Check common install locations for the official Arm GNU Toolchain and enable if found.
+  local candidates=(
+    "$ARM_GNU_DIR/bin"
+    "$HOME/arm-gnu-toolchain/bin"
+    "/opt/arm-gnu-toolchain/bin"
+    "/usr/local/arm-gnu-toolchain/bin"
+  )
+  # macOS: official app bundle (also used by the Homebrew cask, but we don't install it here)
+  if [[ -d "/Applications/ArmGNUToolchain" ]]; then
+    local appbin
+    appbin="$('/usr/bin/find' /Applications/ArmGNUToolchain -maxdepth 2 -type d -path '*/arm-none-eabi/bin' 2>/dev/null | head -n1 || true)"
+    if [[ -d "$appbin" ]]; then
+      candidates+=("$appbin")
+    fi
   fi
+  for d in "${candidates[@]}"; do
+    if [[ -x "$d/arm-none-eabi-gcc" ]]; then
+      export PATH="$d:$PATH"
+      local nsp
+      nsp="$(arm-none-eabi-gcc -print-file-name=nosys.specs 2>/dev/null || true)"
+      if [[ -f "$nsp" ]]; then
+        echo "Using existing Arm GNU Toolchain at $(dirname "$d")"
+        return 0
+      fi
+    fi
+  done
   return 1
 }
 
@@ -260,7 +268,6 @@ if (( IS_MAC )); then
 
   brew_install_if_missing cmake
   brew_install_if_missing ninja
-  brew_install_if_missing arm-none-eabi-gcc
   brew_install_if_missing git
 
 elif (( IS_LINUX )); then
@@ -279,52 +286,25 @@ else
   exit 1
 fi
 
-# Verify toolchain presence
+# Verify toolchain presence (prefer previously installed official Arm toolchain; else download)
 if ! need_cmd arm-none-eabi-gcc; then
-  echo "ERROR: arm-none-eabi-gcc not on PATH after package installation."
-  if (( IS_MAC )); then
-    # Try Homebrew cask toolchain if installed
-    if maybe_use_arm_cask_on_path && need_cmd arm-none-eabi-gcc; then
-      echo "✔ Found Arm GNU Toolchain via Homebrew cask"
-    else
-      echo "Attempting to install Homebrew cask: gcc-arm-embedded"
-      brew_cask_install_if_missing gcc-arm-embedded
-      maybe_use_arm_cask_on_path || true
-    fi
-  fi
-  if ! need_cmd arm-none-eabi-gcc; then
-    echo "Falling back to official Arm GNU Toolchain..."
+  echo "arm-none-eabi-gcc not on PATH; checking common install locations..."
+  if maybe_use_existing_toolchain && need_cmd arm-none-eabi-gcc; then
+    echo "✔ Found existing Arm GNU Toolchain"
+  else
+    echo "Falling back to official Arm GNU Toolchain (direct download)..."
     install_arm_gnu_toolchain
   fi
 fi
 
-# Ensure nosys.specs is available; try quickest fixes before downloading a toolchain
+# Ensure nosys.specs is available; prefer any existing official toolchain before downloading
 if ! ensure_nosys_specs; then
-  echo "Could not resolve nosys.specs in system toolchain."
-
-  # On macOS with Homebrew, try the cask toolchain first
-  if (( IS_MAC )) && need_cmd brew; then
-    # If the cask toolchain is already present, use it; otherwise install the cask
-    if maybe_use_arm_cask_on_path && ensure_nosys_specs; then
-      echo "✔ nosys.specs found via Homebrew cask toolchain"
-    else
-      echo "Attempting to install Homebrew cask: gcc-arm-embedded"
-      brew_cask_install_if_missing gcc-arm-embedded
-      maybe_use_arm_cask_on_path || true
-      if ensure_nosys_specs; then
-        echo "✔ nosys.specs found via Homebrew cask toolchain"
-      else
-        echo "Falling back to official Arm GNU Toolchain..."
-        install_arm_gnu_toolchain
-      fi
-    fi
+  echo "Could not resolve nosys.specs; checking existing toolchains..."
+  if maybe_use_existing_toolchain && ensure_nosys_specs; then
+    echo "✔ nosys.specs found via existing toolchain"
   else
-    echo "Falling back to official Arm GNU Toolchain..."
+    echo "Falling back to official Arm GNU Toolchain (direct download)..."
     install_arm_gnu_toolchain
-  fi
-
-  if ! ensure_nosys.specs 2>/dev/null; then
-    # shellcheck disable=SC2016
     if ! ensure_nosys_specs; then
       echo "ERROR: nosys.specs still not found. Try removing and reinstalling your toolchains."
       exit 1
