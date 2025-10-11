@@ -4,13 +4,13 @@ Small but powerful USB-C powered two channel speaker amplifier.
 
 # Summary
 
-Integrating the MA5332MS from infineon, a super efficient and compact 2 channel class D amplifier. With a TLV320AIC DSP, a low power and compact DSP for consumer audio applications that will allow for tight integration. TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. An easy to use RP2350 microcontroller for high level control of the system, and hopefully digital audio in at 24bit/96khz.
+Integrating the MA5332MS from infineon, a super efficient and compact 2 channel class D amplifier. With a TLV320AIC3204 DSP, a low power and compact DSP for consumer audio applications that will allow for tight integration. TPS26750 to control USB PD 3.1 EPR power supplies for up to 240W of DC power. An easy to use RP2350 microcontroller for high level control of the system, and hopefully digital audio in at 24bit/96khz.
 
 The goal is to design a compact and efficient circuit board that can supply a wide range of power to the class D amplifier through USB-C Power Delivery. It will include line in and out for easy audio amplification. Including a quality and easy to use DSP such as the TLV320AIC DSP should allow us to explore signal processing techniques to achieve optimal results at different power supply voltages, and different speaker setups. Digital audio in over USB-C should be possible in the future with the RP2350 and the DSP. For fun we can drive a HUB75 matrix panel in real time using existing optimized libraries with our signal.
 
 # Power Supply
 
-The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower settings such as 20V/3A is a common laptop charging standard and many people already own USB-C bricks that can supply this which should be enough for some decent audio output, it also won't damage anything so it will be a safe default. The highest easily available is 28V@5A which is uncommon but sold online. 48V@5A is hard to find and expensive although I do plan on testing it on the first revision. 
+The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower settings such as 20V/3A is a common laptop charging standard and many people already own USB-C bricks that can supply this which should be enough for some decent audio output, it also won't damage anything so it will be a safe default. The highest easily available is 28V@5A for 140W DC. 48V@5A is hard to find and expensive although I do plan on testing it on the first revision. 
 
 # Major Circuits
 
@@ -18,9 +18,9 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower s
 
 -TI TPS26750 PD 3.1 EPR controller and power management system
 
--MA5332MS class D amplifier (up to 200W)
+-MA5332MS class D amplifier (up to 100W/Ch without heatsink)
 
--TLV320AIC consumer audio DSP, programmed over serial from RP2350
+-TLV320AIC3204 consumer audio DSP, programmed over serial from RP2350
 
 
 # Highlights
@@ -41,5 +41,7 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower s
 
 -Initial schematic design
 
--Compilable firmware, Serial and digital audio in working.
+-Compilable firmware, serial and digital audio in working
+
+-Auto install toolchain and compile scripts
 
