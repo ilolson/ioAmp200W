@@ -18,7 +18,7 @@ BUILD_TYPE="${BUILD_TYPE:-Debug}"          # or Release
 GENERATOR="${GENERATOR:-}"                 # auto (prefers Ninja)
 # Where to install the official Arm GNU Toolchain if needed
 ARM_GNU_DIR="${ARM_GNU_DIR:-$HOME/arm-gnu-toolchain}"
-ARM_GNU_URL="${ARM_GNU_URL:-https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-darwin-arm64-arm-none-eabi.tar.xz}"
+ARM_GNU_URL="${ARM_GNU_URL:-}"
 ARM_GNU_VERSION="${ARM_GNU_VERSION:-13.2.rel1}"
 
 # ---------- Flags ----------
@@ -51,6 +51,14 @@ OS="$(uname -s | tr '[:upper:]' '[:lower:]')"   # 'darwin' or 'linux'
 ARCH="$(uname -m)"                               # 'arm64', 'x86_64', 'aarch64', etc.
 IS_MAC=0; [[ "$OS" == darwin* ]] && IS_MAC=1
 IS_LINUX=0; [[ "$OS" == linux*  ]] && IS_LINUX=1
+
+# ---------- Default toolchain URL per-OS (only if not provided by env) ----------
+if (( IS_MAC )) && [[ -z "$ARM_GNU_URL" ]]; then
+  ARM_GNU_URL="https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-darwin-arm64-arm-none-eabi.tar.xz"
+fi
+if (( IS_LINUX )) && [[ -z "$ARM_GNU_URL" ]]; then
+  ARM_GNU_URL="$(choose_arm_gnu_url)"
+fi
 
 # ---------- Early Homebrew bootstrap (macOS) ----------
 if (( IS_MAC )); then
@@ -301,9 +309,12 @@ elif (( IS_LINUX )); then
   if need_cmd apt-get; then
     echo "✔ Detected Ubuntu/Debian (apt)"
     apt_install_if_missing software-properties-common
-    apt_install_if_missing cmake ninja-build git curl xz-utils
+    apt_install_if_missing cmake ninja-build git curl xz-utils build-essential pkg-config
     # Try distro toolchain first; libnewlib provides specs on many distros.
     apt_install_if_missing gcc-arm-none-eabi libnewlib-arm-none-eabi || true
+    # Ensure host C/C++ compilers are set for CMake (needed for picotool ExternalProject)
+    export CC="${CC:-gcc}"
+    export CXX="${CXX:-g++}"
   else
     echo "This script currently supports Ubuntu/Debian (apt) and macOS."
     echo "On other distros, install: cmake ninja-build git curl xz, and a working arm-none-eabi toolchain."
@@ -384,10 +395,27 @@ if (( CLEAN )); then
   rm -rf "$BUILD_DIR"
 fi
 
+# If a previous cache has a different PICO_SDK_PATH, clear it and the picotool sub-build cache
+if [[ -f "$BUILD_DIR/CMakeCache.txt" ]] && ! grep -q "PICO_SDK_PATH:.*$PICO_SDK_PATH" "$BUILD_DIR/CMakeCache.txt"; then
+  echo "PICO_SDK_PATH changed; clearing top-level CMake cache"
+  rm -f "$BUILD_DIR/CMakeCache.txt"
+fi
+if [[ -f "$BUILD_DIR/_deps/picotool-build/CMakeCache.txt" ]] && ! grep -q "$PICO_SDK_PATH" "$BUILD_DIR/_deps/picotool-build/CMakeCache.txt"; then
+  echo "Stale picotool cache detected; removing _deps/picotool-build to force reconfigure"
+  rm -rf "$BUILD_DIR/_deps/picotool-build"
+fi
+
 echo "Configuring CMake..."
+COMPILER_ARGS=""
+if (( IS_LINUX )); then
+  COMPILER_ARGS="-DCMAKE_C_COMPILER=${CC:-/usr/bin/gcc} -DCMAKE_CXX_COMPILER=${CXX:-/usr/bin/g++}"
+fi
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
   -DPICO_BOARD="$PICO_BOARD" \
-  -DCMAKE_BUILD_TYPE="$BUILD_TYPE"
+  -DCMAKE_BUILD_TYPE="$BUILD_TYPE" \
+  -DPICO_SDK_PATH="$PICO_SDK_PATH" \
+  -DPICO_EXTRAS_PATH="$PICO_EXTRAS_PATH" \
+  $COMPILER_ARGS
 
 # Parallelism
 if need_cmd nproc; then J=$(nproc)
