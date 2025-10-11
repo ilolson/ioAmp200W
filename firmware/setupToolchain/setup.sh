@@ -168,13 +168,39 @@ ensure_nosys_specs() {
     spec_src="$(/usr/bin/find /usr /opt -type f -path "*arm-none-eabi*" -name nosys.specs 2>/dev/null | head -n1 || true)"
   fi
 
+  if [[ -z "$spec_src" ]]; then
+    # Search relative to the currently selected compiler prefix
+    local gcc_bin gcc_root
+    gcc_bin="$(command -v arm-none-eabi-gcc || true)"
+    if [[ -n "$gcc_bin" ]]; then
+      gcc_root="$(cd "$(dirname "$gcc_bin")/.." && pwd)"
+      spec_src="$(/usr/bin/find "$gcc_root" -type f -name nosys.specs 2>/dev/null | head -n1 || true)"
+    fi
+  fi
+
+  if [[ -z "$spec_src" ]]; then
+    # Search common official Arm GNU Toolchain locations
+    local root
+    for root in "$ARM_GNU_DIR" "$HOME/arm-gnu-toolchain" "/opt/arm-gnu-toolchain" "/usr/local/arm-gnu-toolchain"; do
+      [[ -d "$root" ]] || continue
+      spec_src="$(/usr/bin/find "$root" -type f -name nosys.specs 2>/dev/null | head -n1 || true)"
+      [[ -n "$spec_src" ]] && break
+    done
+  fi
+
   if [[ -n "$spec_src" && -f "$spec_src" ]]; then
     local sysroot
     sysroot="$(arm-none-eabi-gcc -print-sysroot)"
     mkdir -p "$sysroot/lib"
     ln -sf "$spec_src" "$sysroot/lib/nosys.specs"
     echo "Linked nosys.specs: $spec_src -> $sysroot/lib/nosys.specs"
-    return 0
+    # Verify it now resolves for GCC
+    local resolved
+    resolved="$(arm-none-eabi-gcc -print-file-name=nosys.specs 2>/dev/null || true)"
+    if [[ -f "$resolved" ]]; then
+      echo "✔ nosys.specs now resolves at: $resolved"
+      return 0
+    fi
   fi
 
   return 1
