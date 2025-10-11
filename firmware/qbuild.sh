@@ -23,6 +23,7 @@ Usage: $0 [options]
     -b, --board <pico|pico2|custom>          Set PICO_BOARD (default: ${PICO_BOARD})
     -t, --type <Debug|Release>               Set CMAKE_BUILD_TYPE (default: ${BUILD_TYPE})
     -g, --generator <Ninja|Unix Makefiles>   Force CMake generator (default: auto)
+    -r, --repo <path>                       Force repository root (default: auto-detect)
     -T, --target <name>                      Build only the named CMake target
     -c, --clean                              Remove build/ before configuring
     -h, --help                               This help
@@ -30,6 +31,7 @@ Usage: $0 [options]
 Notes:
   • This script NEVER installs packages, downloads toolchains, or updates git repos.
   • It requires arm-none-eabi-gcc and pico-sdk to already exist and be reachable.
+  • Auto-detects repo root: current dir if it has CMakeLists.txt, else parent of this script, else git top-level.
 EOF
   exit 0
 }
@@ -39,6 +41,7 @@ while [[ $# -gt 0 ]]; do
     -b|--board) PICO_BOARD="$2"; shift 2;;
     -t|--type) BUILD_TYPE="$2"; shift 2;;
     -g|--generator) GENERATOR="$2"; shift 2;;
+    -r|--repo) REPO_ROOT="$2"; shift 2;;
     -T|--target) TARGET="$2"; shift 2;;
     -c|--clean) CLEAN=1; shift;;
     -h|--help) usage;;
@@ -116,9 +119,28 @@ ensure_nosys_specs() {
   return 1
 }
 
+
 # ---------- Paths ----------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Allow override via --repo or REPO_ROOT env; otherwise auto-detect the repo root
+REPO_ROOT="${REPO_ROOT:-}"
+if [[ -z "$REPO_ROOT" ]]; then
+  if [[ -f "$PWD/CMakeLists.txt" ]]; then
+    # Run from repo root
+    REPO_ROOT="$PWD"
+  elif [[ -f "$SCRIPT_DIR/../CMakeLists.txt" ]]; then
+    # Script in scripts/ (or similar); repo is the parent
+    REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+  elif need_cmd git && git -C "$SCRIPT_DIR" rev-parse --show-toplevel >/dev/null 2>&1; then
+    # Fallback: git top-level
+    REPO_ROOT="$(git -C "$SCRIPT_DIR" rev-parse --show-toplevel)"
+  else
+    # Last resort: parent of script
+    REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+  fi
+fi
+
 BUILD_DIR="$REPO_ROOT/build"
 
 printf "Repo:        %s\n" "$REPO_ROOT"
