@@ -111,6 +111,7 @@ Thumbs.db
 *.map
 .vscode/
 .DS_Store
+pico_sdk_import.cmake
 
 ### Mac OS ###
 .DS_Store
