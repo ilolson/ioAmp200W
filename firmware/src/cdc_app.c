@@ -24,7 +24,6 @@
  *
  */
 
-#include "bsp/board_api.h"
 #include "tusb.h"
 #include "common.h"
 
@@ -48,25 +47,25 @@ void tud_cdc_line_state_cb(uint8_t itf, bool dtr, bool rts)
 void tud_cdc_rx_cb(uint8_t itf)
 {
   uint8_t buf[64];
-  uint32_t count;
 
   // connected() check for DTR bit
   // Most but not all terminal client set this when making connection
-  if (tud_cdc_connected())
+  if (!tud_cdc_connected())
   {
-    if (tud_cdc_available()) // data is available
-    {
-      count = tud_cdc_n_read(itf, buf, sizeof(buf));
-      (void) count;
-
-      tud_cdc_n_write(itf, buf, count);
-      tud_cdc_n_write_flush(itf);
-      // dummy code to check that cdc serial is responding
-      board_led_write(0);
-      board_delay(50);
-      board_led_write(1);
-      board_delay(50);
-      board_led_write(0);
-    }
+    return;
   }
+
+  // Drain every pending packet so small commands turn around immediately.
+  while (tud_cdc_n_available(itf))
+  {
+    uint32_t const count = tud_cdc_n_read(itf, buf, sizeof(buf));
+    if (!count)
+    {
+      break;
+    }
+
+    tud_cdc_n_write(itf, buf, count);
+  }
+
+  tud_cdc_n_write_flush(itf);
 }

@@ -37,8 +37,8 @@
 //--------------------------------------------------------------------+
 
 // List of supported sample rates
-const uint32_t sample_rates[] = {44100, 48000};
-uint32_t current_sample_rate  = 44100;
+const uint32_t sample_rates[] = {96000, 48000, 44100};
+uint32_t current_sample_rate  = sample_rates[0];
 
 #define N_SAMPLE_RATES  TU_ARRAY_SIZE(sample_rates)
 
@@ -54,9 +54,14 @@ int32_t spk_buf[CFG_TUD_AUDIO_FUNC_1_EP_OUT_SW_BUF_SZ / 4];
 // Speaker data size received in the last frame
 uint16_t spk_data_size;
 // Resolution per format
-const uint8_t resolutions_per_format[CFG_TUD_AUDIO_FUNC_1_N_FORMATS] = {CFG_TUD_AUDIO_FUNC_1_FORMAT_1_RESOLUTION_RX};
+const uint8_t resolutions_per_format[CFG_TUD_AUDIO_FUNC_1_N_FORMATS] = {
+    CFG_TUD_AUDIO_FUNC_1_FORMAT_1_RESOLUTION_RX,
+#if CFG_TUD_AUDIO_FUNC_1_N_FORMATS > 1
+    CFG_TUD_AUDIO_FUNC_1_FORMAT_2_RESOLUTION_RX,
+#endif
+};
 // Current resolution, update on format change
-uint8_t current_resolution;
+uint8_t current_resolution = CFG_TUD_AUDIO_FUNC_1_FORMAT_1_RESOLUTION_RX;
 
 //--------------------------------------------------------------------+
 // AUDIO Task
@@ -65,17 +70,14 @@ uint8_t current_resolution;
 // This task simulates an audio transfer callback, one frame is sent/received every 1ms.
 // In a real application, this would be replaced with actual I2S send/receive callback.
 void audio_task(void) {
-  static uint32_t start_ms = 0;
-  uint32_t curr_ms = board_millis();
-  if (start_ms == curr_ms) return;// not enough time
-  start_ms = curr_ms;
-  // When new data arrived, copy data from speaker buffer, to microphone buffer
-  // and send it over
-  // Only support speaker & headphone both have the same resolution
-  // If one is 16bit another is 24bit be care of LOUD noise !
-  spk_data_size = tud_audio_read(spk_buf, sizeof(spk_buf));
-  if (spk_data_size) {
-      tud_audio_write((uint8_t *) spk_buf, spk_data_size);
+  // When new data arrives, push it straight back out to keep host buffers empty.
+  while (true) {
+    spk_data_size = tud_audio_read(spk_buf, sizeof(spk_buf));
+    if (!spk_data_size) {
+      break;
+    }
+
+    tud_audio_write((uint8_t *) spk_buf, spk_data_size);
   }
 }
 
