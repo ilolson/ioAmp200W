@@ -237,8 +237,6 @@ ensure_nosys_specs() {
   return 1
 }
 
-
-install_arm_gnu_toolchain() {
 find_pico_toolchain_file() {
   local candidates=(
     "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_gcc.cmake"  # SDK >= 2.0
@@ -253,6 +251,9 @@ find_pico_toolchain_file() {
   done
   return 1
 }
+
+
+install_arm_gnu_toolchain() {
   [[ -n "$ARM_GNU_URL" ]] || ARM_GNU_URL="$(choose_arm_gnu_url)"
   echo "Toolchain URL: $ARM_GNU_URL"
 
