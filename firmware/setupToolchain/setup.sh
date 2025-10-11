@@ -414,13 +414,18 @@ if [[ -f "$BUILD_DIR/CMakeCache.txt" ]]; then
 fi
 
 echo "Configuring CMake..."
-# IMPORTANT: Do not override CMAKE_C_COMPILER/CMAKE_CXX_COMPILER here.
-# Pico SDK's toolchain file will select arm-none-eabi-gcc for the target.
+# Force the Pico SDK toolchain so CMake picks arm-none-eabi-gcc (avoids host gcc with ARM flags)
+TOOLCHAIN_FILE="$PICO_SDK_PATH/cmake/pico_toolchain.cmake"
+if [[ ! -f "$TOOLCHAIN_FILE" ]]; then
+  echo "ERROR: Toolchain file not found at $TOOLCHAIN_FILE (check PICO_SDK_PATH)."
+  exit 1
+fi
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
   -DPICO_BOARD="$PICO_BOARD" \
   -DCMAKE_BUILD_TYPE="$BUILD_TYPE" \
   -DPICO_SDK_PATH="$PICO_SDK_PATH" \
-  -DPICO_EXTRAS_PATH="$PICO_EXTRAS_PATH"
+  -DPICO_EXTRAS_PATH="$PICO_EXTRAS_PATH" \
+  -DCMAKE_TOOLCHAIN_FILE="$TOOLCHAIN_FILE"
 
 # Parallelism
 if need_cmd nproc; then J=$(nproc)
