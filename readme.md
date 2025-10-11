@@ -25,19 +25,21 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower s
 
 # Highlights
 
--HUB75 interface (for driving LED matrix panels)
-
 -USB-C digital audio in (24 bit/96kHz hopefully)
 
--Program/Serial connectivity available while streaming audio over USB for easyt real time DSP control
+-Program/Serial connectivity available while streaming audio over USB for easy real time DSP control
 
--Line In
+-Line In/Out, functional DAC
 
--Run without a heatsink at lower powers
+-HUB75 interface (for driving LED matrix panels)
 
 -High quality audio amplification at a manageable cost for DIY setups
+
+-Wide range of easily available power supplies
 
 # Status
 
 -Initial schematic design
+
+-Compilable firmware, Serial and digital audio in working.
 
