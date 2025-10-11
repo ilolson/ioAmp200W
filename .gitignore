@@ -104,6 +104,13 @@ Thumbs.db
 .vscode/
 .idea/
 
+/build/
+*.uf2
+*.elf
+*.bin
+*.map
+.vscode/
+.DS_Store
 
 ### Mac OS ###
 .DS_Store
