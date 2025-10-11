@@ -46,10 +46,23 @@ while [[ $# -gt 0 ]]; do
 done
 
 # ---------- OS/Arch ----------
+
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"   # 'darwin' or 'linux'
 ARCH="$(uname -m)"                               # 'arm64', 'x86_64', 'aarch64', etc.
 IS_MAC=0; [[ "$OS" == darwin* ]] && IS_MAC=1
 IS_LINUX=0; [[ "$OS" == linux*  ]] && IS_LINUX=1
+
+# ---------- Early Homebrew bootstrap (macOS) ----------
+if (( IS_MAC )); then
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Homebrew not found. Installing first..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # shellcheck disable=SC1090
+    eval "$(/opt/homebrew/bin/brew shellenv || true)"
+    eval "$(@HOMEBREW_PREFIX@/bin/brew shellenv || true)" 2>/dev/null || true
+    eval "$(/usr/local/bin/brew shellenv || true)" 2>/dev/null || true
+  fi
+fi
 
 # ---------- Paths ----------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -80,6 +93,16 @@ brew_install_if_missing() {
   fi
 }
 
+brew_cask_install_if_missing() {
+  local cask="$1"
+  if ! brew list --cask "$cask" >/dev/null 2>&1; then
+    echo "Installing Homebrew cask: $cask"
+    brew install --cask "$cask"
+  else
+    echo "✔ $cask already installed"
+  fi
+}
+
 apt_install_if_missing() {
   # Usage: apt_install_if_missing pkg1 [pkg2 ...]
   sudo_wrap apt-get update -y
@@ -97,6 +120,24 @@ apt_install_if_missing() {
   fi
 }
 
+maybe_use_arm_cask_on_path() {
+  # Prefer the Homebrew cask-installed Arm GNU Toolchain if present
+  local cask_bin
+  cask_bin="$(/usr/bin/find /Applications/ArmGNUToolchain -maxdepth 2 -type d -path '/Applications/ArmGNUToolchain/*/arm-none-eabi/bin' 2>/dev/null | head -n1 || true)"
+  if [[ -d "$cask_bin" ]]; then
+    export PATH="$cask_bin:$PATH"
+    echo "Prepended $cask_bin to PATH (Homebrew cask)"
+    return 0
+  fi
+  return 1
+}
+
+xz_supports_threads() {
+  if ! need_cmd xz; then return 1; fi
+  xz --help 2>&1 | grep -q "-T" || return 1
+  return 0
+}
+
 ensure_nosys_specs() {
   # Return 0 if nosys.specs is resolvable by current arm-none-eabi-gcc, else try to link one, else 1
   local spec_path
@@ -109,10 +150,10 @@ ensure_nosys_specs() {
   echo "nosys.specs not found via GCC search path; scanning common locations..."
   local spec_src=""
   if need_cmd brew; then
-    # Homebrew (macOS) search
+    # Homebrew (macOS) search: check gcc keg and the Arm GNUToolchain cask directory
     local gcc_prefix
     gcc_prefix="$(brew --prefix arm-none-eabi-gcc 2>/dev/null || true)"
-    spec_src="$(/usr/bin/find "$gcc_prefix" /opt/homebrew/Cellar/arm-none-eabi-gcc -type f -name nosys.specs 2>/dev/null | head -n1 || true)"
+    spec_src="$(/usr/bin/find $gcc_prefix /Applications/ArmGNUToolchain -type f -name nosys.specs 2>/dev/null | head -n1 || true)"
   fi
   if [[ -z "$spec_src" ]]; then
     # Ubuntu search
@@ -146,18 +187,55 @@ choose_arm_gnu_url() {
 
 install_arm_gnu_toolchain() {
   [[ -n "$ARM_GNU_URL" ]] || ARM_GNU_URL="$(choose_arm_gnu_url)"
+
+  # If an official toolchain already exists, just use it (don’t re-download)
+  if [[ -x "$ARM_GNU_DIR/bin/arm-none-eabi-gcc" ]]; then
+    export PATH="$ARM_GNU_DIR/bin:$PATH"
+    local nsp
+    nsp="$(arm-none-eabi-gcc -print-file-name=nosys.specs 2>/dev/null || true)"
+    if [[ -f "$nsp" ]] || [[ -f "$ARM_GNU_DIR/arm-none-eabi/lib/nosys.specs" ]] || [[ -f "$ARM_GNU_DIR/lib/nosys.specs" ]]; then
+      echo "Using existing official Arm GNU Toolchain at $ARM_GNU_DIR"
+      return 0
+    fi
+  fi
+
   echo "Installing official Arm GNU Toolchain to $ARM_GNU_DIR ..."
   mkdir -p "$ARM_GNU_DIR"
-  # Download & extract (xz tarball). If curl is missing, install it.
-  if ! need_cmd curl; then
-    if (( IS_LINUX )); then apt_install_if_missing curl xz-utils; fi
-    if (( IS_MAC )); then brew_install_if_missing curl; fi
+
+  # Cache tarballs so we don't re-download and so we can resume
+  local cache_dir tar_name tar_path
+  cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/arm-gnu-toolchain"
+  mkdir -p "$cache_dir"
+  tar_name="$(basename "$ARM_GNU_URL")"
+  [[ -n "$tar_name" ]] || tar_name="arm-gnu-toolchain.tar.xz"
+  tar_path="$cache_dir/$tar_name"
+
+  # Downloader: aria2c (multi-connection) if available, else curl with resume & retries
+  if need_cmd aria2c; then
+    echo "Downloading with aria2c (multi-connection) to $tar_path"
+    aria2c -x16 -s16 -o "$tar_name" -d "$cache_dir" "$ARM_GNU_URL"
+  else
+    if ! need_cmd curl; then
+      if (( IS_LINUX )); then apt_install_if_missing curl xz-utils; fi
+      if (( IS_MAC )); then brew_install_if_missing curl; fi
+    fi
+    echo "Downloading with curl (resumable) to $tar_path"
+    curl -fL --retry 5 --retry-all-errors -C - -o "$tar_path" "$ARM_GNU_URL"
   fi
-  if ! need_cmd tar; then
-    if (( IS_LINUX )); then apt_install_if_missing tar xz-utils; fi
-    if (( IS_MAC )); then echo "tar is required"; exit 1; fi
+
+  # Extract — prefer multi-threaded xz if available
+  if xz_supports_threads; then
+    echo "Extracting with multi-threaded xz..."
+    tar -x -C "$ARM_GNU_DIR" --strip-components=1 --use-compress-program="xz -T0" -f "$tar_path"
+  else
+    echo "Extracting (single-threaded xz)..."
+    if ! need_cmd tar; then
+      if (( IS_LINUX )); then apt_install_if_missing tar xz-utils; fi
+      if (( IS_MAC )); then echo "tar is required"; exit 1; fi
+    fi
+    tar -xJ -C "$ARM_GNU_DIR" --strip-components=1 -f "$tar_path"
   fi
-  curl -L "$ARM_GNU_URL" | tar -xJ -C "$ARM_GNU_DIR" --strip-components=1
+
   export PATH="$ARM_GNU_DIR/bin:$PATH"
   echo "Prepended $ARM_GNU_DIR/bin to PATH"
 }
@@ -204,18 +282,53 @@ fi
 # Verify toolchain presence
 if ! need_cmd arm-none-eabi-gcc; then
   echo "ERROR: arm-none-eabi-gcc not on PATH after package installation."
-  echo "Falling back to official Arm GNU Toolchain..."
-  install_arm_gnu_toolchain
+  if (( IS_MAC )); then
+    # Try Homebrew cask toolchain if installed
+    if maybe_use_arm_cask_on_path && need_cmd arm-none-eabi-gcc; then
+      echo "✔ Found Arm GNU Toolchain via Homebrew cask"
+    else
+      echo "Attempting to install Homebrew cask: gcc-arm-embedded"
+      brew_cask_install_if_missing gcc-arm-embedded
+      maybe_use_arm_cask_on_path || true
+    fi
+  fi
+  if ! need_cmd arm-none-eabi-gcc; then
+    echo "Falling back to official Arm GNU Toolchain..."
+    install_arm_gnu_toolchain
+  fi
 fi
 
-# Ensure nosys.specs is available; otherwise fall back to official toolchain
+# Ensure nosys.specs is available; try quickest fixes before downloading a toolchain
 if ! ensure_nosys_specs; then
   echo "Could not resolve nosys.specs in system toolchain."
-  echo "Falling back to official Arm GNU Toolchain..."
-  install_arm_gnu_toolchain
-  if ! ensure_nosys_specs; then
-    echo "ERROR: nosys.specs still not found. Try removing and reinstalling your toolchains."
-    exit 1
+
+  # On macOS with Homebrew, try the cask toolchain first
+  if (( IS_MAC )) && need_cmd brew; then
+    # If the cask toolchain is already present, use it; otherwise install the cask
+    if maybe_use_arm_cask_on_path && ensure_nosys_specs; then
+      echo "✔ nosys.specs found via Homebrew cask toolchain"
+    else
+      echo "Attempting to install Homebrew cask: gcc-arm-embedded"
+      brew_cask_install_if_missing gcc-arm-embedded
+      maybe_use_arm_cask_on_path || true
+      if ensure_nosys_specs; then
+        echo "✔ nosys.specs found via Homebrew cask toolchain"
+      else
+        echo "Falling back to official Arm GNU Toolchain..."
+        install_arm_gnu_toolchain
+      fi
+    fi
+  else
+    echo "Falling back to official Arm GNU Toolchain..."
+    install_arm_gnu_toolchain
+  fi
+
+  if ! ensure_nosys.specs 2>/dev/null; then
+    # shellcheck disable=SC2016
+    if ! ensure_nosys_specs; then
+      echo "ERROR: nosys.specs still not found. Try removing and reinstalling your toolchains."
+      exit 1
+    fi
   fi
 fi
 

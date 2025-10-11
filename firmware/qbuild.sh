@@ -17,9 +17,12 @@ NSP="$(arm-none-eabi-gcc -print-file-name=nosys.specs)"
 # Choose a generator
 GEN="Unix Makefiles"; command -v ninja >/dev/null && GEN="Ninja"
 
-# Clean configure + build
-rm -rf build
-cmake -S . -B build -G "$GEN" -DPICO_BOARD="${PICO_BOARD:-pico2}" -DCMAKE_BUILD_TYPE="${BUILD_TYPE:-Debug}"
+# Persist FetchContent downloads to avoid re-fetching (e.g., picotool) between runs
+export FETCHCONTENT_BASE_DIR="${FETCHCONTENT_BASE_DIR:-$HOME/.cache/cmake-fetch}"
+mkdir -p "$FETCHCONTENT_BASE_DIR"
+
+# Configure (keep build/ so dependencies are not re-fetched); pass persistent FetchContent cache
+cmake -S . -B build -G "$GEN" -DPICO_BOARD="${PICO_BOARD:-pico2}" -DCMAKE_BUILD_TYPE="${BUILD_TYPE:-Debug}" -DFETCHCONTENT_BASE_DIR="$FETCHCONTENT_BASE_DIR"
 
 # Build with all cores
 J=4
