@@ -29,6 +29,8 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower s
 
 -USB-C digital audio in (24 bit/96kHz hopefully)
 
+-Program/Serial connectivity available while streaming audio over USB for easyt real time DSP control
+
 -Line In
 
 -Run without a heatsink at lower powers
