@@ -47,10 +47,24 @@ done
 
 # ---------- OS/Arch ----------
 
+
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"   # 'darwin' or 'linux'
 ARCH="$(uname -m)"                               # 'arm64', 'x86_64', 'aarch64', etc.
 IS_MAC=0; [[ "$OS" == darwin* ]] && IS_MAC=1
 IS_LINUX=0; [[ "$OS" == linux*  ]] && IS_LINUX=1
+
+# Helper to choose an Arm GNU Toolchain URL per OS/arch
+choose_arm_gnu_url() {
+  # Version is ${ARM_GNU_VERSION}. You can override by exporting ARM_GNU_URL yourself.
+  local base="https://developer.arm.com/-/media/Files/downloads/gnu/${ARM_GNU_VERSION}/binrel"
+  case "${OS}-${ARCH}" in
+    darwin-arm64)  echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-darwin-arm64-arm-none-eabi.tar.xz" ;;
+    darwin-x86_64) echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-darwin-x86_64-arm-none-eabi.tar.xz" ;;
+    linux-x86_64)  echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-x86_64-arm-none-eabi.tar.xz" ;;
+    linux-aarch64|linux-arm64) echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-aarch64-arm-none-eabi.tar.xz" ;;
+    *)             echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-x86_64-arm-none-eabi.tar.xz" ;;
+  esac
+}
 
 # ---------- Default toolchain URL per-OS (only if not provided by env) ----------
 if (( IS_MAC )) && [[ -z "$ARM_GNU_URL" ]]; then
@@ -214,18 +228,6 @@ ensure_nosys_specs() {
   return 1
 }
 
-choose_arm_gnu_url() {
-  # Choose a default tarball URL for the official Arm GNU Toolchain if ARM_GNU_URL is empty
-  # Version is ${ARM_GNU_VERSION}. You can override by exporting ARM_GNU_URL yourself.
-  local base="https://developer.arm.com/-/media/Files/downloads/gnu/${ARM_GNU_VERSION}/binrel"
-  case "${OS}-${ARCH}" in
-    darwin-arm64)  echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-darwin-arm64-arm-none-eabi.tar.xz" ;;
-    darwin-x86_64) echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-darwin-x86_64-arm-none-eabi.tar.xz" ;;
-    linux-x86_64)  echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-x86_64-arm-none-eabi.tar.xz" ;;
-    linux-aarch64) echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-aarch64-arm-none-eabi.tar.xz" ;;
-    *)             echo "${base}/arm-gnu-toolchain-${ARM_GNU_VERSION}-x86_64-arm-none-eabi.tar.xz" ;;
-  esac
-}
 
 install_arm_gnu_toolchain() {
   [[ -n "$ARM_GNU_URL" ]] || ARM_GNU_URL="$(choose_arm_gnu_url)"
