@@ -14,6 +14,7 @@ PICO_EXTRAS_PATH="${PICO_EXTRAS_PATH:-$HOME/pico-extras}"
 PICO_BOARD="${PICO_BOARD:-pico2}"          # RP2350 Pico 2 by default; use 'pico' for RP2040
 BUILD_TYPE="${BUILD_TYPE:-Debug}"          # or Release
 GENERATOR="${GENERATOR:-}"                 # auto (prefers Ninja)
+TOOLCHAIN_FILE="${TOOLCHAIN_FILE:-}"
 TARGET="${TARGET:-}"                       # optional: a single CMake target to build
 NO_FLASH="${NO_FLASH:-0}"
 
@@ -25,6 +26,7 @@ Usage: $0 [options]
     -b, --board <pico|pico2|custom>          Set PICO_BOARD (default: ${PICO_BOARD})
     -t, --type <Debug|Release>               Set CMAKE_BUILD_TYPE (default: ${BUILD_TYPE})
     -g, --generator <Ninja|Unix Makefiles>   Force CMake generator (default: auto)
+    -C, --toolchain-file <path>             Use a specific CMake toolchain file (overrides auto)
     -B, --build-dir <path>                 Use a specific build directory (default: auto)
     -r, --repo <path>                       Force repository root (default: auto-detect)
     -T, --target <name>                      Build only the named CMake target
@@ -46,6 +48,7 @@ while [[ $# -gt 0 ]]; do
     -b|--board) PICO_BOARD="$2"; shift 2;;
     -t|--type) BUILD_TYPE="$2"; shift 2;;
     -g|--generator) GENERATOR="$2"; shift 2;;
+    -C|--toolchain-file) TOOLCHAIN_FILE="$2"; shift 2;;
     -B|--build-dir) BUILD_DIR="$2"; shift 2;;
     -r|--repo) REPO_ROOT="$2"; shift 2;;
     -T|--target) TARGET="$2"; shift 2;;
@@ -253,9 +256,13 @@ fi
 echo "Configuring CMake..."
 find_pico_toolchain_file() {
   local candidates=()
+  # Prefer M33 toolchain for Pico 2 / RP2350 when explicitly selected
   if [[ "$PICO_BOARD" == pico2* || "$PICO_BOARD" == *rp2350* || "$PICO_BOARD" == *m33* ]]; then
     candidates+=("$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_cortex_m33_gcc.cmake")
   fi
+  # Prefer M0+ toolchain for RP2040 / Pico (non-Pico2)
+  candidates+=("$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_cortex_m0plus_gcc.cmake")
+  # Generic fallbacks
   candidates+=(
     "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_gcc.cmake"
     "$PICO_SDK_PATH/cmake/preload/toolchains/pico_arm_clang_arm.cmake"
@@ -270,10 +277,15 @@ find_pico_toolchain_file() {
   done
   return 1
 }
-TOOLCHAIN_FILE="$(find_pico_toolchain_file || true)"
-if [[ -z "$TOOLCHAIN_FILE" ]]; then
-  die "Could not locate a Pico SDK toolchain file under $PICO_SDK_PATH.\nLooked for: cmake/preload/toolchains/pico_arm_cortex_m33_gcc.cmake, pico_arm_gcc.cmake, pico_arm_clang_arm.cmake, and cmake/pico_toolchain.cmake"
+if [[ -n "${TOOLCHAIN_FILE:-}" ]]; then
+  [[ -f "$TOOLCHAIN_FILE" ]] || die "Specified toolchain file not found: $TOOLCHAIN_FILE"
+else
+  TOOLCHAIN_FILE="$(find_pico_toolchain_file || true)"
 fi
+if [[ -z "$TOOLCHAIN_FILE" ]]; then
+  die "Could not locate a Pico SDK toolchain file under $PICO_SDK_PATH.\nLooked for: cmake/preload/toolchains/pico_arm_cortex_m33_gcc.cmake, pico_arm_cortex_m0plus_gcc.cmake, pico_arm_gcc.cmake, pico_arm_clang_arm.cmake, and cmake/pico_toolchain.cmake"
+fi
+echo "Using toolchain file: $TOOLCHAIN_FILE"
 
 cmake -S "$REPO_ROOT" -B "$BUILD_DIR" -G "$GENERATOR" \
   -DPICO_BOARD="$PICO_BOARD" \
