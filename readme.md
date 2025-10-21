@@ -20,7 +20,7 @@ The USB PD 3.1 EPR can supply a maximum of 48V@5A for 240 watts DC. Even lower s
 
 -MA5332MS class D amplifier (up to 100W/Ch without heatsink)
 
--TLV320AIC3204 consumer audio DSP, programmed over serial from RP2350
+-TLV3256AIC3204 low power consumer audio codec DSP, digital input from RP2350 and analog line in
 
 
 # Highlights
