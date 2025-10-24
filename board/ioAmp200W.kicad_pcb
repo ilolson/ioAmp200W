@@ -7975,9 +7975,10 @@
 				)
 			)
 		)
-		(property "Value" "TLV320AIC3204IRHBR"
-			(at 10.23 4.035 0)
+		(property "Value" "TLV320AIC3256"
+			(at 5.435 4.035 0)
 			(layer "F.Fab")
+			(hide yes)
 			(uuid "a051a867-61f0-4351-b4ca-8e212b4834ac")
 			(effects
 				(font
