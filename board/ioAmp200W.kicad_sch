@@ -14049,6 +14049,116 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
+		(at 359.41 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9f6e32d-ff24-4a45-aef8-5358413b4580")
+		(property "Reference" "HUB75"
+			(at 360.68 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x08_Odd_Even"
+			(at 360.68 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
+			(at 359.41 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 359.41 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 359.41 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "16"
+			(uuid "827215b1-9d3b-4751-afaf-90da125f43ef")
+		)
+		(pin "3"
+			(uuid "260e3458-09f9-4beb-bd28-244a46ad310f")
+		)
+		(pin "5"
+			(uuid "0dce549e-bbd1-4e08-b33f-c0bd4c9bf514")
+		)
+		(pin "2"
+			(uuid "aa59f860-1a7f-4e08-a4dc-b17c983c089d")
+		)
+		(pin "9"
+			(uuid "d7282413-a858-4361-ad70-640f33f5f133")
+		)
+		(pin "4"
+			(uuid "5c414a78-76ad-4a60-b12f-92c2e16bcedd")
+		)
+		(pin "7"
+			(uuid "7e923f4c-f566-4b7b-94dd-688e3b1c4dd2")
+		)
+		(pin "6"
+			(uuid "44239dcf-72bf-4854-9ebb-960731beb55b")
+		)
+		(pin "8"
+			(uuid "5d53d33a-6489-459c-8b9c-1f64dfca3f9e")
+		)
+		(pin "10"
+			(uuid "2d22fe11-493d-4abb-903b-3ac006f00955")
+		)
+		(pin "12"
+			(uuid "b81510e6-1293-4bbe-805b-fe60936e1dea")
+		)
+		(pin "13"
+			(uuid "a4aea436-af96-4d57-9e35-683f86fd5702")
+		)
+		(pin "14"
+			(uuid "002daa72-b98f-4b3f-b740-08e395f7184e")
+		)
+		(pin "1"
+			(uuid "53423783-edd2-4f24-a99c-eb2c5b8bde10")
+		)
+		(pin "11"
+			(uuid "6cfdc3c7-0dfd-4042-bb13-cba6000c624f")
+		)
+		(pin "15"
+			(uuid "6bf8ec40-e102-4b6c-aa63-942df0347f91")
+		)
+		(instances
+			(project ""
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "HUB75")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 167.005 134.62 90)
 		(unit 1)
@@ -14564,116 +14674,6 @@
 			(project ""
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
-		(at 345.44 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d4a26e47-d096-4325-8ab2-6d76cae71f72")
-		(property "Reference" "J1"
-			(at 346.71 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "HUB75 Connector"
-			(at 346.71 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
-			(at 345.44 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 345.44 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 345.44 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "cfc590bf-24ad-4928-9f40-3b52286e6a44")
-		)
-		(pin "15"
-			(uuid "e7e54b43-d36c-4076-b3e6-9940f1147b2c")
-		)
-		(pin "5"
-			(uuid "7107449e-40eb-4202-a0c4-4acbecced2f5")
-		)
-		(pin "1"
-			(uuid "ae62e1d1-260b-4569-bcd7-b354cbaa8faa")
-		)
-		(pin "3"
-			(uuid "24484d47-3f38-4dd7-b389-4b5244c657ee")
-		)
-		(pin "6"
-			(uuid "edefdf18-cb74-448d-bf47-730e45945e56")
-		)
-		(pin "4"
-			(uuid "8691d848-a9f3-4330-a820-4fc92c07f5d5")
-		)
-		(pin "7"
-			(uuid "e43dd24f-dad2-4264-871e-a0591809c672")
-		)
-		(pin "9"
-			(uuid "1ba627da-41f3-4b03-8bc7-5069a927132f")
-		)
-		(pin "11"
-			(uuid "24fb31e4-2785-45ab-923f-dd7f17f22852")
-		)
-		(pin "13"
-			(uuid "f7c99a2a-e1c4-49ec-bac4-d0a7306160b7")
-		)
-		(pin "8"
-			(uuid "ef028221-c014-4015-aba7-e1bbcb3cbb7c")
-		)
-		(pin "14"
-			(uuid "921ef50d-5967-4e6d-b180-8b3801f8eace")
-		)
-		(pin "16"
-			(uuid "76e1a211-044f-4eda-8278-720ae685f6ba")
-		)
-		(pin "12"
-			(uuid "c4aed8ed-2e2b-4298-b767-bca31e6d09a8")
-		)
-		(pin "10"
-			(uuid "a0cf9daf-a921-43c1-b127-40e6f0ee1b1b")
-		)
-		(instances
-			(project ""
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "J1")
 					(unit 1)
 				)
 			)
