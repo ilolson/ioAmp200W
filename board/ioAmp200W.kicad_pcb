@@ -2627,11 +2627,11 @@
 	(footprint "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 		(layer "F.Cu")
 		(uuid "4134fa94-8f46-4421-b241-7a29be5386e9")
-		(at 137.7 104.5)
+		(at 136.5 106.5 -90)
 		(descr "SMD Tactile Switch, 3.9x3x2 mm, https://lcsc.com/datasheet/lcsc_datasheet_2504101957_XUNPU-TS-1088-AR02016_C720477.pdf")
 		(tags "Tactile Switch")
 		(property "Reference" "SW2"
-			(at 0 -2.65 0)
+			(at 0 -2.65 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "903a6374-36be-4ece-bde9-c98fd05a5b13")
@@ -2643,7 +2643,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 0 2.65 0)
+			(at 0 2.65 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d6618030-c963-4b7e-b5c4-f25acd96e49a")
@@ -2655,7 +2655,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2668,7 +2668,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -2685,36 +2685,6 @@
 		(sheetfile "ioAmp200W.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -2.1 -1.65)
-			(end 2.1 -1.65)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "2ca9462c-2e4b-46d4-a1f7-dbf32e2cbae1")
-		)
-		(fp_line
-			(start -2.1 -1.26)
-			(end -2.1 -1.65)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7d40f46c-698a-424b-a6fc-f1142198f913")
-		)
-		(fp_line
-			(start -2.1 1.26)
-			(end -2.1 1.65)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "7aa1ec03-023f-4a50-a348-2cf05bd2526a")
-		)
-		(fp_line
 			(start -2.1 1.65)
 			(end 2.1 1.65)
 			(stroke
@@ -2723,16 +2693,6 @@
 			)
 			(layer "F.SilkS")
 			(uuid "5bc391f1-d6d5-42ac-ae76-2b4262826502")
-		)
-		(fp_line
-			(start 2.1 -1.65)
-			(end 2.1 -1.26)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a7856cd3-f4eb-4a01-addd-fca08d9c8803")
 		)
 		(fp_line
 			(start 2.1 1.65)
@@ -2745,14 +2705,44 @@
 			(uuid "4b5d9656-dd5b-4949-95b1-d9890df34506")
 		)
 		(fp_line
-			(start -3 -1.75)
-			(end -3 1.75)
+			(start -2.1 1.26)
+			(end -2.1 1.65)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "947d7a97-f22a-4dca-8f6c-497c3ea340e2")
+			(layer "F.SilkS")
+			(uuid "7aa1ec03-023f-4a50-a348-2cf05bd2526a")
+		)
+		(fp_line
+			(start -2.1 -1.26)
+			(end -2.1 -1.65)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7d40f46c-698a-424b-a6fc-f1142198f913")
+		)
+		(fp_line
+			(start -2.1 -1.65)
+			(end 2.1 -1.65)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2ca9462c-2e4b-46d4-a1f7-dbf32e2cbae1")
+		)
+		(fp_line
+			(start 2.1 -1.65)
+			(end 2.1 -1.26)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a7856cd3-f4eb-4a01-addd-fca08d9c8803")
 		)
 		(fp_line
 			(start -3 1.75)
@@ -2765,16 +2755,6 @@
 			(uuid "9f88a74d-17d9-4834-86e8-0e3a5daf8526")
 		)
 		(fp_line
-			(start 3 -1.75)
-			(end -3 -1.75)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "8226cc6c-914d-4bb0-9b99-2905161b5b33")
-		)
-		(fp_line
 			(start 3 1.75)
 			(end 3 -1.75)
 			(stroke
@@ -2785,14 +2765,34 @@
 			(uuid "dd681c0a-db13-44a9-9904-8659188c995c")
 		)
 		(fp_line
-			(start -1.95 -1.5)
-			(end 1.95 -1.5)
+			(start -3 -1.75)
+			(end -3 1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "947d7a97-f22a-4dca-8f6c-497c3ea340e2")
+		)
+		(fp_line
+			(start 3 -1.75)
+			(end -3 -1.75)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "8226cc6c-914d-4bb0-9b99-2905161b5b33")
+		)
+		(fp_line
+			(start -1.95 1.5)
+			(end 1.95 1.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "1f8278ce-892d-4f41-a4c3-f91058b15b34")
+			(uuid "482e28a9-1ac3-4867-84b2-f65389b0cf81")
 		)
 		(fp_line
 			(start -1.95 1.5)
@@ -2805,14 +2805,14 @@
 			(uuid "959b33b4-8f1d-4f87-a78e-76ded9cc6915")
 		)
 		(fp_line
-			(start -1.95 1.5)
-			(end 1.95 1.5)
+			(start -1.95 -1.5)
+			(end 1.95 -1.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "482e28a9-1ac3-4867-84b2-f65389b0cf81")
+			(uuid "1f8278ce-892d-4f41-a4c3-f91058b15b34")
 		)
 		(fp_line
 			(start 1.95 -1.5)
@@ -2836,7 +2836,7 @@
 			(uuid "5c14e478-7540-45be-b440-b624daa03c55")
 		)
 		(pad "1" smd roundrect
-			(at -2.225 0)
+			(at -2.225 0 270)
 			(size 1.05 2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.2380952381)
@@ -2846,7 +2846,7 @@
 			(uuid "a35c07d9-d268-41e8-a527-9aa92aa491ba")
 		)
 		(pad "2" smd roundrect
-			(at 2.225 0)
+			(at 2.225 0 270)
 			(size 1.05 2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.2380952381)
@@ -10312,7 +10312,7 @@
 	(footprint "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
 		(layer "F.Cu")
 		(uuid "b49e3782-b6e6-4a33-91d9-4f0b74599ed6")
-		(at 136.4 109.1 90)
+		(at 136.35 112.1 -90)
 		(descr "SMD3225/4, Crystal, 3.2x2.5mm package, SMD, generated with kicad-footprint-generator make_crystal.py, http://www.txccrystal.com/images/pdf/7m-accuracy.pdf")
 		(property "Reference" "Y1"
 			(at 0 -2.45 90)
@@ -10368,16 +10368,6 @@
 		(sheetfile "ioAmp200W.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -2.06 -1.71)
-			(end -2.06 1.71)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "467b4602-d57b-4ca0-afab-34f11b2fd79e")
-		)
-		(fp_line
 			(start -2.06 1.71)
 			(end 2.06 1.71)
 			(stroke
@@ -10386,6 +10376,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "7c50f7be-ffa0-4652-8d12-4c3fc6e9111f")
+		)
+		(fp_line
+			(start -2.06 -1.71)
+			(end -2.06 1.71)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "467b4602-d57b-4ca0-afab-34f11b2fd79e")
 		)
 		(fp_rect
 			(start -2.1 -1.75)
@@ -10422,7 +10422,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.1 0.85 90)
+			(at -1.1 0.85 270)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -10432,7 +10432,7 @@
 			(uuid "2b8136da-2966-42b9-bbcb-2174b64245a8")
 		)
 		(pad "2" smd roundrect
-			(at 1.1 0.85 90)
+			(at 1.1 0.85 270)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -10442,7 +10442,7 @@
 			(uuid "9d73cc1f-d9b6-4c8f-a856-034e634fade7")
 		)
 		(pad "3" smd roundrect
-			(at 1.1 -0.85 90)
+			(at 1.1 -0.85 270)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -10452,7 +10452,7 @@
 			(uuid "b5624cbd-0e1a-4a73-ae70-cecd16bf5c15")
 		)
 		(pad "4" smd roundrect
-			(at -1.1 -0.85 90)
+			(at -1.1 -0.85 270)
 			(size 1.4 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
@@ -17353,7 +17353,7 @@
 		(descr "SMD IDC box header, 2x08, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://www.tme.eu/Document/4baa0e952ce73e37bc68cf730b541507/T821M114A1S100CEU-B.pdf")
 		(tags "SMD vertical IDC box header  2x08 2.54mm double row")
 		(property "Reference" "HUB75"
-			(at 0 14.97 90)
+			(at 0 14.97 270)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "21468820-e2c6-4bdd-aeb8-8d8f97399f11")
@@ -17366,7 +17366,7 @@
 			)
 		)
 		(property "Value" "Conn_02x08_Odd_Even"
-			(at 0 -14.97 90)
+			(at 0 -14.97 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a678a645-e5ae-44fd-92dd-eb854f3fb667")
@@ -17379,7 +17379,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5c21a304-8be1-42ff-90ed-88f9369f1e8c")
@@ -17392,7 +17392,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ebf092a3-96fc-40e1-bd4d-b871e22fce6a")
@@ -17408,12 +17408,12 @@
 		(path "/a9f6e32d-ff24-4a45-aef8-5358413b4580")
 		(sheetname "/")
 		(sheetfile "ioAmp200W.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_bom dnp)
 		(fp_line
 			(start 4.585 -14.08)
 			(end 4.585 -9.9)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
@@ -17423,7 +17423,7 @@
 			(start -4.585 -14.08)
 			(end 4.585 -14.08)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
@@ -17433,17 +17433,27 @@
 			(start -4.585 -9.9)
 			(end -4.585 -14.08)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
 			(uuid "e0c0057d-b584-4d48-9a84-fa70d8fc9e12")
 		)
 		(fp_line
+			(start -7 1.5)
+			(end -7 -1.5)
+			(stroke
+				(width 0.25)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "00e1760e-92ee-4ca6-896e-0922a0c3ccd8")
+		)
+		(fp_line
 			(start -4.585 9.9)
 			(end -6.085 9.9)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
@@ -17453,7 +17463,7 @@
 			(start -4.585 9.9)
 			(end -4.585 14.08)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
@@ -17463,7 +17473,7 @@
 			(start 4.585 14.08)
 			(end 4.585 9.9)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")
@@ -17473,7 +17483,7 @@
 			(start -4.585 14.08)
 			(end 4.585 14.08)
 			(stroke
-				(width 0.12)
+				(width 0.25)
 				(type solid)
 			)
 			(layer "B.SilkS")

@@ -7017,8 +7017,8 @@
 	)
 	(text_box "CLASS D AMPLIFIER"
 		(exclude_from_sim no)
-		(at 375.92 248.92 0)
-		(size 295.91 283.21)
+		(at 374.65 248.92 0)
+		(size 297.18 283.21)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -7074,6 +7074,26 @@
 			(justify left top)
 		)
 		(uuid "45150679-3f4b-4068-ab68-81fb80f6c893")
+	)
+	(text_box "HUB75 DATA OUT"
+		(exclude_from_sim no)
+		(at 500.38 26.67 0)
+		(size 171.45 215.9)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "7f3b8121-4d6e-4eb4-b5bd-9db264ac50fa")
 	)
 	(text_box "USB-C DATA CONNECTOR"
 		(exclude_from_sim no)
@@ -14050,16 +14070,16 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x08_Odd_Even")
-		(at 359.41 204.47 0)
+		(at 582.93 208.28 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a9f6e32d-ff24-4a45-aef8-5358413b4580")
 		(property "Reference" "HUB75"
-			(at 360.68 190.5 0)
+			(at 584.2 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14067,7 +14087,7 @@
 			)
 		)
 		(property "Value" "Conn_02x08_Odd_Even"
-			(at 360.68 193.04 0)
+			(at 584.2 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14075,7 +14095,7 @@
 			)
 		)
 		(property "Footprint" "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical_SMD"
-			(at 359.41 204.47 0)
+			(at 582.93 208.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14084,7 +14104,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 359.41 204.47 0)
+			(at 582.93 208.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14093,7 +14113,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x08, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 359.41 204.47 0)
+			(at 582.93 208.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
