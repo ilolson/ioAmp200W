@@ -6,4 +6,5 @@
   (lib (name "USB4105_GF_A_120")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/USB4105_GF_A_120")(options "")(descr ""))
   (lib (name "TPD4S480RUKR")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TPD4S480RUKR/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "TPS26750SRSMR")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TPS26750SRSMR/KiCADv6/footprints.pretty")(options "")(descr ""))
+  (lib (name "SN74AHCT245")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/SN74AHCT245/KiCADv6/footprints.pretty")(options "")(descr ""))
 )

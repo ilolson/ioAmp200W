@@ -5,4 +5,5 @@
   (lib (name "TPS26750S")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TPS26750SRSMR/KiCADv6/2025-10-03_14-04-43.kicad_sym")(options "")(descr ""))
   (lib (name "USB4105-GF-A-120")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/USB4105_GF_A_120/USB4105-GF-A-120.kicad_sym")(options "")(descr ""))
   (lib (name "MA5332ms_sym")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/infineon-pcb-footprints-and-symbols-ma5332ms-integrated-class-d-audio-amplifier-ics-altium-pcbdesigndata-en/MA5332ms_sym.kicad_sym")(options "")(descr ""))
+  (lib (name "SN74AHCT245")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/SN74AHCT245/KiCADv6/2025-11-03_18-42-18.kicad_sym")(options "")(descr ""))
 )
