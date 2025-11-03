@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TLV320AIC3254IRHBT")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TLV320AIC3254IRHBT/TLV320AIC3254IRHBT.kicad_sym")(options "")(descr ""))
+  (lib (name "TPD4S480")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TPD4S480RUKR/KiCADv6/2025-10-03_14-06-17.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS26750S")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/TPS26750SRSMR/KiCADv6/2025-10-03_14-04-43.kicad_sym")(options "")(descr ""))
+  (lib (name "USB4105-GF-A-120")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/USB4105_GF_A_120/USB4105-GF-A-120.kicad_sym")(options "")(descr ""))
+  (lib (name "MA5332ms_sym")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/infineon-pcb-footprints-and-symbols-ma5332ms-integrated-class-d-audio-amplifier-ics-altium-pcbdesigndata-en/MA5332ms_sym.kicad_sym")(options "")(descr ""))
+)
