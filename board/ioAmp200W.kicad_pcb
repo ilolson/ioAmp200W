@@ -320,49 +320,47 @@
 	(net 153 "unconnected-(U4-HPR-Pad27)")
 	(net 154 "unconnected-(USB_POWER1-VBUS-PadA4_B9)")
 	(net 155 "unconnected-(USB_POWER1-SBU1-PadA8)")
-	(net 156 "unconnected-(R3-Pad1)")
-	(net 157 "unconnected-(R4-Pad1)")
-	(net 158 "unconnected-(TRS1-PadT)")
-	(net 159 "unconnected-(TRS1-PadS)")
-	(net 160 "unconnected-(U5-GND-Pad5)")
-	(net 161 "unconnected-(U5-IN_N2-Pad3)")
-	(net 162 "unconnected-(U5-IN_N1-Pad9)")
-	(net 163 "unconnected-(U5-VP2-Pad23)")
-	(net 164 "unconnected-(U5-CSD-Pad11)")
-	(net 165 "unconnected-(U5-VSS-Pad6)")
-	(net 166 "unconnected-(U5-VS2_1-Pad22)")
-	(net 167 "unconnected-(U5-VS2_2-Pad24)")
-	(net 168 "unconnected-(U5-VS1_1-Pad17)")
-	(net 169 "unconnected-(U5-COM1-Pad14)")
-	(net 170 "unconnected-(U5-FAULT-Pad12)")
-	(net 171 "unconnected-(U5-IN_P1-Pad8)")
-	(net 172 "unconnected-(U5-VN2-Pad21)")
-	(net 173 "unconnected-(U5-COM2-Pad27)")
-	(net 174 "unconnected-(U5-COMP1-Pad10)")
-	(net 175 "unconnected-(U5-VAA-Pad7)")
-	(net 176 "unconnected-(U5-CSH2-Pad26)")
-	(net 177 "unconnected-(U5-CLIP-Pad1)")
-	(net 178 "unconnected-(U5-VB2-Pad25)")
-	(net 179 "unconnected-(U5-IN_P2-Pad4)")
-	(net 180 "unconnected-(U5-NC-Pad28)")
-	(net 181 "unconnected-(U5-VB1-Pad16)")
-	(net 182 "unconnected-(U5-VCC-Pad13)")
-	(net 183 "unconnected-(HUB75-Pin_8-Pad8)")
-	(net 184 "unconnected-(HUB75-Pin_4-Pad4)")
-	(net 185 "unconnected-(HUB75-Pin_16-Pad16)")
-	(net 186 "unconnected-(HUB75-Pin_15-Pad15)")
-	(net 187 "unconnected-(HUB75-Pin_6-Pad6)")
-	(net 188 "unconnected-(HUB75-Pin_11-Pad11)")
-	(net 189 "unconnected-(HUB75-Pin_3-Pad3)")
-	(net 190 "unconnected-(HUB75-Pin_2-Pad2)")
-	(net 191 "unconnected-(HUB75-Pin_5-Pad5)")
-	(net 192 "unconnected-(HUB75-Pin_7-Pad7)")
-	(net 193 "unconnected-(HUB75-Pin_14-Pad14)")
-	(net 194 "unconnected-(HUB75-Pin_9-Pad9)")
-	(net 195 "unconnected-(HUB75-Pin_10-Pad10)")
-	(net 196 "unconnected-(HUB75-Pin_12-Pad12)")
-	(net 197 "unconnected-(HUB75-Pin_13-Pad13)")
-	(net 198 "unconnected-(HUB75-Pin_1-Pad1)")
+	(net 156 "unconnected-(TRS1-PadT)")
+	(net 157 "unconnected-(TRS1-PadS)")
+	(net 158 "unconnected-(U5-GND-Pad5)")
+	(net 159 "unconnected-(U5-IN_N2-Pad3)")
+	(net 160 "unconnected-(U5-IN_N1-Pad9)")
+	(net 161 "unconnected-(U5-VP2-Pad23)")
+	(net 162 "unconnected-(U5-CSD-Pad11)")
+	(net 163 "unconnected-(U5-VSS-Pad6)")
+	(net 164 "unconnected-(U5-VS2_1-Pad22)")
+	(net 165 "unconnected-(U5-VS2_2-Pad24)")
+	(net 166 "unconnected-(U5-VS1_1-Pad17)")
+	(net 167 "unconnected-(U5-COM1-Pad14)")
+	(net 168 "unconnected-(U5-FAULT-Pad12)")
+	(net 169 "unconnected-(U5-IN_P1-Pad8)")
+	(net 170 "unconnected-(U5-VN2-Pad21)")
+	(net 171 "unconnected-(U5-COM2-Pad27)")
+	(net 172 "unconnected-(U5-COMP1-Pad10)")
+	(net 173 "unconnected-(U5-VAA-Pad7)")
+	(net 174 "unconnected-(U5-CSH2-Pad26)")
+	(net 175 "unconnected-(U5-CLIP-Pad1)")
+	(net 176 "unconnected-(U5-VB2-Pad25)")
+	(net 177 "unconnected-(U5-IN_P2-Pad4)")
+	(net 178 "unconnected-(U5-NC-Pad28)")
+	(net 179 "unconnected-(U5-VB1-Pad16)")
+	(net 180 "unconnected-(U5-VCC-Pad13)")
+	(net 181 "unconnected-(HUB75-Pin_8-Pad8)")
+	(net 182 "unconnected-(HUB75-Pin_4-Pad4)")
+	(net 183 "unconnected-(HUB75-Pin_16-Pad16)")
+	(net 184 "unconnected-(HUB75-Pin_15-Pad15)")
+	(net 185 "unconnected-(HUB75-Pin_6-Pad6)")
+	(net 186 "unconnected-(HUB75-Pin_11-Pad11)")
+	(net 187 "unconnected-(HUB75-Pin_3-Pad3)")
+	(net 188 "unconnected-(HUB75-Pin_2-Pad2)")
+	(net 189 "unconnected-(HUB75-Pin_5-Pad5)")
+	(net 190 "unconnected-(HUB75-Pin_7-Pad7)")
+	(net 191 "unconnected-(HUB75-Pin_14-Pad14)")
+	(net 192 "unconnected-(HUB75-Pin_9-Pad9)")
+	(net 193 "unconnected-(HUB75-Pin_10-Pad10)")
+	(net 194 "unconnected-(HUB75-Pin_12-Pad12)")
+	(net 195 "unconnected-(HUB75-Pin_13-Pad13)")
+	(net 196 "unconnected-(HUB75-Pin_1-Pad1)")
 	(footprint "MountingHole:MountingHole_2.1mm"
 		(layer "F.Cu")
 		(uuid "256695ac-d99c-4ba2-90c9-d8778f26370b")
@@ -2871,7 +2869,7 @@
 	(footprint "USB4105_GF_A_120:GCT_USB4105-GF-A-120"
 		(layer "F.Cu")
 		(uuid "425d55a5-1e06-4ffa-8d84-e0a0028ff058")
-		(at 102.6 112 -90)
+		(at 103 112 -90)
 		(property "Reference" "USB_DATA1"
 			(at 0 -1.9 90)
 			(layer "B.SilkS")
@@ -3641,7 +3639,7 @@
 	(footprint "Library:IFX-PG-IQFN-42-1-V"
 		(layer "F.Cu")
 		(uuid "4d61b4b8-259e-4293-b751-49d7b4aca077")
-		(at 130.311 135.95)
+		(at 135 125)
 		(descr "QFN; 28 pin, 7.00 mm L X 7.00 mm W X 1.00 mm H body")
 		(property "Reference" "U5"
 			(at -0.253 -4.9 0)
@@ -3786,19 +3784,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -3.586 -2.87) (xy -3.586 -2.63) (xy -2.986 -2.63) (xy -2.986 -2.87)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "4850a3e3-a08c-4f4a-af35-a33796bca92c")
-		)
-		(fp_poly
-			(pts
-				(xy -3.586 -2.37) (xy -3.586 -2.13) (xy -2.986 -2.13) (xy -2.986 -2.37)
+				(xy -3.586 -2.37) (xy -3.585999 -2.13) (xy -2.986 -2.13) (xy -2.986 -2.37)
 			)
 			(stroke
 				(width 0)
@@ -3846,19 +3832,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -3.586 -0.37) (xy -3.586 -0.13) (xy -2.986 -0.13) (xy -2.986 -0.37)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "0d0c2b51-eeef-48c1-814e-d4146ec7153b")
-		)
-		(fp_poly
-			(pts
-				(xy -3.586 0.13) (xy -3.586 0.37) (xy -2.986 0.37) (xy -2.986 0.13)
+				(xy -3.586 0.13) (xy -3.585999 0.37) (xy -2.986 0.37) (xy -2.986 0.13)
 			)
 			(stroke
 				(width 0)
@@ -3906,19 +3880,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -3.586 2.13) (xy -3.586 2.37) (xy -2.986 2.37) (xy -2.986 2.13)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "e58ff37b-fc7a-4b73-aca0-eebb8b643234")
-		)
-		(fp_poly
-			(pts
-				(xy -3.586 2.63) (xy -3.586 2.87) (xy -2.986 2.87) (xy -2.986 2.63)
+				(xy -3.586 2.63) (xy -3.585999 2.87) (xy -2.986 2.87) (xy -2.986 2.63)
 			)
 			(stroke
 				(width 0)
@@ -3930,7 +3892,43 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.433 -2.341) (xy -2.433 -1.391) (xy -1.653 -1.391) (xy -1.653 -2.341)
+				(xy -3.585999 -2.87) (xy -3.586 -2.63) (xy -2.986 -2.63) (xy -2.986 -2.87)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "4850a3e3-a08c-4f4a-af35-a33796bca92c")
+		)
+		(fp_poly
+			(pts
+				(xy -3.585999 -0.37) (xy -3.586 -0.13) (xy -2.986 -0.13) (xy -2.986 -0.37)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "0d0c2b51-eeef-48c1-814e-d4146ec7153b")
+		)
+		(fp_poly
+			(pts
+				(xy -3.585999 2.13) (xy -3.586 2.37) (xy -2.986 2.37) (xy -2.986 2.13)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "e58ff37b-fc7a-4b73-aca0-eebb8b643234")
+		)
+		(fp_poly
+			(pts
+				(xy -2.433 -2.341) (xy -2.433 -1.391) (xy -1.653 -1.391) (xy -1.653 -2.340999)
 			)
 			(stroke
 				(width 0)
@@ -3942,7 +3940,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.433 -1.097) (xy -2.433 -0.147) (xy -1.653 -0.147) (xy -1.653 -1.097)
+				(xy -2.433 -1.097) (xy -2.433 -0.147) (xy -1.653 -0.147) (xy -1.653 -1.097001)
 			)
 			(stroke
 				(width 0)
@@ -3954,7 +3952,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.433 0.147) (xy -2.433 1.097) (xy -1.653 1.097) (xy -1.653 0.147)
+				(xy -2.433 0.147) (xy -2.433 1.097) (xy -1.653 1.097001) (xy -1.653 0.147)
 			)
 			(stroke
 				(width 0)
@@ -3966,7 +3964,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.433 1.391) (xy -2.433 2.341) (xy -1.653 2.341) (xy -1.653 1.391)
+				(xy -2.433 1.391) (xy -2.433 2.341) (xy -1.653 2.340999) (xy -1.653 1.391)
 			)
 			(stroke
 				(width 0)
@@ -3978,7 +3976,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.181 -3.15) (xy -1.941 -3.15) (xy -1.941 -3.75) (xy -2.181 -3.75)
+				(xy -2.181 -3.149999) (xy -1.941 -3.15) (xy -1.941 -3.75) (xy -2.180999 -3.75)
 			)
 			(stroke
 				(width 0)
@@ -3990,7 +3988,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -2.181 3.75) (xy -1.941 3.75) (xy -1.941 3.15) (xy -2.181 3.15)
+				(xy -2.180999 3.75) (xy -1.941 3.75) (xy -1.941 3.15) (xy -2.181 3.149999)
 			)
 			(stroke
 				(width 0)
@@ -4014,7 +4012,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.68101 3.3) (xy -1.44101 3.3) (xy -1.44101 3.75) (xy -1.68101 3.75)
+				(xy -1.68101 3.3) (xy -1.44101 3.299999) (xy -1.44101 3.749999) (xy -1.68101 3.75)
 			)
 			(stroke
 				(width 0)
@@ -4026,7 +4024,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.681 -3.75) (xy -1.441 -3.75) (xy -1.441 -3.3) (xy -1.681 -3.3)
+				(xy -1.681 -3.75) (xy -1.440999 -3.75) (xy -1.440999 -3.3) (xy -1.681 -3.3)
 			)
 			(stroke
 				(width 0)
@@ -4050,7 +4048,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.35 -2.341) (xy -1.35 -1.391) (xy -0.57 -1.391) (xy -0.57 -2.341)
+				(xy -1.35 -2.341) (xy -1.35 -1.391) (xy -0.569999 -1.391) (xy -0.57 -2.341)
 			)
 			(stroke
 				(width 0)
@@ -4086,7 +4084,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.35 1.391) (xy -1.35 2.341) (xy -0.57 2.341) (xy -0.57 1.391)
+				(xy -1.35 1.391) (xy -1.35 2.341) (xy -0.57 2.341) (xy -0.569999 1.391)
 			)
 			(stroke
 				(width 0)
@@ -4098,19 +4096,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -1.031 -3.15) (xy -0.791 -3.15) (xy -0.791 -3.75) (xy -1.031 -3.75)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "232101ab-434a-4123-8ee8-f717095f5104")
-		)
-		(fp_poly
-			(pts
-				(xy -1.031 3.75) (xy -0.791 3.75) (xy -0.791 3.15) (xy -1.031 3.15)
+				(xy -1.031001 3.75) (xy -0.791 3.75) (xy -0.791 3.15) (xy -1.031 3.149999)
 			)
 			(stroke
 				(width 0)
@@ -4122,7 +4108,19 @@
 		)
 		(fp_poly
 			(pts
-				(xy -0.531 -3.15) (xy -0.291 -3.15) (xy -0.291 -3.75) (xy -0.531 -3.75)
+				(xy -1.031 -3.149999) (xy -0.791 -3.15) (xy -0.791 -3.75) (xy -1.031001 -3.75)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "232101ab-434a-4123-8ee8-f717095f5104")
+		)
+		(fp_poly
+			(pts
+				(xy -0.531 -3.15) (xy -0.291 -3.149999) (xy -0.291001 -3.75) (xy -0.531 -3.75)
 			)
 			(stroke
 				(width 0)
@@ -4134,7 +4132,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy -0.531 3.75) (xy -0.291 3.75) (xy -0.291 3.15) (xy -0.531 3.15)
+				(xy -0.531 3.75) (xy -0.291001 3.75) (xy -0.291 3.149999) (xy -0.531 3.15)
 			)
 			(stroke
 				(width 0)
@@ -4194,7 +4192,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 0.13 -1.526) (xy 0.13 -0.351) (xy 0.78 -0.351) (xy 0.78 -1.526)
+				(xy 0.13 -1.526) (xy 0.129999 -0.351) (xy 0.78 -0.351) (xy 0.78 -1.526)
 			)
 			(stroke
 				(width 0)
@@ -4230,7 +4228,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 0.764 2.2245) (xy 0.764 2.9995) (xy 1.364 2.9995) (xy 1.364 2.2245)
+				(xy 0.764001 2.2245) (xy 0.764 2.9995) (xy 1.364 2.9995) (xy 1.364 2.2245)
 			)
 			(stroke
 				(width 0)
@@ -4266,7 +4264,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 1.072 -1.5265) (xy 1.072 -0.3515) (xy 1.722 -0.3515) (xy 1.722 -1.5265)
+				(xy 1.072 -1.5265) (xy 1.072 -0.351501) (xy 1.722 -0.3515) (xy 1.721999 -1.5265)
 			)
 			(stroke
 				(width 0)
@@ -4338,18 +4336,6 @@
 		)
 		(fp_poly
 			(pts
-				(xy 2.014 -1.5265) (xy 2.014 -0.3515) (xy 2.664 -0.3515) (xy 2.664 -1.5265)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "b5ba504c-f29e-488b-a839-fb54bcb6330a")
-		)
-		(fp_poly
-			(pts
 				(xy 2.014 0.3485) (xy 2.014 1.5235) (xy 2.664 1.5235) (xy 2.664 0.3485)
 			)
 			(stroke
@@ -4359,6 +4345,18 @@
 			(fill yes)
 			(layer "F.Paste")
 			(uuid "0d3e8d5e-84d6-4075-9a96-bed780506b66")
+		)
+		(fp_poly
+			(pts
+				(xy 2.014001 -1.5265) (xy 2.014 -0.3515) (xy 2.663999 -0.3515) (xy 2.664 -1.5265)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "b5ba504c-f29e-488b-a839-fb54bcb6330a")
 		)
 		(fp_poly
 			(pts
@@ -4386,7 +4384,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 2.534 -3.301) (xy 2.294 -3.301) (xy 2.294 -3.751) (xy 2.534 -3.751)
+				(xy 2.534 -3.301) (xy 2.293999 -3.301) (xy 2.293999 -3.751) (xy 2.534 -3.751)
 			)
 			(stroke
 				(width 0)
@@ -4398,7 +4396,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 2.534 3.75) (xy 2.294 3.75) (xy 2.294 3.3) (xy 2.534 3.3)
+				(xy 2.534 3.75) (xy 2.294 3.749999) (xy 2.294 3.299999) (xy 2.534 3.3)
 			)
 			(stroke
 				(width 0)
@@ -4434,7 +4432,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.034 -3.301) (xy 2.794 -3.301) (xy 2.794 -3.751) (xy 3.034 -3.751)
+				(xy 3.033999 -3.301) (xy 2.794 -3.301) (xy 2.794 -3.751) (xy 3.034 -3.751001)
 			)
 			(stroke
 				(width 0)
@@ -4446,7 +4444,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.034 3.75) (xy 2.794 3.75) (xy 2.794 3.3) (xy 3.034 3.3)
+				(xy 3.034 3.749999) (xy 2.794 3.75) (xy 2.794 3.3) (xy 3.034 3.299999)
 			)
 			(stroke
 				(width 0)
@@ -4458,7 +4456,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.114 -1.626) (xy 3.114 -1.326) (xy 3.914 -1.326) (xy 3.914 -1.626)
+				(xy 3.114 -1.626) (xy 3.114 -1.326) (xy 3.914 -1.326001) (xy 3.914 -1.626001)
 			)
 			(stroke
 				(width 0)
@@ -4470,7 +4468,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.114 1.3245) (xy 3.114 1.6245) (xy 3.914 1.6245) (xy 3.914 1.3245)
+				(xy 3.114 1.324499) (xy 3.114 1.624499) (xy 3.914 1.6245) (xy 3.914 1.3245)
 			)
 			(stroke
 				(width 0)
@@ -4494,7 +4492,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.294 -0.37) (xy 3.294 -0.13) (xy 3.914 -0.13) (xy 3.914 -0.37)
+				(xy 3.294 -0.37) (xy 3.294 -0.13) (xy 3.914 -0.13) (xy 3.913999 -0.37)
 			)
 			(stroke
 				(width 0)
@@ -4506,7 +4504,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.294 0.13) (xy 3.294 0.37) (xy 3.914 0.37) (xy 3.914 0.13)
+				(xy 3.294 0.13) (xy 3.294 0.37) (xy 3.913999 0.37) (xy 3.914 0.13)
 			)
 			(stroke
 				(width 0)
@@ -4530,19 +4528,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.464 -2.631) (xy 3.464 -2.871) (xy 3.914 -2.871) (xy 3.914 -2.631)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "438726f3-eef4-4f04-8558-18b1a1e9e4ab")
-		)
-		(fp_poly
-			(pts
-				(xy 3.464 -2.131) (xy 3.464 -2.371) (xy 3.914 -2.371) (xy 3.914 -2.131)
+				(xy 3.463999 -2.131) (xy 3.464 -2.371) (xy 3.914 -2.371) (xy 3.913999 -2.131)
 			)
 			(stroke
 				(width 0)
@@ -4554,19 +4540,7 @@
 		)
 		(fp_poly
 			(pts
-				(xy 3.464 2.37) (xy 3.464 2.13) (xy 3.914 2.13) (xy 3.914 2.37)
-			)
-			(stroke
-				(width 0)
-				(type default)
-			)
-			(fill yes)
-			(layer "F.Paste")
-			(uuid "8614618f-97e1-4eda-9f0f-7b7e4913b3b1")
-		)
-		(fp_poly
-			(pts
-				(xy 3.464 2.87) (xy 3.464 2.63) (xy 3.914 2.63) (xy 3.914 2.87)
+				(xy 3.463999 2.87) (xy 3.464 2.63) (xy 3.914 2.63) (xy 3.913999 2.87)
 			)
 			(stroke
 				(width 0)
@@ -4575,6 +4549,30 @@
 			(fill yes)
 			(layer "F.Paste")
 			(uuid "789f229f-d6ba-4c68-869f-d1346a96d61e")
+		)
+		(fp_poly
+			(pts
+				(xy 3.464 -2.631) (xy 3.463999 -2.871) (xy 3.914 -2.871001) (xy 3.914 -2.631)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "438726f3-eef4-4f04-8558-18b1a1e9e4ab")
+		)
+		(fp_poly
+			(pts
+				(xy 3.464 2.37) (xy 3.463999 2.13) (xy 3.913999 2.13) (xy 3.914 2.37)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "8614618f-97e1-4eda-9f0f-7b7e4913b3b1")
 		)
 		(fp_line
 			(start -4.5 -4.6)
@@ -4607,8 +4605,8 @@
 			(uuid "2e663289-b6d3-41cf-a121-0d69f30875a0")
 		)
 		(fp_line
-			(start -0.5 0)
-			(end 0.5 0)
+			(start -0.499999 0)
+			(end 0.499999 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -4617,8 +4615,8 @@
 			(uuid "afce01f0-88c1-49ff-8f6c-45cea9600364")
 		)
 		(fp_line
-			(start 0 0.5)
-			(end 0 -0.5)
+			(start 0 0.499999)
+			(end 0 -0.499999)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -4688,7 +4686,7 @@
 			(uuid "fdf4e1fa-b1a4-40c7-a9e5-6afa18846459")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0.12852 0)
+			(at 0 0.128519 0)
 			(unlocked yes)
 			(layer "User.3")
 			(uuid "b11db857-5e45-45d0-aa20-a249b83f6775")
@@ -4703,36 +4701,36 @@
 			(render_cache "U5" 0
 				(polygon
 					(pts
-						(xy 130.889408 135.190729) (xy 130.989579 135.190729) (xy 130.989579 135.628759) (xy 130.986217 135.705151)
-						(xy 130.977172 135.764653) (xy 130.963775 135.810314) (xy 130.942288 135.851835) (xy 130.911611 135.888099)
-						(xy 130.870574 135.919671) (xy 130.823785 135.942096) (xy 130.765695 135.956572) (xy 130.693682 135.961817)
-						(xy 130.623428 135.95725) (xy 130.566166 135.944623) (xy 130.519605 135.925118) (xy 130.478534 135.896727)
-						(xy 130.446647 135.861564) (xy 130.423034 135.818807) (xy 130.408048 135.771436) (xy 130.397914 135.709224)
-						(xy 130.394137 135.628759) (xy 130.394137 135.190729) (xy 130.494355 135.190729) (xy 130.494355 135.629913)
-						(xy 130.496907 135.696656) (xy 130.50348 135.743879) (xy 130.512681 135.776061) (xy 130.527843 135.805026)
-						(xy 130.548635 135.828977) (xy 130.575646 135.848489) (xy 130.606418 135.86221) (xy 130.642484 135.870861)
-						(xy 130.684911 135.873925) (xy 130.741165 135.870075) (xy 130.784495 135.859679) (xy 130.817549 135.843995)
-						(xy 130.842415 135.823562) (xy 130.860477 135.797559) (xy 130.875211 135.759355) (xy 130.885475 135.705042)
-						(xy 130.889408 135.629913)
+						(xy 135.578408 124.240728) (xy 135.678579 124.240728) (xy 135.678579 124.678758) (xy 135.675211 124.755148)
+						(xy 135.66615 124.814649) (xy 135.652729 124.860313) (xy 135.631242 124.901834) (xy 135.600565 124.938098)
+						(xy 135.559528 124.96967) (xy 135.512739 124.992096) (xy 135.454663 125.006572) (xy 135.382682 125.011816)
+						(xy 135.312428 125.007249) (xy 135.255166 124.994622) (xy 135.208605 124.975117) (xy 135.167534 124.946726)
+						(xy 135.135647 124.911563) (xy 135.112034 124.868806) (xy 135.097048 124.821435) (xy 135.086914 124.759223)
+						(xy 135.083137 124.678758) (xy 135.083137 124.240728) (xy 135.183355 124.240728) (xy 135.183355 124.675665)
+						(xy 135.185906 124.741749) (xy 135.192479 124.788509) (xy 135.201681 124.820383) (xy 135.216827 124.849033)
+						(xy 135.237626 124.872761) (xy 135.264692 124.892118) (xy 135.295446 124.905685) (xy 135.331499 124.914245)
+						(xy 135.373911 124.917276) (xy 135.430208 124.913459) (xy 135.47355 124.903155) (xy 135.506586 124.887625)
+						(xy 135.531415 124.867422) (xy 135.549498 124.841623) (xy 135.564228 124.803767) (xy 135.574481 124.749997)
+						(xy 135.578408 124.675665)
 					)
 				)
 				(polygon
 					(pts
-						(xy 131.118602 135.749103) (xy 131.216188 135.74084) (xy 131.227386 135.78678) (xy 131.244353 135.821874)
-						(xy 131.266551 135.848305) (xy 131.294633 135.868247) (xy 131.326046 135.88017) (xy 131.361829 135.884265)
-						(xy 131.394308 135.881052) (xy 131.423634 135.87165) (xy 131.450516 135.855998) (xy 131.475433 135.833487)
-						(xy 131.495255 135.806894) (xy 131.509694 135.776143) (xy 131.518734 135.740446) (xy 131.521918 135.698786)
-						(xy 131.51883 135.659172) (xy 131.510107 135.625661) (xy 131.496234 135.597177) (xy 131.477234 135.572903)
-						(xy 131.444922 135.547581) (xy 131.406542 135.532187) (xy 131.360306 135.526787) (xy 131.31717 135.532078)
-						(xy 131.279199 135.54756) (xy 131.246702 135.571598) (xy 131.22242 135.601385) (xy 131.135128 135.590029)
-						(xy 131.208479 135.199592) (xy 131.584929 135.199592) (xy 131.584929 135.287484) (xy 131.282846 135.287484)
-						(xy 131.242039 135.493458) (xy 131.289284 135.465948) (xy 131.33666 135.450046) (xy 131.385095 135.444804)
-						(xy 131.433381 135.449237) (xy 131.476738 135.462146) (xy 131.51617 135.483455) (xy 131.552385 135.51377)
-						(xy 131.581911 135.55025) (xy 131.603027 135.591318) (xy 131.616037 135.637869) (xy 131.620566 135.691124)
-						(xy 131.616667 135.741963) (xy 131.605316 135.788128) (xy 131.586718 135.830427) (xy 131.560648 135.869493)
-						(xy 131.52933 135.902792) (xy 131.494409 135.928277) (xy 131.455404 135.946592) (xy 131.411546 135.95789)
-						(xy 131.361829 135.961817) (xy 131.310693 135.957879) (xy 131.266255 135.946628) (xy 131.227381 135.928537)
-						(xy 131.1932 135.903561) (xy 131.164306 135.872408) (xy 131.142368 135.836799) (xy 131.127069 135.796031)
+						(xy 135.807602 124.799102) (xy 135.905188 124.793193) (xy 135.916372 124.838558) (xy 135.93333 124.87325)
+						(xy 135.955551 124.899412) (xy 135.983607 124.919136) (xy 136.015022 124.930944) (xy 136.050829 124.935003)
+						(xy 136.083283 124.931791) (xy 136.112602 124.922392) (xy 136.139494 124.906739) (xy 136.164433 124.884224)
+						(xy 136.184255 124.857632) (xy 136.198694 124.82688) (xy 136.207734 124.791184) (xy 136.210918 124.749524)
+						(xy 136.20783 124.70991) (xy 136.199107 124.676398) (xy 136.185234 124.647915) (xy 136.166234 124.623641)
+						(xy 136.133922 124.598319) (xy 136.095542 124.582925) (xy 136.049306 124.577525) (xy 136.006189 124.582758)
+						(xy 135.968199 124.598067) (xy 135.935685 124.6219) (xy 135.91142 124.651384) (xy 135.824128 124.639566)
+						(xy 135.897479 124.249591) (xy 136.273929 124.249591) (xy 136.273929 124.338222) (xy 135.971846 124.338222)
+						(xy 135.931039 124.542673) (xy 135.978236 124.515628) (xy 136.025619 124.49997) (xy 136.074095 124.494803)
+						(xy 136.122381 124.499236) (xy 136.165738 124.512145) (xy 136.20517 124.533454) (xy 136.241385 124.563769)
+						(xy 136.270911 124.600249) (xy 136.292027 124.641317) (xy 136.305037 124.687868) (xy 136.309566 124.741123)
+						(xy 136.305667 124.791962) (xy 136.294316 124.838127) (xy 136.275718 124.880426) (xy 136.249648 124.919492)
+						(xy 136.21833 124.952791) (xy 136.183409 124.978276) (xy 136.144404 124.996591) (xy 136.100546 125.007889)
+						(xy 136.050829 125.011816) (xy 135.999693 125.007878) (xy 135.955255 124.996627) (xy 135.916381 124.978536)
+						(xy 135.8822 124.95356) (xy 135.853306 124.922407) (xy 135.831368 124.886798) (xy 135.816069 124.84603)
 					)
 				)
 			)
@@ -4741,7 +4739,7 @@
 			(at -3.286 -2.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 177 "unconnected-(U5-CLIP-Pad1)")
+			(net 175 "unconnected-(U5-CLIP-Pad1)")
 			(pinfunction "CLIP")
 			(pintype "output")
 			(solder_mask_margin 0)
@@ -4763,7 +4761,7 @@
 			(at -3.286 -1.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 161 "unconnected-(U5-IN_N2-Pad3)")
+			(net 159 "unconnected-(U5-IN_N2-Pad3)")
 			(pinfunction "IN_N2")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4771,10 +4769,10 @@
 			(uuid "252f106f-9717-4447-8918-b8ba3dd7a154")
 		)
 		(pad "4" smd rect
-			(at -3.286 -1.25 270)
+			(at -3.285999 -1.25 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 179 "unconnected-(U5-IN_P2-Pad4)")
+			(net 177 "unconnected-(U5-IN_P2-Pad4)")
 			(pinfunction "IN_P2")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4785,7 +4783,7 @@
 			(at -3.286 -0.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 160 "unconnected-(U5-GND-Pad5)")
+			(net 158 "unconnected-(U5-GND-Pad5)")
 			(pinfunction "GND")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -4796,7 +4794,7 @@
 			(at -3.286 -0.25 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 165 "unconnected-(U5-VSS-Pad6)")
+			(net 163 "unconnected-(U5-VSS-Pad6)")
 			(pinfunction "VSS")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -4807,7 +4805,7 @@
 			(at -3.286 0.25 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 175 "unconnected-(U5-VAA-Pad7)")
+			(net 173 "unconnected-(U5-VAA-Pad7)")
 			(pinfunction "VAA")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -4818,7 +4816,7 @@
 			(at -3.286 0.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 171 "unconnected-(U5-IN_P1-Pad8)")
+			(net 169 "unconnected-(U5-IN_P1-Pad8)")
 			(pinfunction "IN_P1")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4826,10 +4824,10 @@
 			(uuid "77276e50-de39-458d-a291-be0af89f5909")
 		)
 		(pad "9" smd rect
-			(at -3.286 1.25 270)
+			(at -3.285999 1.25 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 162 "unconnected-(U5-IN_N1-Pad9)")
+			(net 160 "unconnected-(U5-IN_N1-Pad9)")
 			(pinfunction "IN_N1")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4840,7 +4838,7 @@
 			(at -3.286 1.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 174 "unconnected-(U5-COMP1-Pad10)")
+			(net 172 "unconnected-(U5-COMP1-Pad10)")
 			(pinfunction "COMP1")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4851,7 +4849,7 @@
 			(at -3.286 2.25 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 164 "unconnected-(U5-CSD-Pad11)")
+			(net 162 "unconnected-(U5-CSD-Pad11)")
 			(pinfunction "CSD")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -4862,7 +4860,7 @@
 			(at -3.286 2.75 270)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 170 "unconnected-(U5-FAULT-Pad12)")
+			(net 168 "unconnected-(U5-FAULT-Pad12)")
 			(pinfunction "FAULT")
 			(pintype "output")
 			(solder_mask_margin 0)
@@ -4870,10 +4868,10 @@
 			(uuid "7275b511-3631-4039-a1cd-b0195ab36bc2")
 		)
 		(pad "13" smd rect
-			(at -2.061 3.45)
+			(at -2.061 3.449999)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 182 "unconnected-(U5-VCC-Pad13)")
+			(net 180 "unconnected-(U5-VCC-Pad13)")
 			(pinfunction "VCC")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -4884,7 +4882,7 @@
 			(at -1.573 3.146)
 			(size 0.2 0.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 169 "unconnected-(U5-COM1-Pad14)")
+			(net 167 "unconnected-(U5-COM1-Pad14)")
 			(pinfunction "COM1")
 			(pintype "passive")
 			(solder_mask_margin 0)
@@ -4903,10 +4901,10 @@
 			(uuid "14cb91d5-f46f-49f1-bfd8-e8171513096f")
 		)
 		(pad "16" smd rect
-			(at -0.411 3.45)
+			(at -0.410999 3.45)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 181 "unconnected-(U5-VB1-Pad16)")
+			(net 179 "unconnected-(U5-VB1-Pad16)")
 			(pinfunction "VB1")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -4917,7 +4915,7 @@
 			(at 0.089 3.15 90)
 			(size 1.3 0.25)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 168 "unconnected-(U5-VS1_1-Pad17)")
+			(net 166 "unconnected-(U5-VS1_1-Pad17)")
 			(pinfunction "VS1_1")
 			(pintype "output")
 			(solder_mask_margin 0)
@@ -4953,7 +4951,7 @@
 			(uuid "04da6a4d-9d4c-42d1-ab57-a3afa5371400")
 		)
 		(pad "18" smd rect
-			(at 1.952 2.613)
+			(at 1.951999 2.613)
 			(size 0.5 0.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net 90 "unconnected-(U5-VP1-Pad18)")
@@ -4964,7 +4962,7 @@
 			(uuid "fca1f48f-57d5-4c5d-a1c7-be2b14fd5cc4")
 		)
 		(pad "19" smd custom
-			(at -0.02 0.201)
+			(at -0.020001 0.201)
 			(size 0.000001 0.000001)
 			(layers "F.Cu" "F.Mask")
 			(net 151 "unconnected-(U5-VS1_2-Pad19)")
@@ -5037,7 +5035,7 @@
 			(at 3.214 -0.875)
 			(size 0.000001 0.000001)
 			(layers "F.Cu" "F.Mask")
-			(net 172 "unconnected-(U5-VN2-Pad21)")
+			(net 170 "unconnected-(U5-VN2-Pad21)")
 			(pinfunction "VN2")
 			(pintype "power_in")
 			(solder_mask_margin 0.000001)
@@ -5061,7 +5059,7 @@
 			(at 3.286 -0.525)
 			(size 0.15 0.15)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 172 "unconnected-(U5-VN2-Pad21)")
+			(net 170 "unconnected-(U5-VN2-Pad21)")
 			(pinfunction "VN2")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -5072,7 +5070,7 @@
 			(at -0.02 -1.675)
 			(size 0.000001 0.000001)
 			(layers "F.Cu" "F.Mask")
-			(net 166 "unconnected-(U5-VS2_1-Pad22)")
+			(net 164 "unconnected-(U5-VS2_1-Pad22)")
 			(pinfunction "VS2_1")
 			(pintype "output")
 			(solder_mask_margin 0.000001)
@@ -5093,10 +5091,10 @@
 			(uuid "510e2a11-143a-4083-a360-6f50ff6fffd3")
 		)
 		(pad "22" smd rect
-			(at 1.385 -0.912)
+			(at 1.385 -0.911999)
 			(size 0.5 0.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 166 "unconnected-(U5-VS2_1-Pad22)")
+			(net 164 "unconnected-(U5-VS2_1-Pad22)")
 			(pinfunction "VS2_1")
 			(pintype "output")
 			(solder_mask_margin 0)
@@ -5107,7 +5105,7 @@
 			(at 0.614 -3.15)
 			(size 0.000001 0.000001)
 			(layers "F.Cu" "F.Mask")
-			(net 163 "unconnected-(U5-VP2-Pad23)")
+			(net 161 "unconnected-(U5-VP2-Pad23)")
 			(pinfunction "VP2")
 			(pintype "power_in")
 			(solder_mask_margin 0.000001)
@@ -5132,10 +5130,10 @@
 			(uuid "4f7b9d53-cb98-4f35-ac67-4effa55eeba0")
 		)
 		(pad "23" smd rect
-			(at 1.952 -2.612)
+			(at 1.952 -2.611999)
 			(size 0.5 0.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 163 "unconnected-(U5-VP2-Pad23)")
+			(net 161 "unconnected-(U5-VP2-Pad23)")
 			(pinfunction "VP2")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -5146,7 +5144,7 @@
 			(at 0.089 -3.15 90)
 			(size 1.3 0.25)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 167 "unconnected-(U5-VS2_2-Pad24)")
+			(net 165 "unconnected-(U5-VS2_2-Pad24)")
 			(pinfunction "VS2_2")
 			(pintype "output")
 			(solder_mask_margin 0)
@@ -5154,10 +5152,10 @@
 			(uuid "5a71c9e7-8a7f-4219-8142-0bc1e06140a0")
 		)
 		(pad "25" smd rect
-			(at -0.411 -3.45)
+			(at -0.410999 -3.45)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 178 "unconnected-(U5-VB2-Pad25)")
+			(net 176 "unconnected-(U5-VB2-Pad25)")
 			(pinfunction "VB2")
 			(pintype "power_in")
 			(solder_mask_margin 0)
@@ -5168,7 +5166,7 @@
 			(at -0.911 -3.45)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 176 "unconnected-(U5-CSH2-Pad26)")
+			(net 174 "unconnected-(U5-CSH2-Pad26)")
 			(pinfunction "CSH2")
 			(pintype "input")
 			(solder_mask_margin 0)
@@ -5179,7 +5177,7 @@
 			(at -1.573 -3.146)
 			(size 0.2 0.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 173 "unconnected-(U5-COM2-Pad27)")
+			(net 171 "unconnected-(U5-COM2-Pad27)")
 			(pinfunction "COM2")
 			(pintype "passive")
 			(solder_mask_margin 0)
@@ -5190,7 +5188,7 @@
 			(at -1.436 -3.801)
 			(size 0.000001 0.000001)
 			(layers "F.Cu" "F.Mask")
-			(net 173 "unconnected-(U5-COM2-Pad27)")
+			(net 171 "unconnected-(U5-COM2-Pad27)")
 			(pinfunction "COM2")
 			(pintype "passive")
 			(solder_mask_margin 0.000001)
@@ -5212,10 +5210,10 @@
 			(uuid "7f592075-1cc6-4303-8175-9272ed7e36e7")
 		)
 		(pad "28" smd rect
-			(at -2.061 -3.45)
+			(at -2.061 -3.449999)
 			(size 0.25 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 180 "unconnected-(U5-NC-Pad28)")
+			(net 178 "unconnected-(U5-NC-Pad28)")
 			(pinfunction "NC")
 			(pintype "passive+no_connect")
 			(solder_mask_margin 0)
@@ -6027,7 +6025,7 @@
 	(footprint "USB4105_GF_A_120:GCT_USB4105-GF-A-120"
 		(layer "F.Cu")
 		(uuid "6e10826b-bc74-4df0-ba05-40fbc13f6fca")
-		(at 102.6 138 -90)
+		(at 103 138 -90)
 		(property "Reference" "USB_POWER1"
 			(at 0 -1.9 90)
 			(layer "B.SilkS")
@@ -8530,7 +8528,7 @@
 			(at 4.925 3.25)
 			(size 1.2 2.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 159 "unconnected-(TRS1-PadS)")
+			(net 157 "unconnected-(TRS1-PadS)")
 			(pintype "passive")
 			(uuid "970acb73-d735-4eac-8247-959effdf656b")
 		)
@@ -8538,7 +8536,7 @@
 			(at 3.825 -3.25)
 			(size 1.2 2.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net 158 "unconnected-(TRS1-PadT)")
+			(net 156 "unconnected-(TRS1-PadT)")
 			(pintype "passive")
 			(uuid "53782180-a477-44bd-a59e-31c4c5429158")
 		)
@@ -13029,7 +13027,7 @@
 	(footprint "Resistor_SMD:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "c8716e59-8a56-44d7-bb35-60f3c391058d")
-		(at 110 110.8 180)
+		(at 110.25 110.8 180)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R4"
@@ -13214,7 +13212,7 @@
 			(size 0.54 0.64)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 157 "unconnected-(R4-Pad1)")
+			(net 2 "GND")
 			(pintype "passive")
 			(uuid "785b4026-ed35-4832-91c3-e0d688dca055")
 		)
@@ -15131,7 +15129,7 @@
 	(footprint "Resistor_SMD:R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "ee6993fc-512d-4dc9-af59-ef568ff10e76")
-		(at 110 113.8 180)
+		(at 110.25 113.75 180)
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R3"
@@ -15316,7 +15314,7 @@
 			(size 0.54 0.64)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 156 "unconnected-(R3-Pad1)")
+			(net 2 "GND")
 			(pintype "passive")
 			(uuid "7fcd7df3-ce88-466c-b713-79225b383c67")
 		)
@@ -17734,7 +17732,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 198 "unconnected-(HUB75-Pin_1-Pad1)")
+			(net 196 "unconnected-(HUB75-Pin_1-Pad1)")
 			(pinfunction "Pin_1")
 			(pintype "passive")
 			(uuid "e33f16b7-b469-4ee6-a4f8-14c1ac35d419")
@@ -17744,7 +17742,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 190 "unconnected-(HUB75-Pin_2-Pad2)")
+			(net 188 "unconnected-(HUB75-Pin_2-Pad2)")
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "6e6cf465-86fa-4950-83f8-368ca7aa854b")
@@ -17754,7 +17752,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 189 "unconnected-(HUB75-Pin_3-Pad3)")
+			(net 187 "unconnected-(HUB75-Pin_3-Pad3)")
 			(pinfunction "Pin_3")
 			(pintype "passive")
 			(uuid "62cf5190-cb39-48ab-a3a4-3ba2ac50d073")
@@ -17764,7 +17762,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 184 "unconnected-(HUB75-Pin_4-Pad4)")
+			(net 182 "unconnected-(HUB75-Pin_4-Pad4)")
 			(pinfunction "Pin_4")
 			(pintype "passive")
 			(uuid "29a82a90-9f2a-4179-b99e-27b1ed98eea9")
@@ -17774,7 +17772,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 191 "unconnected-(HUB75-Pin_5-Pad5)")
+			(net 189 "unconnected-(HUB75-Pin_5-Pad5)")
 			(pinfunction "Pin_5")
 			(pintype "passive")
 			(uuid "81f01227-8793-42c4-beff-88e47aa2e183")
@@ -17784,7 +17782,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 187 "unconnected-(HUB75-Pin_6-Pad6)")
+			(net 185 "unconnected-(HUB75-Pin_6-Pad6)")
 			(pinfunction "Pin_6")
 			(pintype "passive")
 			(uuid "56d78fca-ebc8-44cd-9a39-f5049f35a4dc")
@@ -17794,7 +17792,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 192 "unconnected-(HUB75-Pin_7-Pad7)")
+			(net 190 "unconnected-(HUB75-Pin_7-Pad7)")
 			(pinfunction "Pin_7")
 			(pintype "passive")
 			(uuid "8a98fcb1-4808-47c3-84e5-6a169a898ef0")
@@ -17804,7 +17802,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 183 "unconnected-(HUB75-Pin_8-Pad8)")
+			(net 181 "unconnected-(HUB75-Pin_8-Pad8)")
 			(pinfunction "Pin_8")
 			(pintype "passive")
 			(uuid "0829b016-6092-4ba2-9a89-67d837cf080d")
@@ -17814,7 +17812,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 194 "unconnected-(HUB75-Pin_9-Pad9)")
+			(net 192 "unconnected-(HUB75-Pin_9-Pad9)")
 			(pinfunction "Pin_9")
 			(pintype "passive")
 			(uuid "ba0b4e70-ef84-49c8-b2fa-5b5e75d9bffc")
@@ -17824,7 +17822,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 195 "unconnected-(HUB75-Pin_10-Pad10)")
+			(net 193 "unconnected-(HUB75-Pin_10-Pad10)")
 			(pinfunction "Pin_10")
 			(pintype "passive")
 			(uuid "bcfc523e-75cd-42ce-ab44-fc03912596c9")
@@ -17834,7 +17832,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 188 "unconnected-(HUB75-Pin_11-Pad11)")
+			(net 186 "unconnected-(HUB75-Pin_11-Pad11)")
 			(pinfunction "Pin_11")
 			(pintype "passive")
 			(uuid "5ee76bc1-eb2f-4e49-bb6a-c9b5beb437c5")
@@ -17844,7 +17842,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 196 "unconnected-(HUB75-Pin_12-Pad12)")
+			(net 194 "unconnected-(HUB75-Pin_12-Pad12)")
 			(pinfunction "Pin_12")
 			(pintype "passive")
 			(uuid "c35e519b-1381-475e-b8c8-1d4cd1d5fd0e")
@@ -17854,7 +17852,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 197 "unconnected-(HUB75-Pin_13-Pad13)")
+			(net 195 "unconnected-(HUB75-Pin_13-Pad13)")
 			(pinfunction "Pin_13")
 			(pintype "passive")
 			(uuid "d02798a5-327e-416a-bd11-5772851d6f77")
@@ -17864,7 +17862,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 193 "unconnected-(HUB75-Pin_14-Pad14)")
+			(net 191 "unconnected-(HUB75-Pin_14-Pad14)")
 			(pinfunction "Pin_14")
 			(pintype "passive")
 			(uuid "8bc72e65-9baa-4041-8a5a-1755f40e565b")
@@ -17874,7 +17872,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 186 "unconnected-(HUB75-Pin_15-Pad15)")
+			(net 184 "unconnected-(HUB75-Pin_15-Pad15)")
 			(pinfunction "Pin_15")
 			(pintype "passive")
 			(uuid "43f506fe-346e-4ca0-848c-93cb0fef8f82")
@@ -17884,7 +17882,7 @@
 			(size 5 1.02)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.245098)
-			(net 185 "unconnected-(HUB75-Pin_16-Pad16)")
+			(net 183 "unconnected-(HUB75-Pin_16-Pad16)")
 			(pinfunction "Pin_16")
 			(pintype "passive")
 			(uuid "2ffbc2cc-6bb5-45a9-b0ef-c7d81fde1bf3")
