@@ -7678,7 +7678,7 @@
 		)
 		(uuid "0f274255-0895-4032-a90e-69270cb7461a")
 	)
-	(text "Flash"
+	(text "Flash 4MB"
 		(exclude_from_sim no)
 		(at 63.5 64.77 0)
 		(effects
@@ -8247,12 +8247,6 @@
 		(uuid "f3456470-e7c2-42ad-ac10-2f1837e01c00")
 	)
 	(junction
-		(at 66.04 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f4907524-c2b7-4354-bf06-2fee1ba9e951")
-	)
-	(junction
 		(at 342.9 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8706,16 +8700,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 82.55) (xy 66.04 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bc492ca-86fa-4465-a8d1-2d9b80550002")
-	)
-	(wire
-		(pts
 			(xy 387.35 123.19) (xy 394.97 123.19)
 		)
 		(stroke
@@ -8783,16 +8767,6 @@
 			(type default)
 		)
 		(uuid "1ed8740a-ed85-4d4c-8d4f-b8882d3caa54")
-	)
-	(wire
-		(pts
-			(xy 63.5 91.44) (xy 66.04 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f5ea6e7-97cb-4fb1-941a-443c85912777")
 	)
 	(wire
 		(pts
@@ -8933,16 +8907,6 @@
 			(type default)
 		)
 		(uuid "2a6569e4-569c-4c6b-9ca9-a75ccd70f03c")
-	)
-	(wire
-		(pts
-			(xy 45.72 82.55) (xy 55.88 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ab44dc4-1a2d-41dd-8ff7-10ba7dc877ca")
 	)
 	(wire
 		(pts
@@ -9716,16 +9680,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 91.44) (xy 55.88 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7789a1e2-2371-4a69-b4b2-0c022cf4cb7e")
-	)
-	(wire
-		(pts
 			(xy 217.17 85.09) (xy 214.63 85.09)
 		)
 		(stroke
@@ -9943,16 +9897,6 @@
 			(type default)
 		)
 		(uuid "93cd4c91-7909-43d2-a545-fb1ebd85b5b3")
-	)
-	(wire
-		(pts
-			(xy 63.5 82.55) (xy 66.04 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93d11fcd-a840-49f1-985e-2d798383541b")
 	)
 	(wire
 		(pts
@@ -11006,7 +10950,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 91.44) (xy 80.01 91.44)
+			(xy 67.31 91.44) (xy 80.01 91.44)
 		)
 		(stroke
 			(width 0)
@@ -11173,16 +11117,6 @@
 			(justify left bottom)
 		)
 		(uuid "2825e747-f73d-43ff-a793-9990b4e0504a")
-	)
-	(label "GPIO0"
-		(at 45.72 82.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2db483cc-cbbb-4fc9-8205-a92879355476")
 	)
 	(label "USB_D+"
 		(at 443.23 123.19 180)
@@ -11424,16 +11358,6 @@
 		)
 		(uuid "5faef74c-2c29-48a2-af4f-af1703f78dfa")
 	)
-	(label "QSPI_SS"
-		(at 45.72 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "629c8eaf-33ca-48d3-b544-af7af5507a06")
-	)
 	(label "ROW_E"
 		(at 284.48 171.45 180)
 		(effects
@@ -11674,16 +11598,6 @@
 		)
 		(uuid "a85497be-b399-4afe-93ab-2da320d38fc8")
 	)
-	(label "FLASH_SS"
-		(at 67.945 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a92ad743-ae6c-43b0-b4bd-84cceb08cff1")
-	)
 	(label "G0_5V"
 		(at 520.7 113.03 0)
 		(effects
@@ -11853,6 +11767,16 @@
 			(justify left bottom)
 		)
 		(uuid "cea3981b-3a14-4eff-bc89-3efec445d43c")
+	)
+	(label "QSPI_SS"
+		(at 67.31 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d2625e58-7d93-4247-999f-5888465048e2")
 	)
 	(label "QSPI_SD2"
 		(at 124.46 96.52 180)
@@ -12029,9 +11953,9 @@
 		(at 80.01 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005edac067")
 		(property "Reference" "R1"
 			(at 81.788 75.0316 0)
@@ -12042,7 +11966,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DNF"
+		(property "Value" "10k"
 			(at 81.788 77.343 0)
 			(effects
 				(font
@@ -17800,142 +17724,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 59.69 91.44 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bfd7afff-d47f-4964-9ba8-8a091fc5e90a")
-		(property "Reference" "R10"
-			(at 58.5216 89.662 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0"
-			(at 60.833 89.662 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 59.69 93.218 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 59.69 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "44e47322-1df5-4ea6-86c8-78f27cc27029")
-		)
-		(pin "2"
-			(uuid "2f0a4446-cd57-421a-afe9-d9356b7c8bb5")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 59.69 82.55 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c3bba709-ca2f-44d9-85d3-c0a520436e98")
-		(property "Reference" "R9"
-			(at 58.5216 80.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DNF"
-			(at 60.833 80.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 59.69 84.328 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 59.69 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 59.69 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7abe9412-05f7-402c-822f-24d0efba9928")
-		)
-		(pin "2"
-			(uuid "f961cd47-7c99-40f5-a870-d7bac34966be")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "R9")
 					(unit 1)
 				)
 			)
