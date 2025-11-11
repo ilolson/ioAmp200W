@@ -7923,6 +7923,12 @@
 		(uuid "19298dfc-e5b7-46b6-9db1-311ec765b2c8")
 	)
 	(junction
+		(at 148.59 314.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29c20bb1-60f6-4678-8138-cc6ed09be31d")
+	)
+	(junction
 		(at 217.17 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8223,6 +8229,12 @@
 		(uuid "e4e228c5-9487-483b-a795-cb7eca793cea")
 	)
 	(junction
+		(at 137.16 314.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e883b53b-caca-4826-98d2-2a5cecc862cf")
+	)
+	(junction
 		(at 193.04 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8281,6 +8293,10 @@
 	(no_connect
 		(at 179.07 307.34)
 		(uuid "52ea4088-e1f5-48f9-8894-2d022c30a129")
+	)
+	(no_connect
+		(at 229.87 302.26)
+		(uuid "54852c90-8218-48ec-9ebe-be0d9a19196b")
 	)
 	(no_connect
 		(at 638.81 128.27)
@@ -8493,16 +8509,6 @@
 			(type default)
 		)
 		(uuid "0e7800c4-f45d-456f-b5eb-543f891a4a13")
-	)
-	(wire
-		(pts
-			(xy 158.75 314.96) (xy 158.75 327.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ed45b8f-c7e8-4e61-86bb-a45157e35825")
 	)
 	(wire
 		(pts
@@ -9666,6 +9672,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 322.58) (xy 125.73 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "691c3c90-17ee-4908-be84-21a47d8f6e90")
+	)
+	(wire
+		(pts
 			(xy 163.195 194.31) (xy 170.18 194.31)
 		)
 		(stroke
@@ -9783,6 +9799,16 @@
 			(type default)
 		)
 		(uuid "73502b6b-a2ff-4614-b615-e47af650ec56")
+	)
+	(wire
+		(pts
+			(xy 148.59 314.96) (xy 158.75 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7580da69-c4fd-453a-95bf-621540acc5f5")
 	)
 	(wire
 		(pts
@@ -9933,6 +9959,16 @@
 			(type default)
 		)
 		(uuid "826d6176-cc59-485f-a78f-d64f8d5864c7")
+	)
+	(wire
+		(pts
+			(xy 137.16 314.96) (xy 148.59 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84b513b4-ea2a-46f0-8194-1f1ef68d7c80")
 	)
 	(wire
 		(pts
@@ -10206,6 +10242,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 322.58) (xy 148.59 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c0265ed-b8ad-44b9-95b0-3ed9414689e6")
+	)
+	(wire
+		(pts
 			(xy 229.87 347.98) (xy 229.87 350.52)
 		)
 		(stroke
@@ -10233,6 +10279,16 @@
 			(type default)
 		)
 		(uuid "9f3736a0-b252-40e1-b342-2961913504d2")
+	)
+	(wire
+		(pts
+			(xy 158.75 314.96) (xy 158.75 327.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1c6b296-bb1b-4bb3-99e2-7b456b35bf74")
 	)
 	(wire
 		(pts
@@ -10393,6 +10449,16 @@
 			(type default)
 		)
 		(uuid "b1fe3b1a-dea6-4b56-a904-45f53a879e6f")
+	)
+	(wire
+		(pts
+			(xy 125.73 314.96) (xy 137.16 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b244d8f3-f865-45ca-8852-1a315f76b84b")
 	)
 	(wire
 		(pts
@@ -11053,6 +11119,16 @@
 			(type default)
 		)
 		(uuid "ef212146-67fd-4655-989b-4404edfb0b9e")
+	)
+	(wire
+		(pts
+			(xy 137.16 322.58) (xy 137.16 314.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0902d7f-91c5-4fde-ae92-fb278c811fb0")
 	)
 	(wire
 		(pts
@@ -14096,6 +14172,84 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 148.59 326.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "23a78ec6-722d-424a-a5e8-075144f89877")
+		(property "Reference" "C25"
+			(at 151.511 325.2216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 151.511 327.533 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 149.5552 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C408141"
+			(at 148.59 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ca39f819-1033-44f0-aedd-8cf6bb1f719b")
+		)
+		(pin "2"
+			(uuid "2184ab94-def8-46e1-b39c-4d04836aa4cb")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 331.47 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15665,6 +15819,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 125.73 326.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "573e6875-27da-46f8-aca0-b9408ac3c890")
+		(property "Reference" "C27"
+			(at 128.651 325.2216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 128.651 327.533 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 126.6952 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 125.73 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03e60a84-bf3b-441d-bcab-3e151fb69162")
+		)
+		(pin "2"
+			(uuid "647cbafc-ecbb-4cea-aeb8-3d9a8e0a58f6")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 207.01 532.13 0)
 		(unit 1)
@@ -16071,7 +16293,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 158.75 314.96 0)
+		(at 148.59 314.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16079,7 +16301,7 @@
 		(dnp no)
 		(uuid "6469eab9-2a2b-4506-b191-74ee9ecc2176")
 		(property "Reference" "#PWR047"
-			(at 158.75 318.77 0)
+			(at 148.59 318.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16088,7 +16310,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 159.131 310.5658 0)
+			(at 148.971 310.5658 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16096,7 +16318,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 314.96 0)
+			(at 148.59 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16105,7 +16327,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 314.96 0)
+			(at 148.59 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16114,7 +16336,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 158.75 314.96 0)
+			(at 148.59 314.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18725,6 +18947,72 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 125.73 330.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b66688fb-f063-43e3-bd44-3a3b27dd39e7")
+		(property "Reference" "#PWR054"
+			(at 125.73 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 125.73 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "740e4057-8fa1-46ae-9e34-37988f57a0af")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 101.6 77.47 0)
 		(unit 1)
@@ -19199,6 +19487,74 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 137.16 326.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0f3db9a-1fea-47f6-8edc-951e5f300ebd")
+		(property "Reference" "C26"
+			(at 140.081 325.2216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 140.081 327.533 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 138.1252 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 326.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f065d51b-a11f-4464-b2f0-a2d07dac6c92")
+		)
+		(pin "2"
+			(uuid "34b67e95-2a39-4cc1-8a58-525a7d782261")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -20124,6 +20480,72 @@
 		)
 	)
 	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 137.16 330.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f79b688d-2bed-47a9-b7d0-dbd1c0d85eb1")
+		(property "Reference" "#PWR052"
+			(at 137.16 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0be2bc9-1576-41a7-955f-409e030c9fe8")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR052")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 147.32 121.92 0)
 		(mirror y)
@@ -20319,6 +20741,72 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 148.59 330.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd92d63e-1acb-41e7-a0b2-6b41d36f92f4")
+		(property "Reference" "#PWR050"
+			(at 148.59 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d12c7a4-0f79-456c-aeed-1f6b7bff7c2f")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
