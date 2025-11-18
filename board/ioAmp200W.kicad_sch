@@ -9742,6 +9742,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.24 184.15) (xy 284.48 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e3f2165-4797-4580-a97e-a984a91031bd")
+	)
+	(wire
+		(pts
 			(xy 90.17 171.45) (xy 101.6 171.45)
 		)
 		(stroke
@@ -10569,6 +10579,16 @@
 			(type default)
 		)
 		(uuid "b9c2a0b0-fcaf-43aa-97fc-d283ab1262e6")
+	)
+	(wire
+		(pts
+			(xy 494.03 326.39) (xy 502.92 326.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba082939-c6ec-41e4-956a-602823e3cacb")
 	)
 	(wire
 		(pts
@@ -11740,6 +11760,16 @@
 		)
 		(uuid "4d8b9fe2-3388-4880-bfa5-b3cf3ae404f1")
 	)
+	(label "AMP_CLIP"
+		(at 494.03 326.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f6b7701-e9b3-4565-82cd-c9e622c5f5b3")
+	)
 	(label "SPI0_SCK"
 		(at 284.48 120.65 180)
 		(effects
@@ -12379,6 +12409,16 @@
 			(justify right bottom)
 		)
 		(uuid "e32a2cae-20e7-4623-bea5-09b59fcf6b5f")
+	)
+	(label "AMP_CLIP"
+		(at 284.48 184.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e69046c7-779a-425c-b01a-ed94d011ce37")
 	)
 	(label "R0"
 		(at 284.48 146.05 180)
