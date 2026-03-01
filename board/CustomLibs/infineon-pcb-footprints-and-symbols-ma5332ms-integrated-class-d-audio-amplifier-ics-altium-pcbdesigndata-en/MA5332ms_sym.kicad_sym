@@ -15,7 +15,7 @@
 			)
 		)
 		(property "Value" "MA5332MS"
-			(at 0 -66.04 0)
+			(at 13.208 -22.352 90)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -42,7 +42,7 @@
 			)
 		)
 		(property "Description" "200W Stereo, Integrated Class D Amplifier"
-			(at 0 0 0)
+			(at 50.546 -15.494 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -61,7 +61,7 @@
 			)
 		)
 		(property "PackageReference" "PG-IQFN-42-1"
-			(at -5.588 -38.1 0)
+			(at 51.308 -28.702 90)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -71,7 +71,7 @@
 			)
 		)
 		(property "Manufacturer" "Infineon Technologies"
-			(at -5.588 -68.58 0)
+			(at 51.308 -32.512 90)
 			(effects
 				(font
 					(size 1.8288 1.8288)
@@ -82,8 +82,8 @@
 		)
 		(symbol "MA5332MS_1_0"
 			(rectangle
-				(start 22.86 0)
-				(end 0 -63.5)
+				(start 0 0)
+				(end 19.05 -33.02)
 				(stroke
 					(width 0)
 					(type solid)
@@ -93,62 +93,8 @@
 					(type background)
 				)
 			)
-			(pin power_in line
-				(at -5.08 -2.54 0)
-				(length 5.08)
-				(name "VSS"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -5.08 -7.62 0)
-				(length 5.08)
-				(name "VAA"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -5.08 -12.7 0)
-				(length 5.08)
-				(name "VCC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin output line
-				(at -5.08 -17.78 0)
+				(at -5.08 -2.54 0)
 				(length 5.08)
 				(name "CLIP"
 					(effects
@@ -166,7 +112,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -22.86 0)
+				(at -5.08 -5.08 0)
 				(length 5.08)
 				(name "COMP2"
 					(effects
@@ -184,7 +130,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -27.94 0)
+				(at -5.08 -7.62 0)
 				(length 5.08)
 				(name "IN_N2"
 					(effects
@@ -202,7 +148,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -30.48 0)
+				(at -5.08 -10.16 0)
 				(length 5.08)
 				(name "IN_P2"
 					(effects
@@ -219,8 +165,62 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at -5.08 -12.7 0)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 -15.24 0)
+				(length 5.08)
+				(name "VSS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -5.08 -17.78 0)
+				(length 5.08)
+				(name "VAA"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin input line
-				(at -5.08 -35.56 0)
+				(at -5.08 -20.32 0)
 				(length 5.08)
 				(name "IN_P1"
 					(effects
@@ -238,7 +238,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -38.1 0)
+				(at -5.08 -22.86 0)
 				(length 5.08)
 				(name "IN_N1"
 					(effects
@@ -256,7 +256,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -43.18 0)
+				(at -5.08 -25.4 0)
 				(length 5.08)
 				(name "COMP1"
 					(effects
@@ -274,7 +274,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 -48.26 0)
+				(at -5.08 -27.94 0)
 				(length 5.08)
 				(name "CSD"
 					(effects
@@ -292,7 +292,7 @@
 				)
 			)
 			(pin output line
-				(at -5.08 -53.34 0)
+				(at -5.08 -30.48 0)
 				(length 5.08)
 				(name "FAULT"
 					(effects
@@ -309,8 +309,44 @@
 					)
 				)
 			)
+			(pin power_in line
+				(at 3.81 -38.1 90)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin passive line
-				(at -5.08 -58.42 0)
+				(at 8.89 0 270)
+				(length 5.08)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 -38.1 90)
 				(length 5.08)
 				(name "COM1"
 					(effects
@@ -328,7 +364,7 @@
 				)
 			)
 			(pin passive line
-				(at -5.08 -60.96 0)
+				(at 8.89 -38.1 90)
 				(length 5.08)
 				(name "COM2"
 					(effects
@@ -345,26 +381,8 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 27.94 -2.54 180)
-				(length 5.08)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input line
-				(at 27.94 -7.62 180)
+				(at 13.97 -34.29 90)
 				(length 5.08)
 				(name "CSH1"
 					(effects
@@ -382,7 +400,7 @@
 				)
 			)
 			(pin input line
-				(at 27.94 -10.16 180)
+				(at 15.24 2.54 270)
 				(length 5.08)
 				(name "CSH2"
 					(effects
@@ -400,52 +418,16 @@
 				)
 			)
 			(pin power_in line
-				(at 27.94 -15.24 180)
+				(at 19.05 2.54 270)
 				(length 5.08)
-				(name "VP2"
+				(name "VB2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "23"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 27.94 -20.32 180)
-				(length 5.08)
-				(name "VS2_1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "22"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 27.94 -22.86 180)
-				(length 5.08)
-				(name "VS2_2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "24"
+				(number "25"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -454,97 +436,7 @@
 				)
 			)
 			(pin power_in line
-				(at 27.94 -27.94 180)
-				(length 5.08)
-				(name "VN2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "21"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 27.94 -33.02 180)
-				(length 5.08)
-				(name "VN1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 27.94 -38.1 180)
-				(length 5.08)
-				(name "VS1_1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "17"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 27.94 -40.64 180)
-				(length 5.08)
-				(name "VS1_2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 27.94 -45.72 180)
-				(length 5.08)
-				(name "VP1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 27.94 -50.8 180)
+				(at 19.05 -34.29 90)
 				(length 5.08)
 				(name "VB1"
 					(effects
@@ -562,16 +454,16 @@
 				)
 			)
 			(pin power_in line
-				(at 27.94 -53.34 180)
+				(at 24.13 -6.35 180)
 				(length 5.08)
-				(name "VB2"
+				(name "VP2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "25"
+				(number "23"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -579,17 +471,125 @@
 					)
 				)
 			)
-			(pin passive line
-				(at 27.94 -60.96 180)
+			(pin output line
+				(at 24.13 -10.16 180)
 				(length 5.08)
-				(name "NC"
+				(name "VS2_1"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "28"
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 24.13 -10.16 180)
+				(length 5.08)
+				(name "VS2_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 24.13 -13.97 180)
+				(length 5.08)
+				(name "VN2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 24.13 -17.78 180)
+				(length 5.08)
+				(name "VN1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 24.13 -21.59 180)
+				(length 5.08)
+				(name "VS1_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 24.13 -21.59 180)
+				(length 5.08)
+				(name "VS1_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 24.13 -25.4 180)
+				(length 5.08)
+				(name "VP1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
 					(effects
 						(font
 							(size 1.27 1.27)
