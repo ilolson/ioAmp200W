@@ -9006,6 +9006,16 @@
 		)
 		(uuid "e4f730e9-6723-4c03-a944-54fcb1937080")
 	)
+	(text "CLASS D AMP\n47.5k / (3.5k+8.2k) = 4.05 V/V or 12.5dB\nOriginal TLC082 replaced with TLV9161"
+		(exclude_from_sim no)
+		(at 545.846 262.382 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e53bf4b6-a803-4a86-aea0-bb11f5196b38")
+	)
 	(text "OP AMP Front end \n34.8k / 10k = 3.48V/V or 10.8dB\nOriginal TLC082 replaced with TLV9161"
 		(exclude_from_sim no)
 		(at 427.228 276.352 0)
@@ -10181,14 +10191,6 @@
 	(no_connect
 		(at 179.07 304.8)
 		(uuid "b6466eb4-db01-4166-8caf-d808daab9c00")
-	)
-	(no_connect
-		(at 229.87 292.1)
-		(uuid "bdc176a6-f55a-4f8e-8bdd-97788fe9514d")
-	)
-	(no_connect
-		(at 229.87 294.64)
-		(uuid "c265e4da-282a-485e-ba6f-0307e8bb1791")
 	)
 	(no_connect
 		(at 179.07 302.26)
