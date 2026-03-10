@@ -8867,6 +8867,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:VBUS"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VBUS"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VBUS\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VBUS_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBUS_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(circle
 		(center 172.72 109.855)
@@ -9016,6 +9141,26 @@
 		)
 		(uuid "201f1db8-2668-4689-a1a1-1b081a08f5f5")
 	)
+	(text_box "Replaced with LDO for lower supply voltage capability on VBUS, should allow for min. 15V supply"
+		(exclude_from_sim no)
+		(at 566.42 369.57 0)
+		(size 17.78 17.78)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2028a098-d005-4c02-a421-5a15d807b33e")
+	)
 	(text_box "CONTROL"
 		(exclude_from_sim no)
 		(at 25.4 26.67 0)
@@ -9127,12 +9272,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "04906d31-d1bf-418e-93b1-28c1b4ffa017")
-	)
-	(junction
-		(at 567.69 386.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0af115b9-df1c-4293-81d9-3409b22cd006")
 	)
 	(junction
 		(at 444.5 317.5)
@@ -9285,6 +9424,12 @@
 		(uuid "2cde2dbd-a0b3-4955-ac7e-525937891ef1")
 	)
 	(junction
+		(at 558.8 368.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ce6a1f9-ca4a-49d8-810e-f08acc33b140")
+	)
+	(junction
 		(at 285.75 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9325,12 +9470,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "391905b0-a0ab-4a49-84fb-9fe4d73db476")
-	)
-	(junction
-		(at 570.23 386.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3964b95c-d2d1-4143-a0d1-8fb69bc1f1fa")
 	)
 	(junction
 		(at 584.2 283.21)
@@ -9471,6 +9610,12 @@
 		(uuid "59595f02-6bf3-455a-a1a9-d41a02e13798")
 	)
 	(junction
+		(at 563.88 368.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a28b435-14e0-4710-b990-5652db6db899")
+	)
+	(junction
 		(at 95.25 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9529,6 +9674,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6afb03ab-51d6-4fc4-b7aa-fb3e6b4fd884")
+	)
+	(junction
+		(at 591.82 368.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b5c085a-8da5-46d8-86c0-5fe999e42bdb")
 	)
 	(junction
 		(at 101.6 171.45)
@@ -9775,12 +9926,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a61adf59-c1f1-4284-965c-f0123abe3e5d")
-	)
-	(junction
-		(at 563.88 368.3)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a6952aa0-0130-4dde-9914-028d5ac0eb2d")
 	)
 	(junction
 		(at 612.14 361.95)
@@ -10115,7 +10260,7 @@
 		(uuid "6bbb7398-33df-451e-b088-a8a64c96879c")
 	)
 	(no_connect
-		(at 621.03 421.64)
+		(at 596.9 429.26)
 		(uuid "7b7f4a78-dd87-4aa8-b749-077919bee570")
 	)
 	(no_connect
@@ -10460,6 +10605,16 @@
 	)
 	(wire
 		(pts
+			(xy 591.82 368.3) (xy 593.09 368.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d4a7a58-b81c-4ee4-89a5-86a71fbe6752")
+	)
+	(wire
+		(pts
 			(xy 553.72 294.64) (xy 556.26 294.64)
 		)
 		(stroke
@@ -10507,6 +10662,16 @@
 			(type default)
 		)
 		(uuid "0fd9c1c4-fd32-45ae-bb09-f9dfda1b9231")
+	)
+	(wire
+		(pts
+			(xy 591.82 368.3) (xy 591.82 412.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff660c0-fe32-40b2-b39c-5a8ed57a5718")
 	)
 	(wire
 		(pts
@@ -10870,6 +11035,16 @@
 	)
 	(wire
 		(pts
+			(xy 558.8 368.3) (xy 558.8 412.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a7d12a2-f5fc-4116-ba09-6da6ff2b2578")
+	)
+	(wire
+		(pts
 			(xy 389.89 340.36) (xy 389.89 342.9)
 		)
 		(stroke
@@ -10877,6 +11052,16 @@
 			(type default)
 		)
 		(uuid "1a81cc49-3e54-44a0-800a-c4e71bf11963")
+	)
+	(wire
+		(pts
+			(xy 585.47 368.3) (xy 591.82 368.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a8ab3ea-9c26-4619-96f1-4b0c79532ade")
 	)
 	(wire
 		(pts
@@ -10920,16 +11105,6 @@
 	)
 	(wire
 		(pts
-			(xy 567.69 386.08) (xy 570.23 386.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c889c12-b432-4b85-8fbb-0bcf3f0a5580")
-	)
-	(wire
-		(pts
 			(xy 269.24 105.41) (xy 275.59 105.41)
 		)
 		(stroke
@@ -10947,6 +11122,16 @@
 			(type default)
 		)
 		(uuid "1d1036f7-93bb-4495-a0df-b211da4fd223")
+	)
+	(wire
+		(pts
+			(xy 563.88 386.08) (xy 563.88 387.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dc488f3-7e2c-4bdb-9885-bfc53bbedad7")
 	)
 	(wire
 		(pts
@@ -11050,16 +11235,6 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 386.08) (xy 567.69 386.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20efcc17-e8d4-470f-bd57-081f0cf1831f")
-	)
-	(wire
-		(pts
 			(xy 567.69 344.17) (xy 567.69 345.44)
 		)
 		(stroke
@@ -11160,7 +11335,7 @@
 	)
 	(wire
 		(pts
-			(xy 608.33 351.79) (xy 622.3 351.79)
+			(xy 608.33 351.79) (xy 623.57 351.79)
 		)
 		(stroke
 			(width 0)
@@ -11367,6 +11542,16 @@
 			(type default)
 		)
 		(uuid "2b6b7ed1-5bf6-43b0-a46e-4371ff2d230d")
+	)
+	(wire
+		(pts
+			(xy 585.47 387.35) (xy 585.47 384.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf7e452-416a-449e-a755-b43737096046")
 	)
 	(wire
 		(pts
@@ -12660,16 +12845,6 @@
 	)
 	(wire
 		(pts
-			(xy 563.88 368.3) (xy 554.99 368.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62469d48-d3cd-418b-b119-c6f228e04fc0")
-	)
-	(wire
-		(pts
 			(xy 576.58 345.44) (xy 576.58 351.79)
 		)
 		(stroke
@@ -13810,6 +13985,16 @@
 	)
 	(wire
 		(pts
+			(xy 558.8 368.3) (xy 563.88 368.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "910be101-fc97-4da3-b5f2-840cbb05dfb6")
+	)
+	(wire
+		(pts
 			(xy 165.1 325.12) (xy 179.07 325.12)
 		)
 		(stroke
@@ -13817,16 +14002,6 @@
 			(type default)
 		)
 		(uuid "910fab34-7a7a-464c-a53f-cf0b8b311118")
-	)
-	(wire
-		(pts
-			(xy 565.15 368.3) (xy 563.88 368.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "934abd3b-b2dc-401c-bfa5-7f87a86345e9")
 	)
 	(wire
 		(pts
@@ -14430,16 +14605,6 @@
 	)
 	(wire
 		(pts
-			(xy 582.93 368.3) (xy 593.09 368.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac6a07f6-414b-4b63-850d-7540b67bef8c")
-	)
-	(wire
-		(pts
 			(xy 269.24 179.07) (xy 284.48 179.07)
 		)
 		(stroke
@@ -14900,16 +15065,6 @@
 	)
 	(wire
 		(pts
-			(xy 585.47 384.81) (xy 585.47 386.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdff0f96-f205-4435-b0ec-5f812024b95c")
-	)
-	(wire
-		(pts
 			(xy 551.18 337.82) (xy 546.1 337.82)
 		)
 		(stroke
@@ -15357,6 +15512,16 @@
 			(type default)
 		)
 		(uuid "cf981ce0-d59b-4831-bd4d-31382bfbf5d7")
+	)
+	(wire
+		(pts
+			(xy 558.8 368.3) (xy 554.99 368.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfa89ff8-f4dc-452b-8860-75ad39be0406")
 	)
 	(wire
 		(pts
@@ -15850,6 +16015,16 @@
 	)
 	(wire
 		(pts
+			(xy 585.47 377.19) (xy 585.47 368.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3b04874-b4ff-4091-9d60-1f1a1ea845a9")
+	)
+	(wire
+		(pts
 			(xy 227.33 85.09) (xy 233.68 85.09)
 		)
 		(stroke
@@ -16077,16 +16252,6 @@
 			(type default)
 		)
 		(uuid "f0cbc32e-ddcf-4058-ae37-6a28e4f473e8")
-	)
-	(wire
-		(pts
-			(xy 570.23 386.08) (xy 585.47 386.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f140e384-5e06-4821-8b1f-115b47db58b2")
 	)
 	(wire
 		(pts
@@ -16397,16 +16562,6 @@
 			(type default)
 		)
 		(uuid "fbb89bac-a8bf-4adf-94d8-bf6ff35d30ad")
-	)
-	(wire
-		(pts
-			(xy 570.23 384.81) (xy 570.23 386.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbdba59a-a500-4e5e-a757-17936010141f")
 	)
 	(wire
 		(pts
@@ -21419,73 +21574,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+48V")
-		(at 193.04 443.23 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f9b89d4-52f3-4f81-b523-279f402d50ee")
-		(property "Reference" "#PWR082"
-			(at 189.23 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 196.85 443.2299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 193.04 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 193.04 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 193.04 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b57cd0ab-6336-4c5d-93ef-71ad015bf941")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 205.74 69.85 0)
 		(unit 1)
@@ -22296,73 +22384,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+48V")
-		(at 622.3 283.21 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "203d337b-9bb0-4484-a5f6-fdb0b3cf0373")
-		(property "Reference" "#PWR071"
-			(at 618.49 283.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 626.11 283.2099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 622.3 283.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 622.3 283.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 622.3 283.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2feff549-072e-4bc2-b5dc-bf67b882e337")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -23526,73 +23547,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+48V")
-		(at 91.44 445.77 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2e598247-0754-406b-9e5b-a7f1e1de826f")
-		(property "Reference" "#PWR081"
-			(at 87.63 445.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 95.25 445.7699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 91.44 445.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 445.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 91.44 445.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "58c44965-1a78-4b2f-9493-0d42cf224690")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -24865,7 +24819,7 @@
 	)
 	(symbol
 		(lib_id "TPS7A:TPS7A1601DRBR")
-		(at 600.71 436.88 180)
+		(at 576.58 444.5 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24874,7 +24828,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d540002-2d49-4cbe-b403-00b9a50f6218")
 		(property "Reference" "U10"
-			(at 600.71 414.02 0)
+			(at 576.58 421.64 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -24882,15 +24836,15 @@
 			)
 		)
 		(property "Value" "TPS7A1601DRBR"
-			(at 600.71 416.56 0)
+			(at 576.58 424.18 0)
 			(effects
 				(font
 					(size 1.524 1.524)
 				)
 			)
 		)
-		(property "Footprint" "DRB0008B"
-			(at 600.71 436.88 0)
+		(property "Footprint" "TPS26750SRSMR:VQFN32_RSM_TEX"
+			(at 576.58 444.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24900,7 +24854,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/tps7a16"
-			(at 600.71 436.88 0)
+			(at 576.58 444.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24910,7 +24864,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 600.71 436.88 0)
+			(at 576.58 444.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25418,6 +25372,72 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 623.57 351.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4516d19d-fca8-4db9-b9df-688311594f12")
+		(property "Reference" "#PWR070"
+			(at 623.57 355.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 623.57 346.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 623.57 351.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 623.57 351.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 623.57 351.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0de84f55-65e1-46ec-8eeb-66eca98d9ee2")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -26294,6 +26314,73 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 593.09 368.3 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "557587dd-e71f-4e83-9bf6-7eeb43a77f7d")
+		(property "Reference" "#PWR071"
+			(at 589.28 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 596.9 368.2999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 593.09 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 593.09 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 593.09 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "806c2a17-7281-474b-88c4-29ba7fa86d09")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -29043,73 +29130,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+48V")
-		(at 593.09 368.3 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "85ae6772-7c35-4625-b494-a9831aaf88d7")
-		(property "Reference" "#PWR074"
-			(at 589.28 368.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 596.9 368.2999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 593.09 368.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 593.09 368.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 593.09 368.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3596594a-6b3c-4c99-ad7e-9401e07b445b")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR074")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 396.24 281.94 180)
 		(unit 1)
@@ -29776,73 +29796,6 @@
 			(project ""
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+48V")
-		(at 91.44 443.23 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8e845c52-7a86-4fab-b7c6-7d06d985c748")
-		(property "Reference" "#PWR080"
-			(at 87.63 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 95.25 443.2299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 91.44 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 91.44 443.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eab8d191-9f4f-422e-938f-367a658f6cb7")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR080")
 					(unit 1)
 				)
 			)
@@ -31455,6 +31408,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 585.47 387.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7b85d89-93e6-498e-ac4e-60bc1fffa5bb")
+		(property "Reference" "#PWR01"
+			(at 585.47 393.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 585.47 392.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 585.47 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 585.47 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 585.47 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5af9419-b10d-414f-8518-681ae8c2a6c8")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 477.52 312.42 90)
 		(unit 1)
@@ -32940,7 +32959,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 567.69 386.08 0)
+		(at 563.88 387.35 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -32949,7 +32968,7 @@
 		(fields_autoplaced yes)
 		(uuid "bac5ecb4-ddfc-4f83-ab41-67c8edea5ffb")
 		(property "Reference" "#PWR076"
-			(at 567.69 392.43 0)
+			(at 563.88 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32958,7 +32977,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 567.69 391.16 0)
+			(at 563.88 392.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32966,7 +32985,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 567.69 386.08 0)
+			(at 563.88 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32975,7 +32994,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 567.69 386.08 0)
+			(at 563.88 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32984,7 +33003,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 567.69 386.08 0)
+			(at 563.88 387.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33068,6 +33087,72 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VBUS")
+		(at 622.3 283.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c3ce1b1c-e338-4c6f-a538-a94ac05cd011")
+		(property "Reference" "#PWR016"
+			(at 622.3 287.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 622.3 278.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 622.3 283.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 622.3 283.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 622.3 283.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "feb35f85-8be1-4a12-bcf2-4a41e1f10aa2")
+		)
+		(instances
+			(project ""
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -33354,7 +33439,7 @@
 		(dnp no)
 		(uuid "c58d5bf5-1727-484d-bc13-9617b774f1ae")
 		(property "Reference" "C58"
-			(at 565.15 381 0)
+			(at 559.054 381.254 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33363,7 +33448,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 565.15 383.54 0)
+			(at 559.054 383.794 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35718,6 +35803,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 585.47 381 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9841393-0dd9-4a19-9a0c-6a57a6dc9609")
+		(property "Reference" "C57"
+			(at 586.74 379.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22u"
+			(at 586.74 382.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 584.5048 377.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 585.47 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 585.47 381 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "812a1d8a-e20d-448c-a491-9816200c9226")
+		)
+		(pin "2"
+			(uuid "da2711b4-8a2e-49a5-8afa-06ff342074b3")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 525.78 299.72 180)
 		(unit 1)
@@ -35781,73 +35935,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "R40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+48V")
-		(at 622.3 351.79 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fab3754e-ff1e-44f2-92c8-207d243dfad3")
-		(property "Reference" "#PWR070"
-			(at 618.49 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 626.11 351.7899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 622.3 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 622.3 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+48V\""
-			(at 622.3 351.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "64c687d0-9ffb-4d13-949a-70def48b96dc")
-		)
-		(instances
-			(project ""
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR070")
 					(unit 1)
 				)
 			)
