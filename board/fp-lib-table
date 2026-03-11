@@ -9,4 +9,5 @@
   (lib (name "SN74AHCT245")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/SN74AHCT245/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "TLV9162IDSGR")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/ul_TLV9162IDSGR/KiCADv6/footprints.pretty")(options "")(descr ""))
   (lib (name "TPS7A")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/ul_TPS7A1601DRBR")(options "")(descr ""))
+  (lib (name "LM76005")(type "KiCad")(uri "${KIPRJMOD}/CustomLibs/ul_LM76005QRNPRQ1/KiCADv6/footprints.pretty")(options "")(descr ""))
 )
