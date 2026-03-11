@@ -24819,16 +24819,16 @@
 	)
 	(symbol
 		(lib_id "TPS7A:TPS7A1601DRBR")
-		(at 576.58 444.5 180)
+		(at 576.58 444.5 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3d540002-2d49-4cbe-b403-00b9a50f6218")
 		(property "Reference" "U10"
-			(at 576.58 421.64 0)
+			(at 576.58 467.36 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -24836,7 +24836,7 @@
 			)
 		)
 		(property "Value" "TPS7A1601DRBR"
-			(at 576.58 424.18 0)
+			(at 576.58 464.82 0)
 			(effects
 				(font
 					(size 1.524 1.524)
