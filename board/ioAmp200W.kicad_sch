@@ -13816,6 +13816,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 45.72) (xy 198.12 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48f1e76d-8482-417a-bdaf-e04cc435175a")
+	)
+	(wire
+		(pts
 			(xy 532.13 153.67) (xy 532.13 156.21)
 		)
 		(stroke
@@ -15436,6 +15446,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 50.8) (xy 208.28 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd4443e-fde2-47e0-9c54-282b4f8b095f")
+	)
+	(wire
+		(pts
 			(xy 260.35 433.07) (xy 275.59 433.07)
 		)
 		(stroke
@@ -16526,6 +16546,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 45.72) (xy 205.74 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6a3e1f2-f4b7-47be-9b70-e669638ba716")
+	)
+	(wire
+		(pts
 			(xy 229.87 379.73) (xy 229.87 367.03)
 		)
 		(stroke
@@ -17493,6 +17523,16 @@
 			(type default)
 		)
 		(uuid "d9a35a6f-2ff2-4e82-9a37-0461776c15dd")
+	)
+	(wire
+		(pts
+			(xy 208.28 50.8) (xy 208.28 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da9a65a6-a3b9-4716-b823-35661221a3aa")
 	)
 	(wire
 		(pts
@@ -24178,6 +24218,75 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 201.93 45.72 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "193c1a0b-2c6f-4623-96e7-abc98693f104")
+		(property "Reference" "C67"
+			(at 202.946 47.244 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47nF"
+			(at 197.104 47.244 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 198.12 46.6852 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 201.93 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e0153bc1-bf84-49a3-8fcd-dccf42226b9a")
+		)
+		(pin "1"
+			(uuid "9b2fab3d-86c2-45ee-9076-1a3ba5b23cc2")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C67")
 					(unit 1)
 				)
 			)
