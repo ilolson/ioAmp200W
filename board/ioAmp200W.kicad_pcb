@@ -20138,6 +20138,16 @@
 		)
 		(embedded_fonts no)
 	)
+	(gr_line
+		(start 100 102.5)
+		(end 100 147.5)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f281ae92-dbf6-461c-a8e9-dd81b031c0d6")
+	)
 	(gr_arc
 		(start 100 102.5)
 		(mid 100.732233 100.732233)
@@ -20159,6 +20169,16 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "4bdeb80d-2241-4803-a983-718a05d09972")
+	)
+	(gr_line
+		(start 102.5 150)
+		(end 147.5 150)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "c554c338-c880-42c0-80cd-391cf5db40f2")
 	)
 	(gr_line
 		(start 147.5 100)
@@ -20191,26 +20211,6 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "c518890c-bb2b-4e23-9225-6847359b9c92")
-	)
-	(gr_line
-		(start 102.5 150)
-		(end 147.5 150)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "c554c338-c880-42c0-80cd-391cf5db40f2")
-	)
-	(gr_line
-		(start 100 102.5)
-		(end 100 147.5)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "f281ae92-dbf6-461c-a8e9-dd81b031c0d6")
 	)
 	(gr_line
 		(start 150 147.5)
