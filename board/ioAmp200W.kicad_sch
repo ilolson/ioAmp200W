@@ -12094,12 +12094,6 @@
 		(uuid "6ef6f8a2-09c1-4cc9-8bc1-cf56f872c0fa")
 	)
 	(junction
-		(at 459.74 668.02)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "704a658b-0838-4f59-b7a7-f117587d1d5e")
-	)
-	(junction
 		(at 233.68 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -13190,16 +13184,6 @@
 			(type default)
 		)
 		(uuid "091548e4-2bf3-4f53-ad44-d3c8770c8fee")
-	)
-	(wire
-		(pts
-			(xy 459.74 668.02) (xy 459.74 681.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09263c54-83ee-437a-a41e-a8634a539381")
 	)
 	(wire
 		(pts
@@ -19833,16 +19817,6 @@
 	)
 	(wire
 		(pts
-			(xy 461.01 668.02) (xy 459.74 668.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dab40760-b387-4a7a-a591-c53f203cc227")
-	)
-	(wire
-		(pts
 			(xy 386.08 48.26) (xy 392.43 48.26)
 		)
 		(stroke
@@ -20250,16 +20224,6 @@
 			(type default)
 		)
 		(uuid "e7b40d0e-4321-45d9-8525-fd5236ba5284")
-	)
-	(wire
-		(pts
-			(xy 459.74 655.32) (xy 459.74 668.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7d77299-9227-4915-965f-ed2fd822d208")
 	)
 	(wire
 		(pts
@@ -31073,7 +31037,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MA5332MS_footprint:IFX-PG-IQFN-42-1-V"
+		(property "Footprint" "a"
 			(at 532.13 330.2 0)
 			(hide yes)
 			(show_name no)
@@ -32360,6 +32324,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 459.74 681.99 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65a1636b-2ba5-441c-8dfc-9af37578b5ee")
+		(property "Reference" "#PWR0119"
+			(at 453.39 681.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 455.93 681.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 459.74 681.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 459.74 681.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 459.74 681.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "659d60ca-d6f9-4af3-aa3a-c1de7a64dcd2")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR0119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N4148")
 		(at 549.91 322.58 0)
 		(unit 1)
@@ -33271,6 +33314,85 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 459.74 655.32 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "705893cc-727a-4a89-86ce-a5315ba8c7e5")
+		(property "Reference" "#PWR071"
+			(at 453.39 655.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 455.93 655.3199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 459.74 655.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 459.74 655.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 459.74 655.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ff1564c-730d-4aa3-89db-8145355dcf85")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -44911,7 +45033,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MA5332MS_footprint:IFX-PG-IQFN-42-1-V"
 			(at 499.11 635 0)
 			(hide yes)
 			(show_name no)
@@ -45311,85 +45433,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "C73")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 461.01 668.02 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6f1edb0-961c-44a0-a0b0-6126a315aae7")
-		(property "Reference" "#PWR071"
-			(at 467.36 668.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 464.82 668.0199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 461.01 668.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 461.01 668.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 461.01 668.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "101b18a0-c2ea-4efe-b653-b154c72d7cca")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR071")
 					(unit 1)
 				)
 			)
