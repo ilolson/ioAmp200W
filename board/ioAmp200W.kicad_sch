@@ -25776,7 +25776,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "10u"
 			(at 592.074 374.904 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31110,7 +31110,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "54.9k"
+		(property "Value" "43.2k"
 			(at 137.922 113.284 90)
 			(show_name no)
 			(do_not_autoplace no)
