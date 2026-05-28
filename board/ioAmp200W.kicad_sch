@@ -9334,7 +9334,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+10V"
+		(symbol "power:+12V"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -9359,7 +9359,7 @@
 					)
 				)
 			)
-			(property "Value" "+10V"
+			(property "Value" "+12V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -9391,7 +9391,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+10V\""
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -9413,7 +9413,7 @@
 					)
 				)
 			)
-			(symbol "+10V_0_1"
+			(symbol "+12V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -9451,7 +9451,7 @@
 					)
 				)
 			)
-			(symbol "+10V_1_1"
+			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -11190,12 +11190,6 @@
 		(uuid "6c10be53-c324-48ef-a4d6-1a99e79d23c7")
 	)
 	(junction
-		(at 581.66 350.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6c84bc01-19ee-4496-ade6-dc1a07a6d034")
-	)
-	(junction
 		(at 92.71 453.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11692,12 +11686,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf8b53ec-0d32-4031-9f4a-f4cd06e2dcb2")
-	)
-	(junction
-		(at 632.46 314.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d3cb9edb-a960-4a0d-af71-9859af207125")
 	)
 	(junction
 		(at 322.58 358.14)
@@ -12273,6 +12261,16 @@
 	)
 	(wire
 		(pts
+			(xy 574.04 375.92) (xy 582.93 375.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09701c6d-1a45-4dfa-a170-6b589e254ea4")
+	)
+	(wire
+		(pts
 			(xy 678.18 354.33) (xy 683.26 354.33)
 		)
 		(stroke
@@ -12540,16 +12538,6 @@
 			(type default)
 		)
 		(uuid "122fea68-ad62-4eb2-8bb6-3592bb2dd3ea")
-	)
-	(wire
-		(pts
-			(xy 581.66 349.25) (xy 581.66 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1245ad08-5fb4-4524-995f-f488f5acebfc")
 	)
 	(wire
 		(pts
@@ -12963,13 +12951,13 @@
 	)
 	(wire
 		(pts
-			(xy 596.9 345.44) (xy 596.9 350.52)
+			(xy 632.46 314.96) (xy 636.27 314.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "201a424b-3855-46ea-8d39-4602330c4cb8")
+		(uuid "20768ea6-1783-4d77-bbc6-a858a3349654")
 	)
 	(wire
 		(pts
@@ -13873,6 +13861,16 @@
 	)
 	(wire
 		(pts
+			(xy 596.9 345.44) (xy 596.9 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39fac5b2-264c-463c-a468-339b4acc86ab")
+	)
+	(wire
+		(pts
 			(xy 184.15 254) (xy 184.15 256.54)
 		)
 		(stroke
@@ -14353,7 +14351,7 @@
 	)
 	(wire
 		(pts
-			(xy 594.36 375.92) (xy 596.9 375.92)
+			(xy 590.55 375.92) (xy 594.36 375.92)
 		)
 		(stroke
 			(width 0)
@@ -15413,7 +15411,7 @@
 	)
 	(wire
 		(pts
-			(xy 641.35 314.96) (xy 640.08 314.96)
+			(xy 645.16 314.96) (xy 643.89 314.96)
 		)
 		(stroke
 			(width 0)
@@ -15923,7 +15921,7 @@
 	)
 	(wire
 		(pts
-			(xy 596.9 363.22) (xy 599.44 363.22)
+			(xy 594.36 363.22) (xy 599.44 363.22)
 		)
 		(stroke
 			(width 0)
@@ -16333,7 +16331,7 @@
 	)
 	(wire
 		(pts
-			(xy 599.44 368.3) (xy 598.17 368.3)
+			(xy 599.44 368.3) (xy 596.9 368.3)
 		)
 		(stroke
 			(width 0)
@@ -16453,7 +16451,7 @@
 	)
 	(wire
 		(pts
-			(xy 596.9 363.22) (xy 596.9 375.92)
+			(xy 594.36 363.22) (xy 594.36 375.92)
 		)
 		(stroke
 			(width 0)
@@ -16630,16 +16628,6 @@
 			(type default)
 		)
 		(uuid "958b9615-b92d-458f-a6e6-b2536a949b06")
-	)
-	(wire
-		(pts
-			(xy 577.85 375.92) (xy 586.74 375.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96770656-8795-460e-af02-5f731623849c")
 	)
 	(wire
 		(pts
@@ -16973,7 +16961,7 @@
 	)
 	(wire
 		(pts
-			(xy 577.85 378.46) (xy 598.17 378.46)
+			(xy 572.77 378.46) (xy 596.9 378.46)
 		)
 		(stroke
 			(width 0)
@@ -17213,7 +17201,7 @@
 	)
 	(wire
 		(pts
-			(xy 562.61 350.52) (xy 581.66 350.52)
+			(xy 562.61 350.52) (xy 596.9 350.52)
 		)
 		(stroke
 			(width 0)
@@ -18073,7 +18061,7 @@
 	)
 	(wire
 		(pts
-			(xy 598.17 368.3) (xy 598.17 378.46)
+			(xy 596.9 368.3) (xy 596.9 378.46)
 		)
 		(stroke
 			(width 0)
@@ -19023,16 +19011,6 @@
 	)
 	(wire
 		(pts
-			(xy 581.66 350.52) (xy 596.9 350.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edb84245-bc04-4949-9806-6dfaccbefcf9")
-	)
-	(wire
-		(pts
 			(xy 662.94 393.7) (xy 662.94 388.62)
 		)
 		(stroke
@@ -19320,16 +19298,6 @@
 			(type default)
 		)
 		(uuid "f7cfd304-a69d-49e3-a55a-8a93d7b5ba93")
-	)
-	(wire
-		(pts
-			(xy 632.46 313.69) (xy 632.46 314.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f83d835a-eb45-40d9-a4ee-9adad69f5eb0")
 	)
 	(wire
 		(pts
@@ -19721,6 +19689,16 @@
 		)
 		(uuid "16e94c37-1bf5-4a58-a6ea-38cb8cc1b3fa")
 	)
+	(label "Vref"
+		(at 589.28 350.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1713afa7-d95c-491d-9f5b-296c14e40b65")
+	)
 	(label "XIN"
 		(at 124.46 453.39 180)
 		(effects
@@ -19950,16 +19928,6 @@
 			(justify left bottom)
 		)
 		(uuid "3e8d3aa2-b334-4a5f-8f6d-4784785d1f17")
-	)
-	(label "VSS"
-		(at 577.85 375.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3f011f64-fa8d-42e1-a4a1-00c1983412f5")
 	)
 	(label "G1_5V"
 		(at 495.3 101.6 180)
@@ -20491,6 +20459,16 @@
 		)
 		(uuid "9d401fea-e0d3-4560-b0a8-36907ff9f1c7")
 	)
+	(label "Vref"
+		(at 632.46 314.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a061443c-dd12-428e-88d3-de26b5daad1c")
+	)
 	(label "LN_3V3"
 		(at 431.8 143.51 0)
 		(effects
@@ -20882,7 +20860,7 @@
 		(uuid "d8932b04-376e-4500-a5c7-8c90aa5c6ad7")
 	)
 	(label "AMP_FAULT"
-		(at 577.85 378.46 0)
+		(at 572.77 378.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23288,6 +23266,85 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 574.04 375.92 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13d62330-30ff-4532-b2d4-e547f96a75b1")
+		(property "Reference" "#PWR0139"
+			(at 567.69 375.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 570.23 375.9199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 574.04 375.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 574.04 375.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 574.04 375.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ae45ff6c-b83d-40a5-b4a5-9e17856b0aeb")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR0139")
 					(unit 1)
 				)
 			)
@@ -25903,7 +25960,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 590.55 375.92 270)
+		(at 586.74 375.92 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25913,7 +25970,7 @@
 		(dnp no)
 		(uuid "32a12b8b-3af6-4b36-a006-bdefbfb47cc4")
 		(property "Reference" "C44"
-			(at 591.566 377.444 90)
+			(at 587.756 377.444 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25924,7 +25981,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 592.074 374.904 90)
+			(at 588.264 374.904 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25935,7 +25992,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 586.74 376.8852 0)
+			(at 582.93 376.8852 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25946,7 +26003,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 590.55 375.92 0)
+			(at 586.74 375.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25957,7 +26014,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 590.55 375.92 0)
+			(at 586.74 375.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29817,6 +29874,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 669.29 381 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "56ca4298-12d8-4f3f-8702-2252463e1d97")
+		(property "Reference" "#PWR058"
+			(at 665.48 381 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 667.766 382.778 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 669.29 381 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 669.29 381 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 669.29 381 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "824a7760-9028-46e6-95f1-e50b38459802")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR058")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 403.86 153.67 0)
 		(mirror y)
@@ -29966,84 +30101,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+10V")
-		(at 520.7 339.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "58a3c4d9-5c4e-41c9-8a4f-15ea7876ebe4")
-		(property "Reference" "#PWR067"
-			(at 520.7 342.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+10V"
-			(at 522.224 338.074 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+10V\""
-			(at 520.7 339.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "58e38235-3f5b-4fbb-b95b-830661216934")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -30440,6 +30497,84 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 613.41 410.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c2b999e-8160-456f-b408-65ae23c28719")
+		(property "Reference" "#PWR016"
+			(at 613.41 414.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 613.41 405.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 613.41 410.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 613.41 410.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 613.41 410.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4937380e-56b5-445d-84c6-74f46ef539d6")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -31080,83 +31215,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 581.66 349.25 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "60437656-4c35-47e6-8bae-3465e3e37d4e")
-		(property "Reference" "#PWR065"
-			(at 581.66 353.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 581.66 345.186 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 581.66 349.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 581.66 349.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 581.66 349.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e54d2a1b-1719-40af-85c1-1f7569745c1d")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR065")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 92.71 354.33 0)
 		(unit 1)
@@ -31634,84 +31692,6 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR0119")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+10V")
-		(at 669.29 381 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "67e37e3a-69bb-4dd9-8ed7-81e94f32c9c7")
-		(property "Reference" "#PWR0133"
-			(at 665.48 381 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+10V"
-			(at 668.528 382.778 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 669.29 381 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 669.29 381 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+10V\""
-			(at 669.29 381 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b79e62f1-07c7-40eb-9a55-5d76a48c9179")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR0133")
 					(unit 1)
 				)
 			)
@@ -40378,84 +40358,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+10V")
-		(at 613.41 410.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "af2e3a30-4aeb-4670-ac3b-e73ed972f42b")
-		(property "Reference" "#PWR090"
-			(at 613.41 414.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+10V"
-			(at 614.934 409.194 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 613.41 410.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 613.41 410.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+10V\""
-			(at 613.41 410.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4e10be1b-9452-4931-ab1b-3a44b7d7e5b5")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR090")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D")
 		(at 640.08 325.12 0)
 		(mirror y)
@@ -41961,7 +41863,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 636.27 314.96 90)
+		(at 640.08 314.96 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -41972,7 +41874,7 @@
 		(dnp no)
 		(uuid "c429e503-7b92-4255-aa5a-fe3822e5da21")
 		(property "Reference" "C104"
-			(at 637.54 311.404 90)
+			(at 641.35 311.404 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41983,7 +41885,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 637.54 313.944 90)
+			(at 641.35 313.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41994,7 +41896,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 640.08 315.9252 0)
+			(at 643.89 315.9252 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42005,7 +41907,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 636.27 314.96 0)
+			(at 640.08 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -42016,7 +41918,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 636.27 314.96 0)
+			(at 640.08 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -44165,84 +44067,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 632.46 313.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d9233faf-0002-4d3b-b7ec-d79bcf5b7cb7")
-		(property "Reference" "#PWR064"
-			(at 632.46 317.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 632.46 308.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 632.46 313.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 632.46 313.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 632.46 313.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e6178a17-8c50-4517-aa23-541d82dcb41c")
-		)
-		(instances
-			(project "ioAmp200W"
-				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
-					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 440.69 184.15 0)
 		(unit 1)
@@ -44796,6 +44620,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+12V")
+		(at 520.7 339.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd25e3f9-c26a-4c68-9c1a-3ce27609601c")
+		(property "Reference" "#PWR059"
+			(at 520.7 342.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 520.7 334.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 520.7 339.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "094da144-235b-497f-b447-254b6fd29a59")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR059")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 687.07 375.92 0)
 		(mirror y)
@@ -45205,7 +45107,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 641.35 314.96 90)
+		(at 645.16 314.96 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -45215,7 +45117,7 @@
 		(dnp no)
 		(uuid "dfddcb5b-73fe-4a12-b1fd-99da4bbed9cd")
 		(property "Reference" "#PWR094"
-			(at 647.7 314.96 0)
+			(at 651.51 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45226,7 +45128,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 643.128 315.722 90)
+			(at 646.938 315.722 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45237,7 +45139,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 641.35 314.96 0)
+			(at 645.16 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45248,7 +45150,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 641.35 314.96 0)
+			(at 645.16 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45259,7 +45161,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 641.35 314.96 0)
+			(at 645.16 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
