@@ -10545,7 +10545,7 @@
 		)
 		(uuid "e4f730e9-6723-4c03-a944-54fcb1937080")
 	)
-	(text "OP AMP Stage\n34.8k / 10k = 3.48V/V or 10.8dB\nOriginal TLC082 on ref design updated with TLV9161"
+	(text "OP AMP Stage\n34.8k / 10k = 3.48V/V or 10.8dB\nOriginal TLC082 on ref design updated with TLV9162"
 		(exclude_from_sim no)
 		(at 459.74 318.008 0)
 		(effects
@@ -12501,6 +12501,16 @@
 	)
 	(wire
 		(pts
+			(xy 483.87 351.79) (xy 497.84 351.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "118d72d5-6ae3-44f8-ae75-be0f23b99003")
+	)
+	(wire
+		(pts
 			(xy 273.05 116.84) (xy 273.05 115.57)
 		)
 		(stroke
@@ -12951,7 +12961,7 @@
 	)
 	(wire
 		(pts
-			(xy 632.46 314.96) (xy 636.27 314.96)
+			(xy 632.46 314.96) (xy 646.43 314.96)
 		)
 		(stroke
 			(width 0)
@@ -13248,16 +13258,6 @@
 			(type default)
 		)
 		(uuid "2a0a7df0-d72c-47f9-b3c6-9e67420d47a7")
-	)
-	(wire
-		(pts
-			(xy 494.03 351.79) (xy 497.84 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a1ac5ab-0ac4-4ad6-8c69-2724fc5ee4d5")
 	)
 	(wire
 		(pts
@@ -15411,7 +15411,7 @@
 	)
 	(wire
 		(pts
-			(xy 645.16 314.96) (xy 643.89 314.96)
+			(xy 655.32 314.96) (xy 654.05 314.96)
 		)
 		(stroke
 			(width 0)
@@ -18181,16 +18181,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 351.79) (xy 483.87 351.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc47066b-c4b9-4767-8d81-9269db28878a")
-	)
-	(wire
-		(pts
 			(xy 662.94 325.12) (xy 662.94 330.2)
 		)
 		(stroke
@@ -18831,7 +18821,7 @@
 	)
 	(wire
 		(pts
-			(xy 434.34 346.71) (xy 443.23 346.71)
+			(xy 429.26 346.71) (xy 443.23 346.71)
 		)
 		(stroke
 			(width 0)
@@ -19689,8 +19679,8 @@
 		)
 		(uuid "16e94c37-1bf5-4a58-a6ea-38cb8cc1b3fa")
 	)
-	(label "Vref"
-		(at 589.28 350.52 180)
+	(label "Vref(6VclassD)"
+		(at 593.09 350.52 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20249,8 +20239,8 @@
 		)
 		(uuid "6fb3b244-2f66-4562-a7f2-a2bc17b022fe")
 	)
-	(label "OA_IN+"
-		(at 491.49 351.79 180)
+	(label "OA_IN+(6Vref)"
+		(at 497.84 351.79 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20429,6 +20419,16 @@
 		)
 		(uuid "9817acf4-ede5-4e55-943b-7012cf2b8bf4")
 	)
+	(label "OA_IN+(6Vref)"
+		(at 429.26 346.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "986fb2f1-b324-4b38-9130-1f39e3cc2586")
+	)
 	(label "USB_D-"
 		(at 293.37 389.89 180)
 		(effects
@@ -20458,16 +20458,6 @@
 			(justify right bottom)
 		)
 		(uuid "9d401fea-e0d3-4560-b0a8-36907ff9f1c7")
-	)
-	(label "Vref"
-		(at 632.46 314.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a061443c-dd12-428e-88d3-de26b5daad1c")
 	)
 	(label "LN_3V3"
 		(at 431.8 143.51 0)
@@ -20799,16 +20789,6 @@
 		)
 		(uuid "d461b272-23ea-44f7-9e61-737a267f0ccc")
 	)
-	(label "OA_IN+"
-		(at 434.34 346.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d4fcb603-9eb9-47a9-99d0-0589ab57a6e5")
-	)
 	(label "~{USB_BOOT}"
 		(at 158.115 408.94 0)
 		(effects
@@ -20948,6 +20928,16 @@
 			(justify left bottom)
 		)
 		(uuid "e98bb510-acee-404c-be55-a31594d08635")
+	)
+	(label "Vref(6VclassD)"
+		(at 646.43 314.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ea239fdd-1943-4f2e-9e00-59e884cbe01f")
 	)
 	(label "EPR_DN"
 		(at 92.71 218.44 180)
@@ -41863,7 +41853,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 640.08 314.96 90)
+		(at 650.24 314.96 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -41874,7 +41864,7 @@
 		(dnp no)
 		(uuid "c429e503-7b92-4255-aa5a-fe3822e5da21")
 		(property "Reference" "C104"
-			(at 641.35 311.404 90)
+			(at 651.51 311.404 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41885,7 +41875,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 641.35 313.944 90)
+			(at 651.51 313.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41896,7 +41886,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 643.89 315.9252 0)
+			(at 654.05 315.9252 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41907,7 +41897,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 640.08 314.96 0)
+			(at 650.24 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41918,7 +41908,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 640.08 314.96 0)
+			(at 650.24 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45107,7 +45097,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 645.16 314.96 90)
+		(at 655.32 314.96 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -45117,7 +45107,7 @@
 		(dnp no)
 		(uuid "dfddcb5b-73fe-4a12-b1fd-99da4bbed9cd")
 		(property "Reference" "#PWR094"
-			(at 651.51 314.96 0)
+			(at 661.67 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45128,7 +45118,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 646.938 315.722 90)
+			(at 657.098 315.722 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -45139,7 +45129,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 645.16 314.96 0)
+			(at 655.32 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45150,7 +45140,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 645.16 314.96 0)
+			(at 655.32 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -45161,7 +45151,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 645.16 314.96 0)
+			(at 655.32 314.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
