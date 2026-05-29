@@ -12259,6 +12259,12 @@
 		(uuid "a7edfcd5-ec7f-401f-b1ec-e4dde3062f8e")
 	)
 	(junction
+		(at 695.96 177.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8bc798a-8540-4f29-a216-e74b1caaf7ca")
+	)
+	(junction
 		(at 279.4 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -14520,6 +14526,16 @@
 	)
 	(wire
 		(pts
+			(xy 695.96 177.8) (xy 711.2 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "351f8be7-c7b0-41cd-bf8b-5dbd396798ad")
+	)
+	(wire
+		(pts
 			(xy 299.72 346.71) (xy 311.15 346.71)
 		)
 		(stroke
@@ -16580,6 +16596,16 @@
 	)
 	(wire
 		(pts
+			(xy 746.76 170.18) (xy 746.76 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7388e2c2-fa73-464d-8c85-44b4a5e76244")
+	)
+	(wire
+		(pts
 			(xy 210.82 66.04) (xy 215.9 66.04)
 		)
 		(stroke
@@ -18330,16 +18356,6 @@
 	)
 	(wire
 		(pts
-			(xy 704.85 177.8) (xy 704.85 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af8e73a9-cd62-4337-9265-0edbf0cb874d")
-	)
-	(wire
-		(pts
 			(xy 86.36 386.08) (xy 86.36 387.35)
 		)
 		(stroke
@@ -19770,6 +19786,16 @@
 	)
 	(wire
 		(pts
+			(xy 741.68 172.72) (xy 746.76 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbe10243-a02c-419c-b846-39112aadcfe8")
+	)
+	(wire
+		(pts
 			(xy 629.92 361.95) (xy 621.03 361.95)
 		)
 		(stroke
@@ -20307,16 +20333,6 @@
 			(type default)
 		)
 		(uuid "f38bdcb2-9676-4b5d-b8d8-b74df8c411c4")
-	)
-	(wire
-		(pts
-			(xy 711.2 177.8) (xy 704.85 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f3a8afce-c815-45cc-94c3-c4a471774e78")
 	)
 	(wire
 		(pts
@@ -27723,6 +27739,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 746.76 162.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2d572a4e-3b20-477c-886b-cb091e7ef1b3")
+		(property "Reference" "#PWR010"
+			(at 746.76 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 747.141 158.1658 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 746.76 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 746.76 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 746.76 162.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff146461-3cf8-4a2f-96f6-6db465c1c78a")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
 		(at 571.5 64.77 0)
@@ -32595,6 +32687,82 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR0127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 695.96 185.42 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5946bbff-98a7-42de-9715-2889d68cf632")
+		(property "Reference" "#PWR0128"
+			(at 695.96 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 696.087 189.8142 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 695.96 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 695.96 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 695.96 185.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c3847c17-73ae-4140-b783-09a87f45bb61")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -47787,6 +47955,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 746.76 166.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "db28e585-4719-4441-b554-28e70d35524f")
+		(property "Reference" "R37"
+			(at 746.76 168.148 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 744.728 170.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 744.982 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 746.76 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 746.76 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2e820b49-8d1a-44f2-b956-c552daff4e2b")
+		)
+		(pin "1"
+			(uuid "6f28ce52-f6ff-4ae8-b1b5-707c52f9d7b7")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "R37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Crystal_GND24")
 		(at 92.71 458.47 270)
 		(unit 1)
@@ -48284,7 +48533,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 704.85 171.45 0)
+		(at 695.96 177.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -48294,7 +48543,7 @@
 		(dnp no)
 		(uuid "ded01a86-66dd-4136-9161-f1fd93ebe05b")
 		(property "Reference" "#PWR08"
-			(at 704.85 175.26 0)
+			(at 695.96 181.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48305,7 +48554,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 705.231 167.0558 0)
+			(at 696.341 173.4058 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -48315,7 +48564,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 704.85 171.45 0)
+			(at 695.96 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48326,7 +48575,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 704.85 171.45 0)
+			(at 695.96 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48337,7 +48586,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 704.85 171.45 0)
+			(at 695.96 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -51028,6 +51277,87 @@
 			(project "ioAmp200W"
 				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
 					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 695.96 181.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "faaa6c80-8b9d-48dd-9b3e-c19e68638d76")
+		(property "Reference" "C116"
+			(at 694.69 186.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 697.23 186.944 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 696.9252 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 695.96 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 695.96 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e5f74090-9786-443e-be1d-486f024ae2b9")
+		)
+		(pin "1"
+			(uuid "2d0409d2-025d-4a40-bdc8-5bf9d2725abb")
+		)
+		(instances
+			(project "ioAmp200W"
+				(path "/4f3b51aa-8e6e-4521-ad6c-a7e6e194e2a4"
+					(reference "C116")
 					(unit 1)
 				)
 			)
