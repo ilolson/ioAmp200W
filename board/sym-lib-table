@@ -10,6 +10,6 @@
 	(lib (name "TLV75733PDRVR") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/ul_TLV75733PDRVR/KiCADv6/2026-03-11_20-36-38.kicad_sym") (options "") (descr ""))
 	(lib (name "MP23") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/ul_MP23ABS1TR/KiCADv6/2026-03-30_22-35-50.kicad_sym") (options "") (descr ""))
 	(lib (name "LM70660") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/ul_LM70660RRXR/KiCADv6/2026-03-30_22-52-45.kicad_sym") (options "") (descr ""))
-	(lib (name "TAD5112") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/TAD5112/KiCADv6/TAD5112.kicad_sym") (options "") (descr ""))
 	(lib (name "INA750BIREMR") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/INA750BIREMR/INA750BIREMR.kicad_sym") (options "") (descr ""))
+	(lib (name "TAD5112IRGER") (type "KiCad") (uri "${KIPRJMOD}/CustomLibs/TAD5112IRGER_Mouser/TAD5112IRGER.kicad_sym") (options "") (descr ""))
 )
